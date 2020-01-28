@@ -1,0 +1,8 @@
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ReceptionEnfantLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ReceptionEnfantLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ManageSingleConnexion.dll
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ParametreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ManageSingleConnexion.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ParametreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\obj\Debug\ReceptionEnfantLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\obj\Debug\ReceptionEnfantLibrary.pdb

@@ -1,0 +1,8 @@
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\MariageLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\MariageLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\ManageSingleConnexion.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\ParametreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\ManageSingleConnexion.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\ParametreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\obj\Debug\MariageLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\obj\Debug\MariageLibrary.pdb

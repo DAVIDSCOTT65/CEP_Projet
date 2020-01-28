@@ -1,0 +1,9 @@
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\bin\Debug\BaptemeLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\bin\Debug\BaptemeLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\bin\Debug\ManageSingleConnexion.dll
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\bin\Debug\ParametreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\bin\Debug\ManageSingleConnexion.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\bin\Debug\ParametreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\obj\Debug\BaptemeLibrary.csprojResolveAssemblyReference.cache
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\obj\Debug\BaptemeLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\BaptemeLibrary\obj\Debug\BaptemeLibrary.pdb
