@@ -1,0 +1,9 @@
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\bin\Debug\MembreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\bin\Debug\MembreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\obj\Debug\MembreLibrary.csprojResolveAssemblyReference.cache
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\obj\Debug\MembreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\obj\Debug\MembreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\bin\Debug\ManageSingleConnexion.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\bin\Debug\ParametreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\bin\Debug\ManageSingleConnexion.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\MembreLibrary\bin\Debug\ParametreLibrary.pdb

@@ -1,0 +1,9 @@
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\bin\Debug\FinanceLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\bin\Debug\FinanceLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\bin\Debug\ManageSingleConnexion.dll
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\bin\Debug\ParametreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\bin\Debug\ManageSingleConnexion.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\bin\Debug\ParametreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\obj\Debug\FinanceLibrary.csprojResolveAssemblyReference.cache
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\obj\Debug\FinanceLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\FinanceLibrary\obj\Debug\FinanceLibrary.pdb
