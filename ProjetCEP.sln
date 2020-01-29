@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceptionEnfantLibrary", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MariageLibrary", "MariageLibrary\MariageLibrary.csproj", "{2569B3FF-3910-4479-ABE0-2AD0501C3590}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEPGUI", "CEPGUI\CEPGUI.csproj", "{640863F7-689D-4A2C-9123-58E4E6D420FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilitiesLibrary", "UtilitiesLibrary\UtilitiesLibrary.csproj", "{4CAB5313-06E8-4B91-AC2C-0624538E83F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{2569B3FF-3910-4479-ABE0-2AD0501C3590}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2569B3FF-3910-4479-ABE0-2AD0501C3590}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2569B3FF-3910-4479-ABE0-2AD0501C3590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{640863F7-689D-4A2C-9123-58E4E6D420FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{640863F7-689D-4A2C-9123-58E4E6D420FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{640863F7-689D-4A2C-9123-58E4E6D420FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{640863F7-689D-4A2C-9123-58E4E6D420FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAB5313-06E8-4B91-AC2C-0624538E83F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAB5313-06E8-4B91-AC2C-0624538E83F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CAB5313-06E8-4B91-AC2C-0624538E83F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CAB5313-06E8-4B91-AC2C-0624538E83F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

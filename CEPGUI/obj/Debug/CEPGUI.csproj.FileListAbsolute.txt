@@ -1,0 +1,17 @@
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\CEPGUI.exe.config
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\CEPGUI.exe
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\CEPGUI.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\ManageSingleConnexion.dll
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\ParametreLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\UtilitiesLibrary.dll
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\ManageSingleConnexion.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\ParametreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\UtilitiesLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.csprojResolveAssemblyReference.cache
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Form1.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.PrincipalForm.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Properties.Resources.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.csproj.GenerateResource.Cache
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.exe
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.ConnectUser.resources
