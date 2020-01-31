@@ -38,13 +38,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.passTxt = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(412, 0);
+            this.button2.Location = new System.Drawing.Point(412, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 37);
             this.button2.TabIndex = 57;
@@ -55,9 +57,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(-8, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(416, 1);
+            this.panel1.Size = new System.Drawing.Size(412, 1);
             this.panel1.TabIndex = 49;
             // 
             // panel2
@@ -150,12 +152,31 @@
             this.passTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passTxt.UseSystemPasswordChar = true;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 367);
+            this.panel5.TabIndex = 61;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.Location = new System.Drawing.Point(449, 46);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 323);
+            this.panel6.TabIndex = 62;
+            // 
             // ConnectUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(451, 368);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.passTxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel4);
@@ -191,5 +212,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox passTxt;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

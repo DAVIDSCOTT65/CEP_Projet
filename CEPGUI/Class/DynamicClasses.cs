@@ -111,20 +111,23 @@ namespace CEPGUI.Class
                 cmd.Dispose();
             }
         }
-        public int retourId(string champCode, string nomTable, string champCondition, string valeur)
+        public int retourId(string condition,string param, string procedure)
         {
             int identifiant = 0;
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = @"select " + champCode + " from " + nomTable + " where " + champCondition + " = '" + valeur + "'";
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, param, 100, DbType.String, condition));
 
                 IDataReader rd = cmd.ExecuteReader();
 
                 if (rd.Read())
                 {
-                    identifiant = int.Parse(rd[champCode].ToString());
+                    identifiant = int.Parse(rd["Id"].ToString());
                 }
                 rd.Close();
                 rd.Dispose();

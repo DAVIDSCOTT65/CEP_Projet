@@ -29,14 +29,13 @@ namespace FinanceLibrary
             {
                 cmd.CommandText = "INSERT_ENTREE";
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refdepart", 5, DbType.Int32, d.RefDepart));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refsource", 5, DbType.Int32, d.RefSource));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@montant", 10, DbType.Double, d.Montant));
-
-
-                cmd.ExecuteNonQuery();
+                
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refdepart", 5, DbType.Int32, d.RefDepart));
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refsource", 5, DbType.Int32, d.RefSource));
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@montant", 10, DbType.Double, d.Montant));
+                
+                 cmd.ExecuteNonQuery();
 
                 if (d.Id > 0)
                     MessageBox.Show("Modification effectuer avec succès", "Mofification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,7 +51,7 @@ namespace FinanceLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT_ENTREE_FINANCE";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader dr = cmd.ExecuteReader();

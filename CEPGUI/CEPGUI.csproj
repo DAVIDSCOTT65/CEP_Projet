@@ -63,6 +63,24 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmDepartement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDepartement.Designer.cs">
+      <DependentUpon>FrmDepartement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEntree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEntree.Designer.cs">
+      <DependentUpon>FrmEntree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSource.Designer.cs">
+      <DependentUpon>FrmSource.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +90,32 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Class\PubCon.cs" />
+    <Compile Include="UserControls\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Entrees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Entrees.Designer.cs">
+      <DependentUpon>UC_Entrees.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\ConnectUser.resx">
       <DependentUpon>ConnectUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDepartement.resx">
+      <DependentUpon>FrmDepartement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEntree.resx">
+      <DependentUpon>FrmEntree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSource.resx">
+      <DependentUpon>FrmSource.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
@@ -91,6 +130,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Entrees.resx">
+      <DependentUpon>UC_Entrees.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,13 +150,41 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaptemeLibrary\BaptemeLibrary.csproj">
+      <Project>{5050aadb-905f-4667-b69b-03a45812412a}</Project>
+      <Name>BaptemeLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommuniqueLibrary\CommuniqueLibrary.csproj">
+      <Project>{57d80707-86e8-43df-8868-92521571e2fb}</Project>
+      <Name>CommuniqueLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DepartementLibrary\DepartementLibrary.csproj">
+      <Project>{6c291916-1050-4112-bb48-875013da80b3}</Project>
+      <Name>DepartementLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinanceLibrary\FinanceLibrary.csproj">
+      <Project>{b0bddfeb-4fe1-40e7-ac9b-b9abae4263e8}</Project>
+      <Name>FinanceLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ManageSingleConnexion\ManageSingleConnexion.csproj">
       <Project>{56b977c2-b4ff-438d-bbac-06fb114745e3}</Project>
       <Name>ManageSingleConnexion</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MariageLibrary\MariageLibrary.csproj">
+      <Project>{2569b3ff-3910-4479-abe0-2ad0501c3590}</Project>
+      <Name>MariageLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MembreLibrary\MembreLibrary.csproj">
+      <Project>{c6555015-73af-4775-b051-8c945c5295d9}</Project>
+      <Name>MembreLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ParametreLibrary\ParametreLibrary.csproj">
       <Project>{94050a77-b6ea-44be-8343-00be079081aa}</Project>
       <Name>ParametreLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReceptionEnfantLibrary\ReceptionEnfantLibrary.csproj">
+      <Project>{a9a5b897-4ee7-409a-bbf4-5458936daf54}</Project>
+      <Name>ReceptionEnfantLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\UtilitiesLibrary\UtilitiesLibrary.csproj">
       <Project>{4cab5313-06e8-4b91-ac2c-0624538e83f0}</Project>
@@ -153,6 +226,102 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Xbox Menu_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1600_103.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30-17210X20-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2304-1106041fa741.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1600zw009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8591_widescreen_creative_colors.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Children_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30-17210X20-21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_80px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20200115-WA0005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_80px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_80px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_80px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_80px5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_80px6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\City Church_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Feed_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Feed_80px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factory_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newlyweds_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newlyweds_80px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snowflake_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft Excel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins_70px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

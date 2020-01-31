@@ -1,4 +1,5 @@
 ﻿using CEPGUI.Forms;
+using CEPGUI.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,22 @@ namespace CEPGUI
             PubCon.testFile();
             var form = new ConnectUser();
             form.ShowDialog();
+            ChargerUser(new Home());
+        }
+        public void ChargerUser(UserControl userc)
+        {
+            try
+            {
+                userc.Dock = DockStyle.Fill;
+                centralPanel.Controls.Clear();
+                centralPanel.Controls.Add(userc);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,6 +89,11 @@ namespace CEPGUI
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new UC_Entrees());
         }
     }
 }

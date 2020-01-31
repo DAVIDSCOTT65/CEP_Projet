@@ -30,7 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.spanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -42,11 +45,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.centralPanel = new System.Windows.Forms.Panel();
             this.userPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.circularPictureBox2 = new CEPGUI.Class.CircularPictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -54,9 +57,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.circularPictureBox2 = new CEPGUI.Class.CircularPictureBox();
             this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
             this.panel1.SuspendLayout();
             this.spanel.SuspendLayout();
@@ -74,8 +74,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(1043, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(22, 655);
+            this.panel1.Size = new System.Drawing.Size(22, 674);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(22, 84);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "S\r\nH\r\nO\r\nW";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // spanel
             // 
@@ -100,8 +112,31 @@
             this.spanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.spanel.Location = new System.Drawing.Point(964, 0);
             this.spanel.Name = "spanel";
-            this.spanel.Size = new System.Drawing.Size(79, 655);
+            this.spanel.Size = new System.Drawing.Size(79, 674);
             this.spanel.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(140, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 16);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "NORD KIVU/Goma";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(73, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(236, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "REPUBLIQUE DEMOCRATIQUE DU CONGO";
             // 
             // panel7
             // 
@@ -198,7 +233,7 @@
             this.centralPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.centralPanel.Location = new System.Drawing.Point(1, 79);
             this.centralPanel.Name = "centralPanel";
-            this.centralPanel.Size = new System.Drawing.Size(957, 557);
+            this.centralPanel.Size = new System.Drawing.Size(957, 576);
             this.centralPanel.TabIndex = 2;
             this.centralPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -217,38 +252,16 @@
             this.userPanel.Size = new System.Drawing.Size(957, 73);
             this.userPanel.TabIndex = 3;
             // 
-            // label1
+            // label9
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Eglise Protestante CEP";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(140, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "NORD KIVU/Goma";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(73, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(236, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "REPUBLIQUE DEMOCRATIQUE DU CONGO";
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(772, 45);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 17);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "David Scott";
             // 
             // label8
             // 
@@ -261,16 +274,37 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "MIRINDI";
             // 
-            // label9
+            // label1
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(772, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 17);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "David Scott";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Eglise Protestante CEP";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(-2, 658);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(184, 17);
+            this.label10.TabIndex = 91;
+            this.label10.Text = "D@v Coding Concept 2020";
+            // 
+            // circularPictureBox2
+            // 
+            this.circularPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.circularPictureBox2.Image = global::CEPGUI.Properties.Resources.IMG_5481;
+            this.circularPictureBox2.Location = new System.Drawing.Point(880, 6);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(65, 59);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox2.TabIndex = 15;
+            this.circularPictureBox2.TabStop = false;
             // 
             // button8
             // 
@@ -319,6 +353,7 @@
             this.button6.TabIndex = 10;
             this.button6.Text = "          Finance";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -384,40 +419,6 @@
             this.button2.Text = "       Membres de l\'église";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 84);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "S\r\nH\r\nO\r\nW";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(-2, 639);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(184, 17);
-            this.label10.TabIndex = 91;
-            this.label10.Text = "D@v Coding Concept 2020";
-            // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularPictureBox2.Image = global::CEPGUI.Properties.Resources.IMG_5481;
-            this.circularPictureBox2.Location = new System.Drawing.Point(880, 6);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(65, 59);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 15;
-            this.circularPictureBox2.TabStop = false;
-            // 
             // circularPictureBox1
             // 
             this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.logocep;
@@ -433,7 +434,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1065, 655);
+            this.ClientSize = new System.Drawing.Size(1065, 674);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.userPanel);
             this.Controls.Add(this.centralPanel);

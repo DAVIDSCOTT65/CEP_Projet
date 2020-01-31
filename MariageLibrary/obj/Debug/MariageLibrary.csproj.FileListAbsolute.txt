@@ -6,3 +6,4 @@ E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\ManageSingleConnexion.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\bin\Debug\ParametreLibrary.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\obj\Debug\MariageLibrary.dll
 E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\obj\Debug\MariageLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\MariageLibrary\obj\Debug\MariageLibrary.csprojResolveAssemblyReference.cache
