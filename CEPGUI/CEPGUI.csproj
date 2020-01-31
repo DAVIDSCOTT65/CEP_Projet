@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\CircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class\DynamicClasses.cs" />
     <Compile Include="Class\UserSession.cs" />
     <Compile Include="Forms\ConnectUser.cs">
@@ -86,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -113,6 +117,42 @@
       <Project>{4cab5313-06e8-4b91-ac2c-0624538e83f0}</Project>
       <Name>UtilitiesLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dav.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_5481.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logocep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conference_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Group Man Man_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send Mass Email_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Children_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newlyweds_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snowflake_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xbox Menu_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
