@@ -1,6 +1,6 @@
 ﻿namespace CEPGUI.UserControls
 {
-    partial class UC_Entrees
+    partial class UC_Depense
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,9 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Entrees));
-            this.serchTxt = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Depense));
             this.dgFinance = new System.Windows.Forms.DataGridView();
+            this.serchTxt = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -48,15 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgFinance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // serchTxt
-            // 
-            this.serchTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.serchTxt.Location = new System.Drawing.Point(53, 52);
-            this.serchTxt.Name = "serchTxt";
-            this.serchTxt.Size = new System.Drawing.Size(755, 27);
-            this.serchTxt.TabIndex = 78;
             // 
             // dgFinance
             // 
@@ -108,7 +99,17 @@
             this.dgFinance.RowHeadersVisible = false;
             this.dgFinance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgFinance.Size = new System.Drawing.Size(948, 488);
-            this.dgFinance.TabIndex = 81;
+            this.dgFinance.TabIndex = 86;
+            this.dgFinance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFinance_CellContentClick);
+            // 
+            // serchTxt
+            // 
+            this.serchTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.serchTxt.Location = new System.Drawing.Point(53, 52);
+            this.serchTxt.Name = "serchTxt";
+            this.serchTxt.Size = new System.Drawing.Size(755, 27);
+            this.serchTxt.TabIndex = 83;
             // 
             // button3
             // 
@@ -122,7 +123,7 @@
             this.button3.Location = new System.Drawing.Point(888, 52);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(40, 28);
-            this.button3.TabIndex = 82;
+            this.button3.TabIndex = 87;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -137,7 +138,7 @@
             this.button1.Location = new System.Drawing.Point(842, 51);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 28);
-            this.button1.TabIndex = 80;
+            this.button1.TabIndex = 85;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -150,7 +151,7 @@
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 79;
+            this.pictureBox4.TabIndex = 84;
             this.pictureBox4.TabStop = false;
             // 
             // ColNum
@@ -165,16 +166,16 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "DateEntree";
-            this.Column1.HeaderText = "Date Entree";
+            this.Column1.DataPropertyName = "DateDepense";
+            this.Column1.HeaderText = "Date";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 130;
+            this.Column1.Width = 75;
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "Source";
-            this.Column2.HeaderText = "Dépense";
+            this.Column2.DataPropertyName = "TypeDepense";
+            this.Column2.HeaderText = "Motif";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -210,27 +211,27 @@
             // 
             // Column7
             // 
-            this.Column7.DataPropertyName = "RefSource";
+            this.Column7.DataPropertyName = "RefType";
             this.Column7.HeaderText = "RefSource";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Visible = false;
             // 
-            // UC_Entrees
+            // UC_Depense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.dgFinance);
+            this.Controls.Add(this.serchTxt);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.serchTxt);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "UC_Entrees";
+            this.Name = "UC_Depense";
             this.Size = new System.Drawing.Size(957, 576);
-            this.Load += new System.EventHandler(this.UC_Entrees_Load);
+            this.Load += new System.EventHandler(this.UC_Depense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgFinance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -240,11 +241,11 @@
 
         #endregion
 
+        public System.Windows.Forms.DataGridView dgFinance;
+        private System.Windows.Forms.TextBox serchTxt;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox serchTxt;
-        public System.Windows.Forms.DataGridView dgFinance;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

@@ -34,3 +34,6 @@ E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\MariageLibrary.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\MembreLibrary.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\ReceptionEnfantLibrary.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmSource.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmDepense.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmType.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.UserControls.UC_Depense.resources

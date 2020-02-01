@@ -27,12 +27,12 @@ namespace FinanceLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "INSERT_ENTREE";
+                cmd.CommandText = "INSERT_DEPENSE";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refdepart", 5, DbType.Int32, d.RefDepart));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@@reftype", 5, DbType.Int32, d.RefType));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@reftype", 5, DbType.Int32, d.RefType));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@montant", 10, DbType.Double, d.Montant));
 
 
@@ -52,7 +52,7 @@ namespace FinanceLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT_DEPENSE_FINANCE";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader dr = cmd.ExecuteReader();

@@ -1,6 +1,6 @@
 ﻿namespace CEPGUI.Forms
 {
-    partial class FrmDepartement
+    partial class FrmType
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.departTxt = new System.Windows.Forms.TextBox();
+            this.designTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.panel4.Location = new System.Drawing.Point(474, 39);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 152);
-            this.panel4.TabIndex = 197;
+            this.panel4.TabIndex = 219;
             // 
             // panel3
             // 
@@ -57,7 +57,17 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 189);
-            this.panel3.TabIndex = 196;
+            this.panel3.TabIndex = 218;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.Coins_70px;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 217;
+            this.pictureBox1.TabStop = false;
             // 
             // label5
             // 
@@ -66,7 +76,7 @@
             this.label5.Location = new System.Drawing.Point(431, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 21);
-            this.label5.TabIndex = 193;
+            this.label5.TabIndex = 216;
             this.label5.Text = "*";
             // 
             // label4
@@ -75,15 +85,15 @@
             this.label4.Location = new System.Drawing.Point(16, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 21);
-            this.label4.TabIndex = 190;
+            this.label4.TabIndex = 215;
             this.label4.Text = "Designation";
             // 
-            // departTxt
+            // designTxt
             // 
-            this.departTxt.Location = new System.Drawing.Point(125, 90);
-            this.departTxt.Name = "departTxt";
-            this.departTxt.Size = new System.Drawing.Size(300, 27);
-            this.departTxt.TabIndex = 189;
+            this.designTxt.Location = new System.Drawing.Point(125, 90);
+            this.designTxt.Name = "designTxt";
+            this.designTxt.Size = new System.Drawing.Size(300, 27);
+            this.designTxt.TabIndex = 214;
             // 
             // label6
             // 
@@ -93,9 +103,9 @@
             this.label6.Location = new System.Drawing.Point(108, 24);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 24);
-            this.label6.TabIndex = 184;
-            this.label6.Text = "Création département";
+            this.label6.Size = new System.Drawing.Size(154, 24);
+            this.label6.TabIndex = 213;
+            this.label6.Text = "Type dépense";
             // 
             // button1
             // 
@@ -111,7 +121,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(371, 38);
-            this.button1.TabIndex = 182;
+            this.button1.TabIndex = 211;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -123,7 +133,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(473, 1);
-            this.panel2.TabIndex = 181;
+            this.panel2.TabIndex = 210;
             // 
             // button2
             // 
@@ -132,7 +142,7 @@
             this.button2.Location = new System.Drawing.Point(437, 1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 37);
-            this.button2.TabIndex = 183;
+            this.button2.TabIndex = 212;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -143,19 +153,9 @@
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 1);
-            this.panel1.TabIndex = 180;
+            this.panel1.TabIndex = 209;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.Department_70px;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 195;
-            this.pictureBox1.TabStop = false;
-            // 
-            // FrmDepartement
+            // FrmType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,7 +166,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.departTxt);
+            this.Controls.Add(this.designTxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -176,9 +176,9 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmDepartement";
+            this.Name = "FrmType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDepartement";
+            this.Text = "FrmType";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -192,7 +192,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox departTxt;
+        private System.Windows.Forms.TextBox designTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;

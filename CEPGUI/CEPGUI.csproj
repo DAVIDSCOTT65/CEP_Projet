@@ -69,6 +69,12 @@
     <Compile Include="Forms\FrmDepartement.Designer.cs">
       <DependentUpon>FrmDepartement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmDepense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDepense.Designer.cs">
+      <DependentUpon>FrmDepense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmEntree.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="Forms\FrmSource.Designer.cs">
       <DependentUpon>FrmSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmType.Designer.cs">
+      <DependentUpon>FrmType.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PrincipalForm.cs">
       <SubType>Form</SubType>
@@ -96,6 +108,12 @@
     <Compile Include="UserControls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Depense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Depense.Designer.cs">
+      <DependentUpon>UC_Depense.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Entrees.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,11 +129,17 @@
     <EmbeddedResource Include="Forms\FrmDepartement.resx">
       <DependentUpon>FrmDepartement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDepense.resx">
+      <DependentUpon>FrmDepense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEntree.resx">
       <DependentUpon>FrmEntree.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSource.resx">
       <DependentUpon>FrmSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmType.resx">
+      <DependentUpon>FrmType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
@@ -132,6 +156,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Depense.resx">
+      <DependentUpon>UC_Depense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Entrees.resx">
       <DependentUpon>UC_Entrees.cs</DependentUpon>
