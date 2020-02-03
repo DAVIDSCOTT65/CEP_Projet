@@ -93,6 +93,11 @@ namespace CEPGUI
 
         private void button6_Click(object sender, EventArgs e)
         {
+            ChargerUser(new UC_Entrees());
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
             ChargerUser(new UC_Depense());
         }
     }

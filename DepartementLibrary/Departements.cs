@@ -59,6 +59,29 @@ namespace DepartementLibrary
             }
             return lst;
         }
+        public int CountDepartement()
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "COUNT_DEPARTEMENT";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr["NbrDepart"] == DBNull.Value)
+                        Id = 0;
+                    else
+                        Id = Convert.ToInt32(dr["NbrDepart"].ToString());
+                }
+                dr.Dispose();
+            }
+            return Id;
+
+        }
         public List<Departements> Research(string recherche)
         {
             List<Departements> lst = new List<Departements>();

@@ -71,7 +71,7 @@ namespace FinanceLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM Entree WHERE (Designation LIKE '%" + recherche + "%' OR Designation LIKE '%" + recherche + "' OR Designation LIKE '" + recherche + "%') ORDER By Id DESC";
+                cmd.CommandText = "SELECT * FROM Affichage_Finance_Entree WHERE (Designation LIKE '%" + recherche + "%' OR Designation LIKE '%" + recherche + "' OR Designation LIKE '" + recherche + "%') ORDER By Id DESC";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();

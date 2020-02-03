@@ -38,5 +38,24 @@ namespace CEPGUI.UserControls
         {
 
         }
+
+        private void serchTxt_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Search(new Depenses());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
+
+        }
+        void Search(Depenses art)
+        {
+            dgFinance.DataSource = art.Research(serchTxt.Text);
+        }
     }
 }

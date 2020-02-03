@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button5 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,6 +48,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCaiss = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +67,7 @@
             this.button5.Size = new System.Drawing.Size(40, 28);
             this.button5.TabIndex = 199;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel4
             // 
@@ -96,7 +100,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(419, 161);
+            this.label7.Location = new System.Drawing.Point(397, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(16, 21);
             this.label7.TabIndex = 195;
@@ -106,7 +110,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(419, 89);
+            this.label5.Location = new System.Drawing.Point(397, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 21);
             this.label5.TabIndex = 194;
@@ -115,7 +119,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 165);
+            this.label2.Location = new System.Drawing.Point(8, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 21);
             this.label2.TabIndex = 193;
@@ -124,7 +128,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 129);
+            this.label1.Location = new System.Drawing.Point(8, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 192;
@@ -133,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 92);
+            this.label4.Location = new System.Drawing.Point(8, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 21);
             this.label4.TabIndex = 191;
@@ -141,7 +145,7 @@
             // 
             // montantTxt
             // 
-            this.montantTxt.Location = new System.Drawing.Point(113, 89);
+            this.montantTxt.Location = new System.Drawing.Point(94, 89);
             this.montantTxt.Name = "montantTxt";
             this.montantTxt.Size = new System.Drawing.Size(300, 27);
             this.montantTxt.TabIndex = 190;
@@ -157,7 +161,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.button4.Image = global::CEPGUI.Properties.Resources.Add_32px;
-            this.button4.Location = new System.Drawing.Point(432, 124);
+            this.button4.Location = new System.Drawing.Point(413, 124);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(40, 28);
             this.button4.TabIndex = 189;
@@ -173,7 +177,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.button3.Image = global::CEPGUI.Properties.Resources.Add_32px;
-            this.button3.Location = new System.Drawing.Point(432, 158);
+            this.button3.Location = new System.Drawing.Point(413, 158);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(40, 28);
             this.button3.TabIndex = 188;
@@ -185,9 +189,9 @@
             this.sourceCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.sourceCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.sourceCombo.FormattingEnabled = true;
-            this.sourceCombo.Location = new System.Drawing.Point(113, 161);
+            this.sourceCombo.Location = new System.Drawing.Point(94, 161);
             this.sourceCombo.Name = "sourceCombo";
-            this.sourceCombo.Size = new System.Drawing.Size(304, 29);
+            this.sourceCombo.Size = new System.Drawing.Size(300, 29);
             this.sourceCombo.TabIndex = 187;
             // 
             // departCombo
@@ -195,9 +199,9 @@
             this.departCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.departCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.departCombo.FormattingEnabled = true;
-            this.departCombo.Location = new System.Drawing.Point(113, 126);
+            this.departCombo.Location = new System.Drawing.Point(94, 126);
             this.departCombo.Name = "departCombo";
-            this.departCombo.Size = new System.Drawing.Size(304, 29);
+            this.departCombo.Size = new System.Drawing.Size(300, 29);
             this.departCombo.TabIndex = 186;
             // 
             // label6
@@ -225,7 +229,7 @@
             this.button1.Location = new System.Drawing.Point(64, 215);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(371, 38);
+            this.button1.Size = new System.Drawing.Size(377, 38);
             this.button1.TabIndex = 183;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
@@ -260,12 +264,23 @@
             this.panel1.Size = new System.Drawing.Size(437, 1);
             this.panel1.TabIndex = 181;
             // 
+            // lblCaiss
+            // 
+            this.lblCaiss.AutoSize = true;
+            this.lblCaiss.Location = new System.Drawing.Point(422, 89);
+            this.lblCaiss.Name = "lblCaiss";
+            this.lblCaiss.Size = new System.Drawing.Size(19, 21);
+            this.lblCaiss.TabIndex = 200;
+            this.lblCaiss.Text = "0";
+            this.toolTip1.SetToolTip(this.lblCaiss, "Montant total en caisse");
+            // 
             // FrmDepense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(474, 273);
+            this.Controls.Add(this.lblCaiss);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -320,5 +335,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCaiss;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

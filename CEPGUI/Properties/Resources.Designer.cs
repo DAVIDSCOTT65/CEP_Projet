@@ -263,6 +263,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Giving_Tickets_50px {
+            get {
+                object obj = ResourceManager.GetObject("Giving Tickets_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_20200115_WA0005 {
             get {
                 object obj = ResourceManager.GetObject("IMG-20200115-WA0005", resourceCulture);

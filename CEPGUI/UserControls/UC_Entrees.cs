@@ -33,5 +33,27 @@ namespace CEPGUI.UserControls
         {
             dgFinance.DataSource = ent.ListOfEntree();
         }
+
+        private void serchTxt_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Search(new Entree());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        void Search(Entree art)
+        {
+            dgFinance.DataSource = art.Research(serchTxt.Text);
+        }
+
+        private void dgFinance_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

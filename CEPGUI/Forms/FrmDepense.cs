@@ -15,6 +15,7 @@ namespace CEPGUI.Forms
     public partial class FrmDepense : Form
     {
         DynamicClasses dn = new DynamicClasses();
+        Depenses dep = new Depenses();
         public int id = 0;
         public FrmDepense()
         {
@@ -25,6 +26,8 @@ namespace CEPGUI.Forms
         {
             dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
             dn.chargeNomsCombo(sourceCombo, "Designation", "SELECT_DEPENSE");
+            lblCaiss.Text = dep.GetCaisse().ToString() + "$";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -52,7 +55,7 @@ namespace CEPGUI.Forms
         {
             try
             {
-                Depenses dep = new Depenses();
+                
 
                 dep.Id = id;
                 dep.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
@@ -73,6 +76,13 @@ namespace CEPGUI.Forms
             departCombo.Text = "";
             sourceCombo.Text = "";
             montantTxt.Text = "0";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
+            dn.chargeNomsCombo(sourceCombo, "Designation", "SELECT_DEPENSE");
+            lblCaiss.Text = dep.GetCaisse().ToString() + "$";
         }
     }
 }

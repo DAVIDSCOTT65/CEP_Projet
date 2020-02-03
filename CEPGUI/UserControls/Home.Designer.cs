@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -39,7 +41,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblCaisse = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -56,14 +58,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDepart = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel8.SuspendLayout();
@@ -101,6 +101,28 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(271, 129);
             this.panel7.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(121, 71);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(144, 17);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Nombre des baptisés";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(120, 40);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(140, 22);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "250 Baptemes";
             // 
             // pictureBox8
             // 
@@ -167,7 +189,7 @@
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel9.Controls.Add(this.label7);
             this.panel9.Controls.Add(this.pictureBox5);
-            this.panel9.Controls.Add(this.label8);
+            this.panel9.Controls.Add(this.lblCaisse);
             this.panel9.Location = new System.Drawing.Point(18, 347);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(292, 129);
@@ -194,16 +216,16 @@
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             // 
-            // label8
+            // lblCaisse
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(123, 56);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 33);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "500 Dollars";
+            this.lblCaisse.AutoSize = true;
+            this.lblCaisse.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaisse.ForeColor = System.Drawing.Color.White;
+            this.lblCaisse.Location = new System.Drawing.Point(123, 56);
+            this.lblCaisse.Name = "lblCaisse";
+            this.lblCaisse.Size = new System.Drawing.Size(153, 33);
+            this.lblCaisse.TabIndex = 5;
+            this.lblCaisse.Text = "500 Dollars";
             // 
             // panel4
             // 
@@ -386,7 +408,7 @@
             this.panel6.BackgroundImage = global::CEPGUI.Properties.Resources._1600zw009;
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.lblDepart);
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Location = new System.Drawing.Point(18, 212);
             this.panel6.Name = "panel6";
@@ -405,17 +427,17 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Régroupant nos membres";
             // 
-            // label4
+            // lblDepart
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(120, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 22);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "35 Départements";
+            this.lblDepart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDepart.AutoSize = true;
+            this.lblDepart.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepart.ForeColor = System.Drawing.Color.White;
+            this.lblDepart.Location = new System.Drawing.Point(120, 79);
+            this.lblDepart.Name = "lblDepart";
+            this.lblDepart.Size = new System.Drawing.Size(169, 22);
+            this.lblDepart.TabIndex = 3;
+            this.lblDepart.Text = "35 Départements";
             // 
             // pictureBox4
             // 
@@ -472,28 +494,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(121, 71);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(144, 17);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Nombre des baptisés";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(120, 40);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 22);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "250 Baptemes";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -509,7 +509,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(904, 502);
             this.Load += new System.EventHandler(this.Home_Load);
@@ -561,12 +561,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDepart;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblCaisse;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox7;

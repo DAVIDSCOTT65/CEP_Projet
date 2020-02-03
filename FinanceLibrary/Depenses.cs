@@ -65,6 +65,29 @@ namespace FinanceLibrary
             }
             return lst;
         }
+        public double GetCaisse()
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "GET_CAISSE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr["TotalEnCaisse"] == DBNull.Value)
+                        Montant = 0;
+                    else
+                        Montant = Convert.ToDouble(dr["TotalEnCaisse"].ToString());
+                }
+                dr.Dispose();
+            }
+            return Montant;
+
+        }
         public List<Depenses> Research(string recherche)
         {
             List<Depenses> lst = new List<Depenses>();
@@ -72,7 +95,7 @@ namespace FinanceLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM Depenses WHERE (Designation LIKE '%" + recherche + "%' OR Designation LIKE '%" + recherche + "' OR Designation LIKE '" + recherche + "%') ORDER By Id DESC";
+                cmd.CommandText = "SELECT * FROM Affichage_Finance_Depense WHERE (Designation LIKE '%" + recherche + "%' OR Designation LIKE '%" + recherche + "' OR Designation LIKE '" + recherche + "%') ORDER By Id DESC";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();
