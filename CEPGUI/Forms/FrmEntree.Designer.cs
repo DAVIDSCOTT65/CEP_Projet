@@ -138,6 +138,7 @@
             this.montantTxt.TabIndex = 170;
             this.montantTxt.Text = "0";
             this.montantTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.montantTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montantTxt_KeyPress);
             // 
             // label4
             // 

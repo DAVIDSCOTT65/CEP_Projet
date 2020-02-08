@@ -26,7 +26,7 @@ namespace CEPGUI.Forms
         {
             dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
             dn.chargeNomsCombo(sourceCombo, "Designation", "SELECT_DEPENSE");
-            lblCaiss.Text = dep.GetCaisse().ToString() + "$";
+            lblCaiss.Text = dep.GetCaisse().ToString();
 
         }
 
@@ -55,15 +55,22 @@ namespace CEPGUI.Forms
         {
             try
             {
+
+                if (Convert.ToDouble(montantTxt.Text) > Convert.ToDouble(lblCaiss.Text) || Convert.ToDouble(montantTxt.Text) <= 0)
+                    MessageBox.Show("Montant négatif ou montant supérieur au montant en caisse", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    dep.Id = id;
+                    dep.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
+                    dep.RefType = dn.retourId(sourceCombo.Text, "@design", "GET_ID_TYPE");
+                    dep.Montant = Convert.ToDouble(montantTxt.Text);
+                    dep.SaveDatas(dep);
+
+                    Initialise();
+
+                    lblCaiss.Text = dep.GetCaisse().ToString();
+                }
                 
-
-                dep.Id = id;
-                dep.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
-                dep.RefType = dn.retourId(sourceCombo.Text, "@design", "GET_ID_TYPE");
-                dep.Montant = Convert.ToDouble(montantTxt.Text);
-                dep.SaveDatas(dep);
-
-                Initialise();
             }
             catch (Exception ex)
             {
@@ -83,6 +90,15 @@ namespace CEPGUI.Forms
             dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
             dn.chargeNomsCombo(sourceCombo, "Designation", "SELECT_DEPENSE");
             lblCaiss.Text = dep.GetCaisse().ToString() + "$";
+        }
+
+        private void montantTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsControl(e.KeyChar)) && !(Char.IsDigit(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Valeur monnaitaire uniquement");
+            }
         }
     }
 }

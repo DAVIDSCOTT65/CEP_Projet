@@ -100,5 +100,20 @@ namespace CEPGUI
         {
             ChargerUser(new UC_Depense());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new UC_Membre());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new Home());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new UC_Departements());
+        }
     }
 }

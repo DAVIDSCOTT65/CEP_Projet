@@ -183,6 +183,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Church_52px {
+            get {
+                object obj = ResourceManager.GetObject("Church_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap City_Church_80px {
             get {
                 object obj = ResourceManager.GetObject("City Church_80px", resourceCulture);
@@ -223,6 +233,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Department {
+            get {
+                object obj = ResourceManager.GetObject("Department", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Department_50px {
             get {
                 object obj = ResourceManager.GetObject("Department_50px", resourceCulture);
@@ -233,9 +253,29 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Department_50px1 {
+            get {
+                object obj = ResourceManager.GetObject("Department_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Department_70px {
             get {
                 object obj = ResourceManager.GetObject("Department_70px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Department_70px1 {
+            get {
+                object obj = ResourceManager.GetObject("Department_70px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +306,26 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap Giving_Tickets_50px {
             get {
                 object obj = ResourceManager.GetObject("Giving Tickets_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images__3_ {
+            get {
+                object obj = ResourceManager.GetObject("images (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images__3_1 {
+            get {
+                object obj = ResourceManager.GetObject("images (3)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +486,16 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap User_Group_Man_Man_50px {
             get {
                 object obj = ResourceManager.GetObject("User Group Man Man_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Groups_70px {
+            get {
+                object obj = ResourceManager.GetObject("User Groups_70px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

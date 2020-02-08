@@ -92,5 +92,14 @@ namespace CEPGUI.Forms
             departCombo.SelectedIndex = -1;
             sourceCombo.SelectedIndex = -1;
         }
+
+        private void montantTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsControl(e.KeyChar)) && !(Char.IsDigit(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Valeur monnaitaire uniquement");
+            }
+        }
     }
 }

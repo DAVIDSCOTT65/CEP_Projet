@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinanceLibrary;
 using DepartementLibrary;
+using MembreLibrary;
 
 namespace CEPGUI.UserControls
 {
@@ -16,6 +17,7 @@ namespace CEPGUI.UserControls
     {
         Depenses dep = new Depenses();
         Departements d = new Departements();
+        Membre m = new Membre();
         public Home()
         {
             InitializeComponent();
@@ -32,6 +34,7 @@ namespace CEPGUI.UserControls
         {
             lblCaisse.Text = dep.GetCaisse().ToString() + " Dollars";
             lblDepart.Text = d.CountDepartement().ToString() + " Departements";
+            lblMembre.Text = m.CountMembre().ToString() + " Fidèles";
         }
 
 

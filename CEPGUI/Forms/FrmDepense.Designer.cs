@@ -50,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCaiss = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,6 +152,7 @@
             this.montantTxt.TabIndex = 190;
             this.montantTxt.Text = "0";
             this.montantTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.montantTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montantTxt_KeyPress);
             // 
             // button4
             // 
@@ -267,12 +269,22 @@
             // lblCaiss
             // 
             this.lblCaiss.AutoSize = true;
-            this.lblCaiss.Location = new System.Drawing.Point(422, 89);
+            this.lblCaiss.Location = new System.Drawing.Point(419, 89);
             this.lblCaiss.Name = "lblCaiss";
             this.lblCaiss.Size = new System.Drawing.Size(19, 21);
             this.lblCaiss.TabIndex = 200;
             this.lblCaiss.Text = "0";
             this.toolTip1.SetToolTip(this.lblCaiss, "Montant total en caisse");
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(450, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 21);
+            this.label3.TabIndex = 201;
+            this.label3.Text = "$";
+            this.toolTip1.SetToolTip(this.label3, "Montant total en caisse");
             // 
             // FrmDepense
             // 
@@ -280,6 +292,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(474, 273);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCaiss);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel4);
@@ -337,5 +350,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCaiss;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -62,7 +62,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMembre = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -281,7 +281,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::CEPGUI.Properties.Resources._2304_1106041fa741;
+            this.panel3.BackgroundImage = global::CEPGUI.Properties.Resources.images__3_1;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(695, 77);
@@ -292,7 +292,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CEPGUI.Properties.Resources.City_Church_80px;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(66, 27);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(110, 99);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -455,7 +455,7 @@
             this.panel1.BackgroundImage = global::CEPGUI.Properties.Resources._1600_103;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblMembre);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(18, 77);
             this.panel1.Name = "panel1";
@@ -473,16 +473,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Reparties en département";
             // 
-            // label1
+            // lblMembre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(136, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "570 fidèles";
+            this.lblMembre.AutoSize = true;
+            this.lblMembre.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMembre.ForeColor = System.Drawing.Color.White;
+            this.lblMembre.Location = new System.Drawing.Point(136, 50);
+            this.lblMembre.Name = "lblMembre";
+            this.lblMembre.Size = new System.Drawing.Size(131, 27);
+            this.lblMembre.TabIndex = 1;
+            this.lblMembre.Text = "570 fidèles";
             // 
             // pictureBox1
             // 
@@ -559,7 +559,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMembre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblDepart;
         private System.Windows.Forms.PictureBox pictureBox8;

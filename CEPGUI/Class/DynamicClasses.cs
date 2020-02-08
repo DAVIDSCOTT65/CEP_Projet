@@ -300,5 +300,38 @@ namespace CEPGUI.Class
             }
 
         }
+        public void ExportInExcel(DataGridView dg)
+        {
+            if(dg.Rows.Count <=0)
+            {
+                MessageBox.Show("Rien à exporter, tableau vide", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                copyAlltoClipboard(dg);
+                Microsoft.Office.Interop.Excel.Application xlexcel;
+                Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+                Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+                xlexcel = new Microsoft.Office.Interop.Excel.Application();
+                xlexcel.Visible = true;
+                xlWorkBook = xlexcel.Workbooks.Add(misValue);
+                xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
+                CR.Select();
+                xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            }
+           
+        }
+        private void copyAlltoClipboard(DataGridView dg)
+        {
+            //to remove the first blank column from datagridview
+            dg.RowHeadersVisible = false;
+            dg.SelectAll();
+            DataObject dataObj = dg.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+        }
+
     }
 }
