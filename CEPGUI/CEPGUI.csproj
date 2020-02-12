@@ -33,11 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +61,18 @@
     </Compile>
     <Compile Include="Class\DynamicClasses.cs" />
     <Compile Include="Class\UserSession.cs" />
+    <Compile Include="EtatSorties\CR_Depense.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Depense.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EtatSorties\CR_Entree.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Entree.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\AffectactionDepartement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +108,12 @@
     </Compile>
     <Compile Include="Forms\FrmEntree.Designer.cs">
       <DependentUpon>FrmEntree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmImpression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmImpression.Designer.cs">
+      <DependentUpon>FrmImpression.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMembre.cs">
       <SubType>Form</SubType>
@@ -147,6 +172,14 @@
     <Compile Include="UserControls\UC_Membre.Designer.cs">
       <DependentUpon>UC_Membre.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EtatSorties\CR_Depense.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Depense.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Entree.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Entree.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AffectactionDepartement.resx">
       <DependentUpon>AffectactionDepartement.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEntree.resx">
       <DependentUpon>FrmEntree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmImpression.resx">
+      <DependentUpon>FrmImpression.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMembre.resx">
       <DependentUpon>FrmMembre.cs</DependentUpon>
@@ -412,6 +448,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Department_70px1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

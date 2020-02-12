@@ -90,7 +90,9 @@
             this.userTxt.Name = "userTxt";
             this.userTxt.Size = new System.Drawing.Size(345, 20);
             this.userTxt.TabIndex = 53;
+            this.userTxt.Text = "Username";
             this.userTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.userTxt.Click += new System.EventHandler(this.userTxt_Click);
             // 
             // panel3
             // 
@@ -128,8 +130,10 @@
             this.passTxt.Name = "passTxt";
             this.passTxt.Size = new System.Drawing.Size(345, 19);
             this.passTxt.TabIndex = 54;
+            this.passTxt.Text = "Password";
             this.passTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passTxt.UseSystemPasswordChar = true;
+            this.passTxt.Click += new System.EventHandler(this.passTxt_Click);
             // 
             // ConnectUser
             // 

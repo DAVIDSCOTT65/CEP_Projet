@@ -59,5 +59,15 @@ namespace CEPGUI.Forms
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
         }
+
+        private void passTxt_Click(object sender, EventArgs e)
+        {
+            passTxt.Text = "";
+        }
+
+        private void userTxt_Click(object sender, EventArgs e)
+        {
+            userTxt.Text = "";
+        }
     }
 }
