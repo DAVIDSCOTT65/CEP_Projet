@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CEPGUI.Forms;
 using FinanceLibrary;
+using CEPGUI.Class;
 
 namespace CEPGUI.UserControls
 {
     public partial class UC_Entrees : UserControl
     {
+        DynamicClasses dn = new DynamicClasses();
         public UC_Entrees()
         {
             InitializeComponent();
@@ -54,6 +56,11 @@ namespace CEPGUI.UserControls
         private void dgFinance_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dn.RapportEntreeToday();
         }
     }
 }

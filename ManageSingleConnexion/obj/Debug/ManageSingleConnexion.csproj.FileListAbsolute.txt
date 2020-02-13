@@ -2,4 +2,3 @@ E:\DAVID\PROJETBDD\ProjetCEP\ManageSingleConnexion\bin\Debug\ManageSingleConnexi
 E:\DAVID\PROJETBDD\ProjetCEP\ManageSingleConnexion\bin\Debug\ManageSingleConnexion.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\ManageSingleConnexion\obj\Debug\ManageSingleConnexion.dll
 E:\DAVID\PROJETBDD\ProjetCEP\ManageSingleConnexion\obj\Debug\ManageSingleConnexion.pdb
-E:\DAVID\PROJETBDD\ProjetCEP\ManageSingleConnexion\obj\Debug\ManageSingleConnexion.csprojResolveAssemblyReference.cache

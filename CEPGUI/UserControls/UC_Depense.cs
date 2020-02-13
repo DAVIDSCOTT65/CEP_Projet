@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CEPGUI.Forms;
 using FinanceLibrary;
+using CEPGUI.Class;
 
 namespace CEPGUI.UserControls
 {
     public partial class UC_Depense : UserControl
     {
+        DynamicClasses dn = new DynamicClasses();
         public UC_Depense()
         {
             InitializeComponent();
@@ -56,6 +58,12 @@ namespace CEPGUI.UserControls
         void Search(Depenses art)
         {
             dgFinance.DataSource = art.Research(serchTxt.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            dn.RapportDepensesToday();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using ManageSingleConnexion;
+﻿using CEPGUI.EtatSorties;
+using CEPGUI.Forms;
+using ManageSingleConnexion;
 using ParametreLibrary;
 using System;
 using System.Collections.Generic;
@@ -331,6 +333,84 @@ namespace CEPGUI.Class
             DataObject dataObj = dg.GetClipboardContent();
             if (dataObj != null)
                 Clipboard.SetDataObject(dataObj);
+        }
+        public void RapportDepensesToday()
+        {
+            try
+            {
+                FrmImpression frm = new FrmImpression();
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetDepensesToday";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Finance_Depense");
+
+                    CR_Depense entree = new CR_Depense();
+                    entree.SetDataSource(ds);
+
+                    frm.crystalReportViewer1.ReportSource = entree;
+                    frm.crystalReportViewer1.Refresh();
+
+
+                    frm.Visible = true;
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
+        public void RapportEntreeToday()
+        {
+            try
+            {
+                FrmImpression frm = new FrmImpression();
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetEntreesToday";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Finance_Entree");
+
+                    CR_Entree entree = new CR_Entree();
+                    entree.SetDataSource(ds);
+
+                    frm.crystalReportViewer1.ReportSource = entree;
+                    frm.crystalReportViewer1.Refresh();
+
+
+                    frm.Visible = true;
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
         }
 
     }
