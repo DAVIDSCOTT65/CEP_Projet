@@ -357,7 +357,7 @@ namespace CEPGUI.Class
 
                     frm.crystalReportViewer1.ReportSource = entree;
                     frm.crystalReportViewer1.Refresh();
-
+                    frm.rapport = "Depenses";
 
                     frm.Visible = true;
 
@@ -396,7 +396,7 @@ namespace CEPGUI.Class
 
                     frm.crystalReportViewer1.ReportSource = entree;
                     frm.crystalReportViewer1.Refresh();
-
+                    frm.rapport = "Entrees";
 
                     frm.Visible = true;
 
