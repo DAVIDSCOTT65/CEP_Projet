@@ -26,8 +26,8 @@ namespace CommuniqueLibrary
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@detailscom", 200, DbType.String, d.DetailsComm));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@@datepublication", 20, DbType.Date, d.DatePublication));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@detailscom", 255, DbType.String, d.DetailsComm));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@datepublication", 20, DbType.Date, d.DatePublication));
 
                 cmd.ExecuteNonQuery();
 

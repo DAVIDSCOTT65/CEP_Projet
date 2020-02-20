@@ -42,7 +42,7 @@ namespace CommuniqueLibrary
 
             }
         }
-        public List<CommuniquerConcerner> ListOfCommuniquer()
+        public List<CommuniquerConcerner> ListOfCommuniquer(string depart)
         {
             List<CommuniquerConcerner> lst = new List<CommuniquerConcerner>();
 
@@ -50,8 +50,19 @@ namespace CommuniqueLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                if (depart == "Tous")
+                {
+                    cmd.CommandText = "SELECT_COMMUNIQUE_POUR_TOUS";
+                    
+                }
+                else
+                {
+                    cmd.CommandText = "SELECT_COMMUNIQUE";
+                }
+                
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@depart", 200, DbType.String, depart));
 
                 IDataReader dr = cmd.ExecuteReader();
 
@@ -63,14 +74,14 @@ namespace CommuniqueLibrary
             }
             return lst;
         }
-        public List<CommuniquerConcerner> Research(string recherche)
+        public List<CommuniquerConcerner> Research(string recherche,string depart)
         {
             List<CommuniquerConcerner> lst = new List<CommuniquerConcerner>();
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM CommuniquerConcerner WHERE (DatePublication LIKE '%" + recherche + "%' OR DatePublication LIKE '%" + recherche + "' OR DatePublication LIKE '" + recherche + "%') ORDER By Id DESC";
+                cmd.CommandText = "SELECT * FROM Affichage_Details_Communique WHERE (DetailsCommunique LIKE '%" + recherche + "%' OR DetailsCommunique LIKE '%" + recherche + "' OR DetailsCommunique LIKE '" + recherche + "%') AND Departement='" + depart + "'";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();
@@ -92,7 +103,7 @@ namespace CommuniqueLibrary
             m.Num = i;
             m.Id = Convert.ToInt32(dr["Id"].ToString());
             m.Depart = dr["Departement"].ToString();
-            m.DetailsComm = dr["DetailsComm"].ToString();
+            m.DetailsComm = dr["DetailsCommunique"].ToString();
             m.DatePublication = Convert.ToDateTime(dr["DatePublication"].ToString());
 
 

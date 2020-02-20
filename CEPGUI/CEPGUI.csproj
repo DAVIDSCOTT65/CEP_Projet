@@ -92,6 +92,12 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmAnnonce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAnnonce.Designer.cs">
+      <DependentUpon>FrmAnnonce.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmDepartement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     <Compile Include="UserControls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Communique.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Communique.Designer.cs">
+      <DependentUpon>UC_Communique.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Departements.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +202,9 @@
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAnnonce.resx">
+      <DependentUpon>FrmAnnonce.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartement.resx">
       <DependentUpon>FrmDepartement.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +241,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Communique.resx">
+      <DependentUpon>UC_Communique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Departements.resx">
       <DependentUpon>UC_Departements.cs</DependentUpon>
@@ -455,6 +473,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

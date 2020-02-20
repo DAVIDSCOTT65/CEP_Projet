@@ -32,9 +32,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.spanel = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -42,31 +51,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.centralPanel = new System.Windows.Forms.Panel();
             this.userPanel = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.circularPictureBox2 = new CEPGUI.Class.CircularPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.circularPictureBox2 = new CEPGUI.Class.CircularPictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
             this.panel1.SuspendLayout();
             this.spanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.userPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +119,40 @@
             this.spanel.Size = new System.Drawing.Size(79, 749);
             this.spanel.TabIndex = 1;
             // 
+            // button10
+            // 
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Image = global::CEPGUI.Properties.Resources.Church_52px;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 199);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(295, 53);
+            this.button10.TabIndex = 16;
+            this.button10.Text = "       Membres de l\'église";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Image = global::CEPGUI.Properties.Resources.Giving_Tickets_50px;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(11, 554);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(295, 53);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "          Dépense";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -142,6 +176,38 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "REPUBLIQUE DEMOCRATIQUE DU CONGO";
             // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Image = global::CEPGUI.Properties.Resources.Snowflake_50px;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(12, 680);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(295, 53);
+            this.button8.TabIndex = 12;
+            this.button8.Text = "          Bapteme";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = global::CEPGUI.Properties.Resources.Newlyweds_50px;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(9, 621);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(295, 53);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "          Mariage";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Gray;
@@ -149,6 +215,90 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(296, 1);
             this.panel7.TabIndex = 8;
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::CEPGUI.Properties.Resources.Money_50px;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(6, 499);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(295, 53);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "          Entrée";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = global::CEPGUI.Properties.Resources.Send_Mass_Email_50px;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(6, 440);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(295, 53);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "          Annonces";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::CEPGUI.Properties.Resources.Children_50px;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(6, 381);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(295, 53);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "              Réception des enfants";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::CEPGUI.Properties.Resources.Department_50px1;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(6, 322);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(295, 53);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "           Départements";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::CEPGUI.Properties.Resources.User_Group_Man_Man_50px;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(5, 263);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(295, 53);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "       Membres de l\'église";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel4
             // 
@@ -224,6 +374,16 @@
             this.label2.Text = "www.cpgoma.cd";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.logocep;
+            this.circularPictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(72, 80);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 0;
+            this.circularPictureBox1.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -278,6 +438,17 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "MIRINDI";
             // 
+            // circularPictureBox2
+            // 
+            this.circularPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.circularPictureBox2.Image = global::CEPGUI.Properties.Resources.IMG_5481;
+            this.circularPictureBox2.Location = new System.Drawing.Point(880, 6);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(65, 59);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox2.TabIndex = 15;
+            this.circularPictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -298,176 +469,6 @@
             this.label10.Size = new System.Drawing.Size(184, 17);
             this.label10.TabIndex = 91;
             this.label10.Text = "D@v Coding Concept 2020";
-            // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularPictureBox2.Image = global::CEPGUI.Properties.Resources.IMG_5481;
-            this.circularPictureBox2.Location = new System.Drawing.Point(880, 6);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(65, 59);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 15;
-            this.circularPictureBox2.TabStop = false;
-            // 
-            // button10
-            // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Image = global::CEPGUI.Properties.Resources.Church_52px;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 199);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(295, 53);
-            this.button10.TabIndex = 16;
-            this.button10.Text = "       Membres de l\'église";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button9
-            // 
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Image = global::CEPGUI.Properties.Resources.Giving_Tickets_50px;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(11, 554);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(295, 53);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "          Dépense";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Image = global::CEPGUI.Properties.Resources.Snowflake_50px;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(12, 680);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(295, 53);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "          Bapteme";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = global::CEPGUI.Properties.Resources.Newlyweds_50px;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(9, 621);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(295, 53);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "          Mariage";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::CEPGUI.Properties.Resources.Money_50px;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(6, 499);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(295, 53);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "          Entrée";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::CEPGUI.Properties.Resources.Send_Mass_Email_50px;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(6, 440);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(295, 53);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "          Département";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::CEPGUI.Properties.Resources.Children_50px;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(6, 381);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(295, 53);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "              Réception des enfants";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::CEPGUI.Properties.Resources.Department_50px1;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(6, 322);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(295, 53);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "           Annonces de l\'église";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::CEPGUI.Properties.Resources.User_Group_Man_Man_50px;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(5, 263);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(295, 53);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "       Membres de l\'église";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.logocep;
-            this.circularPictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(72, 80);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 0;
-            this.circularPictureBox1.TabStop = false;
             // 
             // PrincipalForm
             // 
@@ -490,10 +491,10 @@
             this.spanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
