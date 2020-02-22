@@ -92,11 +92,35 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmActivites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmActivites.Designer.cs">
+      <DependentUpon>FrmActivites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddActivite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddActivite.Designer.cs">
+      <DependentUpon>FrmAddActivite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmAnnonce.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmAnnonce.Designer.cs">
       <DependentUpon>FrmAnnonce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBapteme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBapteme.Designer.cs">
+      <DependentUpon>FrmBapteme.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmDepartement.cs">
       <SubType>Form</SubType>
@@ -128,6 +152,12 @@
     <Compile Include="Forms\FrmMembre.Designer.cs">
       <DependentUpon>FrmMembre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmReceptionEnfant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceptionEnfant.Designer.cs">
+      <DependentUpon>FrmReceptionEnfant.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmSource.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +184,12 @@
     </Compile>
     <Compile Include="UserControls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Activite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Activite.Designer.cs">
+      <DependentUpon>UC_Activite.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Communique.cs">
       <SubType>UserControl</SubType>
@@ -202,8 +238,20 @@
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmActivites.resx">
+      <DependentUpon>FrmActivites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddActivite.resx">
+      <DependentUpon>FrmAddActivite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAnnonce.resx">
       <DependentUpon>FrmAnnonce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBapteme.resx">
+      <DependentUpon>FrmBapteme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartement.resx">
       <DependentUpon>FrmDepartement.cs</DependentUpon>
@@ -219,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMembre.resx">
       <DependentUpon>FrmMembre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceptionEnfant.resx">
+      <DependentUpon>FrmReceptionEnfant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSource.resx">
       <DependentUpon>FrmSource.cs</DependentUpon>
@@ -241,6 +292,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Activite.resx">
+      <DependentUpon>UC_Activite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Communique.resx">
       <DependentUpon>UC_Communique.cs</DependentUpon>
@@ -476,6 +530,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\About_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Feed_80px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Feed_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Feed_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Children_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Children_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Holy Bible_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Romance_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

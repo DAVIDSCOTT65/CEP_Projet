@@ -2,3 +2,4 @@ E:\DAVID\PROJETBDD\ProjetCEP\ParametreLibrary\bin\Debug\ParametreLibrary.dll
 E:\DAVID\PROJETBDD\ProjetCEP\ParametreLibrary\bin\Debug\ParametreLibrary.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\ParametreLibrary\obj\Debug\ParametreLibrary.dll
 E:\DAVID\PROJETBDD\ProjetCEP\ParametreLibrary\obj\Debug\ParametreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\ParametreLibrary\obj\Debug\ParametreLibrary.csprojResolveAssemblyReference.cache

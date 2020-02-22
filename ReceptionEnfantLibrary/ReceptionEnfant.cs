@@ -38,6 +38,7 @@ namespace ReceptionEnfantLibrary
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@noms", 200, DbType.String, m.Noms));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@sexe", 2, DbType.String, m.Sexe));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@datenaiss", 20, DbType.Date, m.DateNaissance));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@datereception", 20, DbType.Date, m.DateReception));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@pere", 200, DbType.String, m.Pere));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@mere", 200, DbType.String, m.Mere));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@provOrigine", 200, DbType.String, m.ProvOrigine));

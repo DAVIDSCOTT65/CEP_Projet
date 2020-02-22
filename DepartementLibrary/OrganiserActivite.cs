@@ -19,6 +19,7 @@ namespace DepartementLibrary
         public string Heure { get; set; }
         public int RefDepart { get; set; }
         public int RefActivite { get; set; }
+        public string Description { get; set; }
         public DateTime DateCreation { get; set; }
         public string Departement { get; set; }
         public string Activite { get; set; }
@@ -36,6 +37,7 @@ namespace DepartementLibrary
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@heure", 100, DbType.String, o.Heure));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refdepart", 5, DbType.Int32, o.RefDepart));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refactivite", 5, DbType.Int32, o.RefActivite));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@description", 100, DbType.String, o.Description));
 
 
                 cmd.ExecuteNonQuery();
@@ -54,7 +56,7 @@ namespace DepartementLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT_ACTIVITES";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader dr = cmd.ExecuteReader();
@@ -87,6 +89,29 @@ namespace DepartementLibrary
             }
             return lst;
         }
+        public int CountActivite()
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "COUNT_ACTIVITE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr["NbrActiv"] == DBNull.Value)
+                        Id = 0;
+                    else
+                        Id = Convert.ToInt32(dr["NbrActiv"].ToString());
+                }
+                dr.Dispose();
+            }
+            return Id;
+
+        }
         private OrganiserActivite GetOrganiser(IDataReader dr)
         {
             OrganiserActivite m = new OrganiserActivite();
@@ -95,10 +120,10 @@ namespace DepartementLibrary
 
             m.Num = i;
             m.Id = Convert.ToInt32(dr["Id"].ToString());
-            m.DateActivite = Convert.ToDateTime(dr["DateActivite"].ToString());
-            m.Heure =dr["HeureActivite"].ToString();
+            m.DateActivite = Convert.ToDateTime(dr["DateHeure"].ToString());
             m.Departement = dr["Departement"].ToString();
             m.Activite = dr["Activite"].ToString();
+            m.Description = dr["Description"].ToString();
 
             return m;
         }

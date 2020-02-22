@@ -120,5 +120,20 @@ namespace CEPGUI
         {
             ChargerUser(new UC_Communique());
         }
+
+        private void spanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new UC_Activite());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -54,12 +54,15 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button5 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgMembre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -119,7 +122,7 @@
             this.dgMembre.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgMembre.RowHeadersVisible = false;
             this.dgMembre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgMembre.Size = new System.Drawing.Size(948, 438);
+            this.dgMembre.Size = new System.Drawing.Size(997, 438);
             this.dgMembre.TabIndex = 87;
             this.dgMembre.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgMembre_MouseDoubleClick);
             // 
@@ -254,7 +257,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.serchTxt.Location = new System.Drawing.Point(6, 49);
             this.serchTxt.Name = "serchTxt";
-            this.serchTxt.Size = new System.Drawing.Size(611, 27);
+            this.serchTxt.Size = new System.Drawing.Size(423, 27);
             this.serchTxt.TabIndex = 84;
             this.serchTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.serchTxt.TextChanged += new System.EventHandler(this.serchTxt_TextChanged);
@@ -276,7 +279,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(689, 542);
+            this.label2.Location = new System.Drawing.Point(738, 542);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 90;
@@ -288,7 +291,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTotal.Location = new System.Drawing.Point(772, 542);
+            this.lblTotal.Location = new System.Drawing.Point(821, 542);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(123, 25);
             this.lblTotal.TabIndex = 91;
@@ -299,7 +302,7 @@
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(650, 43);
+            this.checkBox1.Location = new System.Drawing.Point(462, 43);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(111, 21);
             this.checkBox1.TabIndex = 92;
@@ -311,59 +314,74 @@
             this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(651, 67);
+            this.checkBox2.Location = new System.Drawing.Point(463, 67);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(146, 21);
             this.checkBox2.TabIndex = 93;
             this.checkBox2.Text = "Sans Département";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // checkBox3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button3.Image = global::CEPGUI.Properties.Resources.Microsoft_Excel_32px;
-            this.button3.Location = new System.Drawing.Point(908, 48);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 28);
-            this.button3.TabIndex = 88;
-            this.toolTip1.SetToolTip(this.button3, "Expoter le tableau vers excel");
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(579, 43);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(68, 21);
+            this.checkBox3.TabIndex = 201;
+            this.checkBox3.Text = "Phone";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button6
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button1.Image = global::CEPGUI.Properties.Resources.Add_32px;
-            this.button1.Location = new System.Drawing.Point(862, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 28);
-            this.button1.TabIndex = 86;
-            this.toolTip1.SetToolTip(this.button1, "Cliquer pour ajouter des fidèles");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button6.Image = global::CEPGUI.Properties.Resources.Romance_32px;
+            this.button6.Location = new System.Drawing.Point(799, 47);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(40, 28);
+            this.button6.TabIndex = 204;
+            this.toolTip1.SetToolTip(this.button6, "Cliquer pour enregistrer ou confirmer un mariage");
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // button4
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(617, 49);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 85;
-            this.pictureBox4.TabStop = false;
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button4.Image = global::CEPGUI.Properties.Resources.Holy_Bible_32px;
+            this.button4.Location = new System.Drawing.Point(845, 47);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(40, 28);
+            this.button4.TabIndex = 203;
+            this.toolTip1.SetToolTip(this.button4, "Cliquer pour enregistrer ou confirmer un bapteme");
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button2.Image = global::CEPGUI.Properties.Resources.Children_32px;
+            this.button2.Location = new System.Drawing.Point(891, 47);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 28);
+            this.button2.TabIndex = 202;
+            this.toolTip1.SetToolTip(this.button2, "Cliquer pour receptionner un enfant");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -382,23 +400,61 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // checkBox3
+            // button3
             // 
-            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(767, 43);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(68, 21);
-            this.checkBox3.TabIndex = 201;
-            this.checkBox3.Text = "Phone";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button3.Image = global::CEPGUI.Properties.Resources.Microsoft_Excel_32px;
+            this.button3.Location = new System.Drawing.Point(940, 49);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(40, 28);
+            this.button3.TabIndex = 88;
+            this.toolTip1.SetToolTip(this.button3, "Expoter le tableau vers excel");
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button1.Image = global::CEPGUI.Properties.Resources.Add_32px;
+            this.button1.Location = new System.Drawing.Point(653, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 28);
+            this.button1.TabIndex = 86;
+            this.toolTip1.SetToolTip(this.button1, "Cliquer pour ajouter des fidèles");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(429, 49);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(28, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 85;
+            this.pictureBox4.TabStop = false;
             // 
             // UC_Membre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.checkBox2);
@@ -415,7 +471,7 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UC_Membre";
-            this.Size = new System.Drawing.Size(957, 576);
+            this.Size = new System.Drawing.Size(1006, 576);
             this.Load += new System.EventHandler(this.UC_Membre_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgMembre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -453,5 +509,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
     }
 }

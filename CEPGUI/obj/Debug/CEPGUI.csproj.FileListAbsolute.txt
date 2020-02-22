@@ -63,3 +63,9 @@ E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\bin\Debug\stdole.dll
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmImpression.resources
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmAnnonce.resources
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.UserControls.UC_Communique.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmActivites.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.UserControls.UC_Activite.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmAddActivite.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmReceptionEnfant.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.Form2.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.Bapteme.resources

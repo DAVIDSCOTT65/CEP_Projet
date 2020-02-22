@@ -48,7 +48,7 @@ namespace CEPGUI.Forms
                         dateBapt = Convert.ToDateTime(baptTxt.Text);
                         if(dateBapt.Date>DateTime.Today)
                             MessageBox.Show("Impossible d'enregistrer une date de bapteme qui n'est pas encore arriver\n Laisser le champs date bapteme vide ou bien inserer une date valide", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        else if(dateBapt.Date<datenaissaissance.Date)
+                        else if(dateBapt.Date <= datenaissaissance.Date)
                         {
                             MessageBox.Show("Impossible d'enregistrer une date de bapteme inférieur à la date de naissance\n Laisser le champs date bapteme vide ou bien inserer une date valide", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         }
@@ -61,7 +61,7 @@ namespace CEPGUI.Forms
                             m.Sexe = sexe;
                             m.LieuNaissance = lieuTxt.Text;
                             m.DateNaissance = Convert.ToDateTime(naissTxt.Text);
-                            m.DateBapteme = Convert.ToDateTime(baptTxt.Text);
+                            m.DateBapteme = baptTxt.Text;
                             m.Pere = pereTxt.Text;
                             m.Mere = mereTxt.Text;
                             m.ProvOrigine = provTxt.Text;
@@ -70,14 +70,32 @@ namespace CEPGUI.Forms
                             m.Pasteur = pastTxt.Text;
                             //Appel de la methode SaveDatas pour enregistrer dans la BDD
                             m.SaveDatas(m);
-                            //Initialisation des champs
-                            Initialiser();
-                            //Message de confirmation
-                            MessageBox.Show("Enregistrement reussie", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
                         }
                     }
-                    
-                   
+                    else
+                    {
+                        Membre m = new Membre();
+                        //Affectation des données dans la classe Membre
+                        m.Id = id;
+                        m.Noms = nomTxt.Text;
+                        m.Sexe = sexe;
+                        m.LieuNaissance = lieuTxt.Text;
+                        m.DateNaissance = Convert.ToDateTime(naissTxt.Text);
+                        m.DateBapteme = baptTxt.Text;
+                        m.Pere = pereTxt.Text;
+                        m.Mere = mereTxt.Text;
+                        m.ProvOrigine = provTxt.Text;
+                        m.TerrOrigine = terrTxt.Text;
+                        m.Telephone = phoneTxt.Text;
+                        m.Pasteur = pastTxt.Text;
+                        //Appel de la methode SaveDatas pour enregistrer dans la BDD
+                        m.SaveDatas(m);
+                    }
+                    //Initialisation des champs
+                    Initialiser();
+                    //Message de confirmation
+                    MessageBox.Show("Enregistrement reussie", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 
             }

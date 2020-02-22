@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnectUser));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -152,10 +153,11 @@
             this.Font = new System.Drawing.Font("Georgia", 12F);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConnectUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConnectUser";
+            this.Text = "Connecction";
             this.Load += new System.EventHandler(this.ConnectUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

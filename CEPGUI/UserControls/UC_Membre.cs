@@ -123,5 +123,18 @@ namespace CEPGUI.UserControls
         {
             doubleclic_grid();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmReceptionEnfant frm = new FrmReceptionEnfant();
+            frm.ShowDialog();
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.ShowDialog();
+        }
     }
 }

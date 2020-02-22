@@ -133,6 +133,26 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Activity_Feed_50px {
+            get {
+                object obj = ResourceManager.GetObject("Activity Feed_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Activity_Feed_50px1 {
+            get {
+                object obj = ResourceManager.GetObject("Activity Feed_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Activity_Feed_80px {
             get {
                 object obj = ResourceManager.GetObject("Activity Feed_80px", resourceCulture);
@@ -153,6 +173,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Activity_Feed_80px2 {
+            get {
+                object obj = ResourceManager.GetObject("Activity Feed_80px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_32px {
             get {
                 object obj = ResourceManager.GetObject("Add_32px", resourceCulture);
@@ -166,6 +196,26 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap Calendar_80px {
             get {
                 object obj = ResourceManager.GetObject("Calendar_80px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Children_32px {
+            get {
+                object obj = ResourceManager.GetObject("Children_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Children_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("Children_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +373,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Holy_Bible_32px {
+            get {
+                object obj = ResourceManager.GetObject("Holy Bible_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Print_25px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_Print_25px_1", resourceCulture);
@@ -466,6 +526,16 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap Refresh_32px {
             get {
                 object obj = ResourceManager.GetObject("Refresh_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Romance_32px {
+            get {
+                object obj = ResourceManager.GetObject("Romance_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

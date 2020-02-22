@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMembre));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,25 +57,27 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnF = new System.Windows.Forms.RadioButton();
             this.rbtnM = new System.Windows.Forms.RadioButton();
             this.naissTxt = new System.Windows.Forms.MaskedTextBox();
-            this.baptTxt = new System.Windows.Forms.MaskedTextBox();
             this.phoneTxt = new System.Windows.Forms.MaskedTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.baptTxt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.Location = new System.Drawing.Point(472, 39);
             this.panel4.Name = "panel4";
@@ -189,7 +192,7 @@
             // 
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(436, 0);
+            this.button2.Location = new System.Drawing.Point(435, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 37);
             this.button2.TabIndex = 184;
@@ -199,6 +202,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
@@ -335,31 +340,6 @@
             this.label13.TabIndex = 220;
             this.label13.Text = "*";
             // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button5.Image = global::CEPGUI.Properties.Resources.Refresh_32px;
-            this.button5.Location = new System.Drawing.Point(13, 489);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 28);
-            this.button5.TabIndex = 199;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.User_Groups_70px;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 196;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtnF);
@@ -403,16 +383,6 @@
             this.naissTxt.TabIndex = 5;
             this.naissTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.naissTxt.ValidatingType = typeof(System.DateTime);
-            // 
-            // baptTxt
-            // 
-            this.baptTxt.Location = new System.Drawing.Point(143, 246);
-            this.baptTxt.Mask = "00/00/0000";
-            this.baptTxt.Name = "baptTxt";
-            this.baptTxt.Size = new System.Drawing.Size(300, 27);
-            this.baptTxt.TabIndex = 6;
-            this.baptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.baptTxt.ValidatingType = typeof(System.DateTime);
             // 
             // phoneTxt
             // 
@@ -473,19 +443,52 @@
             this.label20.TabIndex = 228;
             this.label20.Text = "*";
             // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button5.Image = global::CEPGUI.Properties.Resources.Refresh_32px;
+            this.button5.Location = new System.Drawing.Point(13, 489);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(40, 28);
+            this.button5.TabIndex = 199;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.User_Groups_70px;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 196;
+            this.pictureBox1.TabStop = false;
+            // 
+            // baptTxt
+            // 
+            this.baptTxt.Location = new System.Drawing.Point(143, 247);
+            this.baptTxt.Name = "baptTxt";
+            this.baptTxt.Size = new System.Drawing.Size(300, 27);
+            this.baptTxt.TabIndex = 230;
+            this.baptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmMembre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(473, 529);
+            this.Controls.Add(this.baptTxt);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.phoneTxt);
-            this.Controls.Add(this.baptTxt);
             this.Controls.Add(this.naissTxt);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
@@ -521,14 +524,15 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmMembre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMembre";
+            this.Text = "Membres";
             this.Load += new System.EventHandler(this.FrmMembre_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,12 +574,12 @@
         public System.Windows.Forms.RadioButton rbtnF;
         public System.Windows.Forms.RadioButton rbtnM;
         public System.Windows.Forms.MaskedTextBox naissTxt;
-        public System.Windows.Forms.MaskedTextBox baptTxt;
         public System.Windows.Forms.MaskedTextBox phoneTxt;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        public System.Windows.Forms.TextBox baptTxt;
     }
 }

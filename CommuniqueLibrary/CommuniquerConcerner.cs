@@ -94,6 +94,29 @@ namespace CommuniqueLibrary
             }
             return lst;
         }
+        public int CountCommunique()
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "COUNT_COMMUNIQUE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr["NbrCommun"] == DBNull.Value)
+                        Id = 0;
+                    else
+                        Id = Convert.ToInt32(dr["NbrCommun"].ToString());
+                }
+                dr.Dispose();
+            }
+            return Id;
+
+        }
         private CommuniquerConcerner GetCommuniquer(IDataReader dr)
         {
             CommuniquerConcerner m = new CommuniquerConcerner();

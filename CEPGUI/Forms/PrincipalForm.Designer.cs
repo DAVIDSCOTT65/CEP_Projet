@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.spanel = new System.Windows.Forms.Panel();
@@ -118,6 +119,7 @@
             this.spanel.Name = "spanel";
             this.spanel.Size = new System.Drawing.Size(79, 749);
             this.spanel.TabIndex = 1;
+            this.spanel.Paint += new System.Windows.Forms.PaintEventHandler(this.spanel_Paint);
             // 
             // button10
             // 
@@ -160,7 +162,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(140, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
+            this.label6.Size = new System.Drawing.Size(230, 16);
             this.label6.TabIndex = 14;
             this.label6.Text = "NORD KIVU/Goma";
             // 
@@ -191,6 +193,7 @@
             this.button8.TabIndex = 12;
             this.button8.Text = "          Bapteme";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -257,7 +260,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::CEPGUI.Properties.Resources.Children_50px;
+            this.button4.Image = global::CEPGUI.Properties.Resources.Activity_Feed_50px1;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(6, 381);
             this.button4.Name = "button4";
@@ -265,6 +268,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "              Réception des enfants";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -296,7 +300,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(295, 53);
             this.button2.TabIndex = 6;
-            this.button2.Text = "       Membres de l\'église";
+            this.button2.Text = "       Gestion des membres";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -333,7 +337,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(39, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 34);
+            this.label5.Size = new System.Drawing.Size(265, 34);
             this.label5.TabIndex = 4;
             this.label5.Text = "                                  45ème \r\nCOMMUNUTE EVANGELIQUE DE PENTECOTE";
             // 
@@ -481,9 +485,10 @@
             this.Controls.Add(this.centralPanel);
             this.Controls.Add(this.spanel);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrincipalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PrincipalForm";
+            this.Text = "CEP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PrincipalForm_Load);
             this.panel1.ResumeLayout(false);

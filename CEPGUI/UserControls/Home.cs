@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FinanceLibrary;
 using DepartementLibrary;
 using MembreLibrary;
+using CommuniqueLibrary;
 
 namespace CEPGUI.UserControls
 {
@@ -18,6 +19,8 @@ namespace CEPGUI.UserControls
         Depenses dep = new Depenses();
         Departements d = new Departements();
         Membre m = new Membre();
+        CommuniquerConcerner c = new CommuniquerConcerner();
+        OrganiserActivite org = new OrganiserActivite();
         public Home()
         {
             InitializeComponent();
@@ -35,6 +38,8 @@ namespace CEPGUI.UserControls
             lblCaisse.Text = dep.GetCaisse().ToString() + " Dollars";
             lblDepart.Text = d.CountDepartement().ToString() + " Departements";
             lblMembre.Text = m.CountMembre().ToString() + " Fidèles";
+            lblAnnonce.Text = c.CountCommunique().ToString() + " Annonces";
+            lblActiv.Text = org.CountActivite().ToString() + " Activités";
         }
 
 

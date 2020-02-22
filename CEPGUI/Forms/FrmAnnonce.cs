@@ -95,7 +95,7 @@ namespace CEPGUI.Forms
             {
                 CommuniquerConcerner com = new CommuniquerConcerner();
                 if (dateTxt.Text == "" || annonceTxt.Text == "" || annonceTxt.Text == "Rédiger l'annonce ................................................" || datepublication.Date < DateTime.Today)
-                    MessageBox.Show("Completer tous les champs obligatoires svp ou vérifier la date de publication.\n N.B: La date de publication n'est doit pas etre inférieur à la date d'aujourd'hui", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Completer tous les champs obligatoires svp ou vérifier la date de publication.\n N.B: La date de publication ne doit pas etre inférieur à la date d'aujourd'hui", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 else
                 {
                     if (dgDepart.Rows.Count > 0)

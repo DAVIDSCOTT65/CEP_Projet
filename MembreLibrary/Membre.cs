@@ -19,7 +19,7 @@ namespace MembreLibrary
         public string Sexe { get; set; }
         public string LieuNaissance { get; set; }
         public DateTime DateNaissance { get; set; }
-        public DateTime DateBapteme { get; set; }
+        public string DateBapteme { get; set; }
         public string Pere { get; set; }
         public string Mere { get; set; }
         public string ProvOrigine { get; set; }
@@ -64,7 +64,7 @@ namespace MembreLibrary
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@sexe", 2, DbType.String, m.Sexe));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@lieunaiss", 100, DbType.String, m.LieuNaissance));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@datenaiss", 20, DbType.Date, m.DateNaissance));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@datebapteme", 20, DbType.Date, m.DateBapteme));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@datebapteme", 20, DbType.String, m.DateBapteme));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@pere", 200, DbType.String, m.Pere));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@mere", 200, DbType.String, m.Mere));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@provOrigine", 200, DbType.String, m.ProvOrigine));
@@ -176,7 +176,7 @@ namespace MembreLibrary
             m.Sexe = dr["Sexe"].ToString();
             m.LieuNaissance = dr["LieuNaissance"].ToString();
             m.DateNaissance = Convert.ToDateTime(dr["DateNaissance"].ToString());
-            m.DateBapteme = Convert.ToDateTime(dr["DateBapteme"].ToString());
+            m.DateBapteme = dr["DateBapteme"].ToString();
             m.Pere = dr["NomPere"].ToString();
             m.Mere = dr["NomMere"].ToString();
             m.ProvOrigine = dr["ProvinceOrigine"].ToString();
