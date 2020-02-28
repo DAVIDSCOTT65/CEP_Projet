@@ -137,6 +137,55 @@ namespace CEPGUI.Class
             }
             return identifiant;
         }
+        public int retourIdWithDate(string condition, string param, string procedure)
+        {
+            int identifiant = 0;
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, param, 100, DbType.Date, condition));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    identifiant = int.Parse(rd["Id"].ToString());
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+        }
+        public void RetourDatasBapteme(string condition,TextBox champ1, TextBox champ2)
+        {
+            
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_DATAS_BAPTEMES";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 100, DbType.Date, condition));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    champ1.Text = rd["Lieu"].ToString();
+                    champ2.Text = rd["Pasteur"].ToString();
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            
+        }
         public string retourCode(string designation)
         {
             string code = "";

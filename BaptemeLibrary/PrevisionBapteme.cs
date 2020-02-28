@@ -21,6 +21,8 @@ namespace BaptemeLibrary
         public string Sexe { get; set; }
         public string Lieu { get; set; }
         public DateTime DateCelebration { get; set; }
+        public DateTime DateNaissance { get; set; }
+        public string LieuNaiss { get; set; }
         public string Pasteur { get; set; }
         public void SaveDatas(PrevisionBapteme d)
         {
@@ -51,7 +53,7 @@ namespace BaptemeLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT_ALL_PREVISIONS_BAPTEME";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader dr = cmd.ExecuteReader();
@@ -71,7 +73,7 @@ namespace BaptemeLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM PrevisionBapteme WHERE (Noms LIKE '%" + recherche + "%' OR Noms LIKE '%" + recherche + "' OR Noms LIKE '" + recherche + "%') ORDER By Id DESC";
+                cmd.CommandText = "SELECT * FROM AffichagePrevision WHERE (Noms LIKE '%" + recherche + "%' OR Noms LIKE '%" + recherche + "' OR Noms LIKE '" + recherche + "%') ORDER By Id DESC";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();
@@ -94,6 +96,8 @@ namespace BaptemeLibrary
             m.Id = Convert.ToInt32(dr["Id"].ToString());
             m.Noms = dr["Noms"].ToString();
             m.Sexe = dr["Sexe"].ToString();
+            m.DateNaissance = Convert.ToDateTime(dr["DateNaissance"].ToString());
+            m.LieuNaiss = dr["LieuNaissance"].ToString();
             m.Lieu = dr["Lieu"].ToString();
             m.DateCelebration = Convert.ToDateTime(dr["DateCelebration"].ToString());
             m.Pasteur = dr["Pasteur"].ToString();

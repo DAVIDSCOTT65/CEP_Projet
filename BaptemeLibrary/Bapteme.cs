@@ -29,7 +29,7 @@ namespace BaptemeLibrary
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@lieu", 100, DbType.String, d.Lieu));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 20, DbType.Date, d.DateCelebration));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@pasteur", 100, DbType.String, d.DateCelebration));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@pasteur", 100, DbType.String, d.Pasteur));
 
                 cmd.ExecuteNonQuery();
 

@@ -283,6 +283,26 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Couple {
+            get {
+                object obj = ResourceManager.GetObject("Couple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Couple1 {
+            get {
+                object obj = ResourceManager.GetObject("Couple1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dav {
             get {
                 object obj = ResourceManager.GetObject("Dav", resourceCulture);
@@ -436,6 +456,26 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap logocep {
             get {
                 object obj = ResourceManager.GetObject("logocep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Love_32px {
+            get {
+                object obj = ResourceManager.GetObject("Love_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Love_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("Love_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

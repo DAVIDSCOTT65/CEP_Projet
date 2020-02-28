@@ -133,7 +133,13 @@ namespace CEPGUI.UserControls
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            FrmBapteme frm = new FrmBapteme();
+            frm.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmMariage frm = new FrmMariage();
             frm.ShowDialog();
         }
     }

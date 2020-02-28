@@ -92,11 +92,11 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\FrmBapteme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Forms\FrmBapteme.Designer.cs">
+      <DependentUpon>FrmBapteme.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmActivites.cs">
       <SubType>Form</SubType>
@@ -116,11 +116,11 @@
     <Compile Include="Forms\FrmAnnonce.Designer.cs">
       <DependentUpon>FrmAnnonce.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmBapteme.cs">
+    <Compile Include="Forms\FrmBaptemeSave.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmBapteme.Designer.cs">
-      <DependentUpon>FrmBapteme.cs</DependentUpon>
+    <Compile Include="Forms\FrmBaptemeSave.Designer.cs">
+      <DependentUpon>FrmBaptemeSave.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmDepartement.cs">
       <SubType>Form</SubType>
@@ -145,6 +145,12 @@
     </Compile>
     <Compile Include="Forms\FrmImpression.Designer.cs">
       <DependentUpon>FrmImpression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMariage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMariage.Designer.cs">
+      <DependentUpon>FrmMariage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMembre.cs">
       <SubType>Form</SubType>
@@ -238,8 +244,8 @@
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmBapteme.resx">
+      <DependentUpon>FrmBapteme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmActivites.resx">
       <DependentUpon>FrmActivites.cs</DependentUpon>
@@ -250,8 +256,8 @@
     <EmbeddedResource Include="Forms\FrmAnnonce.resx">
       <DependentUpon>FrmAnnonce.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmBapteme.resx">
-      <DependentUpon>FrmBapteme.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmBaptemeSave.resx">
+      <DependentUpon>FrmBaptemeSave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartement.resx">
       <DependentUpon>FrmDepartement.cs</DependentUpon>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmImpression.resx">
       <DependentUpon>FrmImpression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMariage.resx">
+      <DependentUpon>FrmMariage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMembre.resx">
       <DependentUpon>FrmMembre.cs</DependentUpon>
@@ -551,6 +560,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Romance_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Love_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Love_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Couple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Couple1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
