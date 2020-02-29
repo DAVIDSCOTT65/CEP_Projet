@@ -27,7 +27,27 @@ namespace MariageLibrary
         public string Marraine { get; set; }
         public DateTime DateCelebration { get; set; }
         public string Pasteur { get; set; }
+        public void AutoCompleteMode(string procedure,TextBox textBox)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                IDataReader dr = cmd.ExecuteReader();
+
+                AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+
+                while (dr.Read())
+                {
+                    collection.Add(dr.GetString(0));
+                }
+                textBox.AutoCompleteCustomSource = collection;
+                dr.Close();
+            }
+        }
         public void SaveDatas(PrevisionMariage d)
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
