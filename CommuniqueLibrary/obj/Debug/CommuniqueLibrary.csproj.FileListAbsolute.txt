@@ -6,3 +6,4 @@ E:\DAVID\PROJETBDD\ProjetCEP\CommuniqueLibrary\bin\Debug\ManageSingleConnexion.p
 E:\DAVID\PROJETBDD\ProjetCEP\CommuniqueLibrary\bin\Debug\ParametreLibrary.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\CommuniqueLibrary\obj\Debug\CommuniqueLibrary.dll
 E:\DAVID\PROJETBDD\ProjetCEP\CommuniqueLibrary\obj\Debug\CommuniqueLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\CommuniqueLibrary\obj\Debug\CommuniqueLibrary.csprojResolveAssemblyReference.cache

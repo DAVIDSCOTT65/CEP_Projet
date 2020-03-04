@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMariage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbDate = new System.Windows.Forms.ComboBox();
@@ -56,21 +56,30 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.membreCombo = new System.Windows.Forms.ComboBox();
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.dgBapt = new System.Windows.Forms.DataGridView();
+            this.dgMariage = new System.Windows.Forms.DataGridView();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColConjoint = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColParrain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPasteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBapt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMariage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +103,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(12, 79);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(811, 332);
+            this.groupBox2.Size = new System.Drawing.Size(811, 288);
             this.groupBox2.TabIndex = 331;
             this.groupBox2.TabStop = false;
             // 
@@ -110,7 +119,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(269, 292);
+            this.button1.Location = new System.Drawing.Point(270, 247);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(255, 30);
@@ -125,15 +134,16 @@
             this.cmbDate.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbDate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDate.FormattingEnabled = true;
-            this.cmbDate.Location = new System.Drawing.Point(115, 256);
+            this.cmbDate.Location = new System.Drawing.Point(115, 210);
             this.cmbDate.Name = "cmbDate";
             this.cmbDate.Size = new System.Drawing.Size(564, 30);
             this.cmbDate.TabIndex = 320;
+            this.cmbDate.SelectedIndexChanged += new System.EventHandler(this.cmbDate_SelectedIndexChanged);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel6.Location = new System.Drawing.Point(419, 217);
+            this.panel6.Location = new System.Drawing.Point(419, 171);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(384, 1);
             this.panel6.TabIndex = 331;
@@ -142,9 +152,9 @@
             // 
             this.panel8.BackgroundImage = global::CEPGUI.Properties.Resources.Couple1;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Location = new System.Drawing.Point(378, 177);
+            this.panel8.Location = new System.Drawing.Point(380, 145);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(32, 35);
+            this.panel8.Size = new System.Drawing.Size(32, 30);
             this.panel8.TabIndex = 333;
             // 
             // marraineTxt
@@ -152,18 +162,19 @@
             this.marraineTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.marraineTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marraineTxt.ForeColor = System.Drawing.Color.Gray;
-            this.marraineTxt.Location = new System.Drawing.Point(414, 177);
-            this.marraineTxt.Multiline = true;
+            this.marraineTxt.Location = new System.Drawing.Point(414, 146);
             this.marraineTxt.Name = "marraineTxt";
-            this.marraineTxt.Size = new System.Drawing.Size(391, 39);
+            this.marraineTxt.Size = new System.Drawing.Size(391, 24);
             this.marraineTxt.TabIndex = 332;
             this.marraineTxt.Text = "Marraine";
             this.marraineTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.marraineTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.marraineTxt_MouseClick);
+            this.marraineTxt.TextChanged += new System.EventHandler(this.marraineTxt_TextChanged);
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel11.Location = new System.Drawing.Point(6, 217);
+            this.panel11.Location = new System.Drawing.Point(6, 171);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(366, 1);
             this.panel11.TabIndex = 330;
@@ -173,18 +184,18 @@
             this.parrainTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.parrainTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parrainTxt.ForeColor = System.Drawing.Color.Gray;
-            this.parrainTxt.Location = new System.Drawing.Point(6, 178);
-            this.parrainTxt.Multiline = true;
+            this.parrainTxt.Location = new System.Drawing.Point(6, 147);
             this.parrainTxt.Name = "parrainTxt";
-            this.parrainTxt.Size = new System.Drawing.Size(365, 39);
+            this.parrainTxt.Size = new System.Drawing.Size(365, 24);
             this.parrainTxt.TabIndex = 329;
             this.parrainTxt.Text = "Parrain";
             this.parrainTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.parrainTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.parrainTxt_MouseClick);
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel10.Location = new System.Drawing.Point(413, 121);
+            this.panel10.Location = new System.Drawing.Point(413, 92);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(390, 1);
             this.panel10.TabIndex = 306;
@@ -193,9 +204,9 @@
             // 
             this.panel7.BackgroundImage = global::CEPGUI.Properties.Resources.Love_32px1;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Location = new System.Drawing.Point(378, 81);
+            this.panel7.Location = new System.Drawing.Point(381, 75);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(32, 35);
+            this.panel7.Size = new System.Drawing.Size(26, 20);
             this.panel7.TabIndex = 326;
             // 
             // button6
@@ -207,7 +218,7 @@
             this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.button6.Image = global::CEPGUI.Properties.Resources.Add_32px;
-            this.button6.Location = new System.Drawing.Point(685, 254);
+            this.button6.Location = new System.Drawing.Point(685, 208);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(40, 28);
             this.button6.TabIndex = 325;
@@ -217,7 +228,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 225);
+            this.label2.Location = new System.Drawing.Point(306, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 21);
             this.label2.TabIndex = 323;
@@ -226,7 +237,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(310, 139);
+            this.label1.Location = new System.Drawing.Point(310, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 21);
             this.label1.TabIndex = 307;
@@ -239,18 +250,18 @@
             this.conjointeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.conjointeTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conjointeTxt.ForeColor = System.Drawing.Color.Gray;
-            this.conjointeTxt.Location = new System.Drawing.Point(410, 81);
-            this.conjointeTxt.Multiline = true;
+            this.conjointeTxt.Location = new System.Drawing.Point(410, 66);
             this.conjointeTxt.Name = "conjointeTxt";
-            this.conjointeTxt.Size = new System.Drawing.Size(397, 39);
+            this.conjointeTxt.Size = new System.Drawing.Size(397, 24);
             this.conjointeTxt.TabIndex = 306;
             this.conjointeTxt.Text = "Conjointe";
             this.conjointeTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.conjointeTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.conjointeTxt_MouseClick);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.Location = new System.Drawing.Point(6, 121);
+            this.panel5.Location = new System.Drawing.Point(6, 92);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(366, 1);
             this.panel5.TabIndex = 305;
@@ -262,13 +273,13 @@
             this.conjointTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.conjointTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conjointTxt.ForeColor = System.Drawing.Color.Gray;
-            this.conjointTxt.Location = new System.Drawing.Point(6, 82);
-            this.conjointTxt.Multiline = true;
+            this.conjointTxt.Location = new System.Drawing.Point(6, 66);
             this.conjointTxt.Name = "conjointTxt";
-            this.conjointTxt.Size = new System.Drawing.Size(365, 39);
+            this.conjointTxt.Size = new System.Drawing.Size(365, 24);
             this.conjointTxt.TabIndex = 304;
             this.conjointTxt.Text = "Conjoint";
             this.conjointTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.conjointTxt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.conjointTxt_MouseClick);
             this.conjointTxt.TextChanged += new System.EventHandler(this.conjointTxt_TextChanged);
             // 
             // label8
@@ -344,96 +355,97 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.membreCombo);
             this.groupBox1.Controls.Add(this.serchTxt);
             this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.dgBapt);
+            this.groupBox1.Controls.Add(this.dgMariage);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(18, 414);
+            this.groupBox1.Location = new System.Drawing.Point(18, 373);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(805, 287);
+            this.groupBox1.Size = new System.Drawing.Size(805, 328);
             this.groupBox1.TabIndex = 332;
             this.groupBox1.TabStop = false;
-            // 
-            // membreCombo
-            // 
-            this.membreCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.membreCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.membreCombo.FormattingEnabled = true;
-            this.membreCombo.Location = new System.Drawing.Point(499, 53);
-            this.membreCombo.Name = "membreCombo";
-            this.membreCombo.Size = new System.Drawing.Size(276, 29);
-            this.membreCombo.TabIndex = 319;
             // 
             // serchTxt
             // 
             this.serchTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.serchTxt.Location = new System.Drawing.Point(35, 53);
+            this.serchTxt.Location = new System.Drawing.Point(184, 53);
             this.serchTxt.Name = "serchTxt";
             this.serchTxt.Size = new System.Drawing.Size(428, 27);
             this.serchTxt.TabIndex = 308;
             this.serchTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.serchTxt.TextChanged += new System.EventHandler(this.serchTxt_TextChanged);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(462, 53);
+            this.pictureBox4.Location = new System.Drawing.Point(611, 53);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 309;
             this.pictureBox4.TabStop = false;
             // 
-            // dgBapt
+            // dgMariage
             // 
-            this.dgBapt.AllowUserToAddRows = false;
-            this.dgBapt.AllowUserToDeleteRows = false;
-            this.dgBapt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgMariage.AllowUserToAddRows = false;
+            this.dgMariage.AllowUserToDeleteRows = false;
+            this.dgMariage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgBapt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgBapt.BackgroundColor = System.Drawing.Color.White;
-            this.dgBapt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBapt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgBapt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBapt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgMariage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgMariage.BackgroundColor = System.Drawing.Color.White;
+            this.dgMariage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMariage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgMariage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMariage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNum,
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgBapt.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgBapt.Location = new System.Drawing.Point(6, 86);
-            this.dgBapt.Name = "dgBapt";
-            this.dgBapt.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBapt.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgBapt.RowHeadersVisible = false;
-            this.dgBapt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgBapt.Size = new System.Drawing.Size(790, 195);
-            this.dgBapt.TabIndex = 307;
+            this.ColConjoint,
+            this.ColParrain,
+            this.ColDate,
+            this.ColId,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.ColPasteur});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgMariage.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgMariage.Location = new System.Drawing.Point(6, 86);
+            this.dgMariage.Name = "dgMariage";
+            this.dgMariage.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMariage.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgMariage.RowHeadersVisible = false;
+            this.dgMariage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgMariage.Size = new System.Drawing.Size(790, 236);
+            this.dgMariage.TabIndex = 307;
+            this.dgMariage.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgMariage_MouseDoubleClick);
             // 
             // ColNum
             // 
@@ -444,23 +456,113 @@
             this.ColNum.ReadOnly = true;
             this.ColNum.Width = 53;
             // 
-            // Column1
+            // ColConjoint
             // 
-            this.Column1.HeaderText = "Conjointe & Conjointe";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.ColConjoint.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColConjoint.DataPropertyName = "Conjoint";
+            this.ColConjoint.HeaderText = "Conjointe & Conjointe";
+            this.ColConjoint.Name = "ColConjoint";
+            this.ColConjoint.ReadOnly = true;
+            this.ColConjoint.Width = 188;
             // 
-            // Column2
+            // ColParrain
             // 
-            this.Column2.HeaderText = "Parrain & Marraine";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.ColParrain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColParrain.DataPropertyName = "Parrain";
+            this.ColParrain.HeaderText = "Parrain & Marraine";
+            this.ColParrain.Name = "ColParrain";
+            this.ColParrain.ReadOnly = true;
+            this.ColParrain.Width = 163;
             // 
-            // Column3
+            // ColDate
             // 
-            this.Column3.HeaderText = "Date de Mariage";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.ColDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDate.DataPropertyName = "DateCelebration";
+            this.ColDate.HeaderText = "Date de Mariage";
+            this.ColDate.Name = "ColDate";
+            this.ColDate.ReadOnly = true;
+            this.ColDate.Width = 155;
+            // 
+            // ColId
+            // 
+            this.ColId.DataPropertyName = "Id";
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "RefParrainage";
+            this.Column5.HeaderText = "RefParrain";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "RefConjoint";
+            this.Column6.HeaderText = "RefConjoint";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "RefConjointe";
+            this.Column7.HeaderText = "RefConinte";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "RefMariage";
+            this.Column8.HeaderText = "RefMariage";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Conjoint";
+            this.Column9.HeaderText = "Conjoint";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Conjointe";
+            this.Column10.HeaderText = "Conjointe";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "DateCreation";
+            this.Column11.HeaderText = "DateCreation";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "Marraine";
+            this.Column12.HeaderText = "Marraine";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Visible = false;
+            // 
+            // ColPasteur
+            // 
+            this.ColPasteur.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColPasteur.DataPropertyName = "Pasteur";
+            this.ColPasteur.HeaderText = "Pasteur";
+            this.ColPasteur.Name = "ColPasteur";
+            this.ColPasteur.ReadOnly = true;
+            this.ColPasteur.Width = 93;
             // 
             // label3
             // 
@@ -495,6 +597,7 @@
             this.button5.Size = new System.Drawing.Size(40, 28);
             this.button5.TabIndex = 328;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // FrmMariage
             // 
@@ -527,7 +630,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBapt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMariage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -557,12 +660,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox serchTxt;
         private System.Windows.Forms.PictureBox pictureBox4;
-        public System.Windows.Forms.DataGridView dgBapt;
-        private System.Windows.Forms.ComboBox membreCombo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        public System.Windows.Forms.DataGridView dgMariage;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         public System.Windows.Forms.TextBox marraineTxt;
@@ -571,5 +669,19 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.ComboBox cmbDate;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColConjoint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColParrain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPasteur;
     }
 }

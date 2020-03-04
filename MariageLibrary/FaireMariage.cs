@@ -17,12 +17,12 @@ namespace MariageLibrary
         public int Id { get; set; }
         public int RefPrev { get; set; }
         public DateTime DateMariage { get; set; }
+         public string Pasteur { get; set; }
 
         public string Conjoint { get; set; }
         public string Conjointe { get; set; }
         public string Parrain { get; set; }
         public string Marraine { get; set; }
-        public string Pasteur { get; set; }
         public void SaveDatas(FaireMariage d)
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -35,7 +35,8 @@ namespace MariageLibrary
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refprevision", 5, DbType.Int32, d.RefPrev));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 20, DbType.Date, d.DateMariage));
-                
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@pasteur", 50, DbType.String, d.Pasteur));
+
 
                 cmd.ExecuteNonQuery();
 

@@ -137,6 +137,31 @@ namespace CEPGUI.Class
             }
             return identifiant;
         }
+        public int retourIdParrainnage(string parrain, string marraine, string procedure)
+        {
+            int identifiant = 0;
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@parrain", 100, DbType.String, parrain));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@marraine", 100, DbType.String, marraine));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    identifiant = int.Parse(rd["Id"].ToString());
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+        }
         public int retourIdWithDate(string condition, string param, string procedure)
         {
             int identifiant = 0;

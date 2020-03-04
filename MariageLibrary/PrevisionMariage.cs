@@ -54,7 +54,7 @@ namespace MariageLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "INSERT_MARIAGE";
+                cmd.CommandText = "INSERT_PREVISION_MARIAGE";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
@@ -71,7 +71,7 @@ namespace MariageLibrary
 
             }
         }
-        public List<PrevisionMariage> ListOfPrevisions()
+        public List<PrevisionMariage> ListOfPrevisions(string datepasteur)
         {
             List<PrevisionMariage> lst = new List<PrevisionMariage>();
 
@@ -79,8 +79,10 @@ namespace MariageLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT_PREVISION_MARIAGE";
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 50, DbType.String, datepasteur));
 
                 IDataReader dr = cmd.ExecuteReader();
 
@@ -92,14 +94,14 @@ namespace MariageLibrary
             }
             return lst;
         }
-        public List<PrevisionMariage> Research(string recherche)
+        public List<PrevisionMariage> Research(string recherche,string datepast)
         {
             List<PrevisionMariage> lst = new List<PrevisionMariage>();
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM PrevisionMariage WHERE (Conjoint LIKE '%" + recherche + "%' OR Conjoint LIKE '%" + recherche + "' OR Conjoint LIKE '" + recherche + "%') ORDER By Id DESC";
+                cmd.CommandText = "SELECT * FROM Affichage_Prevision_Mariage WHERE (Couples LIKE '%" + recherche + "%' OR Couples LIKE '%" + recherche + "' OR Couples LIKE '" + recherche + "%') AND DatePasteur='" + datepast + "' ORDER By Id DESC";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();
@@ -120,13 +122,10 @@ namespace MariageLibrary
 
             m.Num = i;
             m.Id = Convert.ToInt32(dr["Id"].ToString());
-            m.Conjoint = dr["Conjoint"].ToString();
-            m.Conjointe = dr["Conjointe"].ToString();
-            m.Parrain = dr["Parrain"].ToString();
-            m.Marraine = dr["Marraine"].ToString();
-            m.DateCelebration = Convert.ToDateTime(dr["DateCelebration"].ToString());
+            m.Conjoint = dr["Couples"].ToString();
+            m.Parrain = dr["Couple_Parrainage"].ToString();
             m.Pasteur = dr["Pasteur"].ToString();
-
+            m.DateCelebration = Convert.ToDateTime(dr["DateCelebration"].ToString());
 
             return m;
         }

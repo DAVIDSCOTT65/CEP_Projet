@@ -71,3 +71,4 @@ E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.UserControls.UC_Membre.reso
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.csproj.GenerateResource.Cache
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmMariage.resources
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmAddMariage.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmFaireMariage.resources

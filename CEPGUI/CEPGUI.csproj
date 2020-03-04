@@ -146,6 +146,12 @@
     <Compile Include="Forms\FrmEntree.Designer.cs">
       <DependentUpon>FrmEntree.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmFaireMariage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFaireMariage.Designer.cs">
+      <DependentUpon>FrmFaireMariage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmImpression.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,12 @@
     <Compile Include="UserControls\UC_Activite.Designer.cs">
       <DependentUpon>UC_Activite.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Bapteme.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Bapteme.Designer.cs">
+      <DependentUpon>UC_Bapteme.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Communique.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +238,12 @@
     </Compile>
     <Compile Include="UserControls\UC_Entrees.Designer.cs">
       <DependentUpon>UC_Entrees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Mariage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Mariage.Designer.cs">
+      <DependentUpon>UC_Mariage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Membre.cs">
       <SubType>UserControl</SubType>
@@ -277,6 +295,9 @@
     <EmbeddedResource Include="Forms\FrmEntree.resx">
       <DependentUpon>FrmEntree.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFaireMariage.resx">
+      <DependentUpon>FrmFaireMariage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmImpression.resx">
       <DependentUpon>FrmImpression.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +335,9 @@
     <EmbeddedResource Include="UserControls\UC_Activite.resx">
       <DependentUpon>UC_Activite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Bapteme.resx">
+      <DependentUpon>UC_Bapteme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Communique.resx">
       <DependentUpon>UC_Communique.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Entrees.resx">
       <DependentUpon>UC_Entrees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Mariage.resx">
+      <DependentUpon>UC_Mariage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Membre.resx">
       <DependentUpon>UC_Membre.cs</DependentUpon>
@@ -581,6 +608,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Couple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Romance_32px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
