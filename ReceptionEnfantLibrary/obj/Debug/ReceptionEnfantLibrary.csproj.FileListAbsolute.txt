@@ -6,4 +6,3 @@ E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ManageSingleConnex
 E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\bin\Debug\ParametreLibrary.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\obj\Debug\ReceptionEnfantLibrary.dll
 E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\obj\Debug\ReceptionEnfantLibrary.pdb
-E:\DAVID\PROJETBDD\ProjetCEP\ReceptionEnfantLibrary\obj\Debug\ReceptionEnfantLibrary.csprojResolveAssemblyReference.cache

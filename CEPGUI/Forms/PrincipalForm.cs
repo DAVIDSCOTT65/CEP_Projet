@@ -133,7 +133,12 @@ namespace CEPGUI
 
         private void button8_Click(object sender, EventArgs e)
         {
-            
+            ChargerUser(new UC_Bapteme());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new UC_Mariage());
         }
     }
 }

@@ -13,9 +13,11 @@ namespace BaptemeLibrary
     public class Baptiser
     {
         int i = 0;
+        string procedure = "";
         public int Num { get; set; }
         public int Id { get; set; }
         public DateTime DateBapteme { get; set; }
+        public string LieuBapteme { get; set; }
         public int RefPrevision { get; set; }
         public string Noms { get; set; }
         public string Sexe { get; set; }
@@ -41,15 +43,16 @@ namespace BaptemeLibrary
 
             }
         }
-        public List<Baptiser> ListOfBaptiser()
+        public List<Baptiser> ListOfBaptiser(string proc)
         {
+            procedure = proc;
             List<Baptiser> lst = new List<Baptiser>();
 
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = proc;
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader dr = cmd.ExecuteReader();
@@ -92,8 +95,13 @@ namespace BaptemeLibrary
             m.Id = Convert.ToInt32(dr["Id"].ToString());
             m.Noms = dr["Noms"].ToString();
             m.Sexe = dr["Sexe"].ToString();
-            m.DateBapteme = Convert.ToDateTime(dr["DateCelebration"].ToString());
-            m.Pasteur = dr["Pasteur"].ToString();
+            m.DateBapteme = Convert.ToDateTime(dr["DateBapteme"].ToString());
+            if(procedure != "SELECT_ALL_MEMBRE_BAPTISER")
+            {
+                m.LieuBapteme = dr["Lieu"].ToString();
+                m.Pasteur = dr["Pasteur"].ToString();
+            }
+                
 
 
             return m;

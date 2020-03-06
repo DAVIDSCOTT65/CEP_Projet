@@ -52,22 +52,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.centralPanel = new System.Windows.Forms.Panel();
             this.userPanel = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.circularPictureBox2 = new CEPGUI.Class.CircularPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.circularPictureBox2 = new CEPGUI.Class.CircularPictureBox();
+            this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
             this.panel1.SuspendLayout();
             this.spanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.userPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -210,6 +210,7 @@
             this.button7.TabIndex = 11;
             this.button7.Text = "          Mariage";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel7
             // 
@@ -300,7 +301,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(295, 53);
             this.button2.TabIndex = 6;
-            this.button2.Text = "       Gestion des membres";
+            this.button2.Text = "          Gestion des membres";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -378,16 +379,6 @@
             this.label2.Text = "www.cpgoma.cd";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.logocep;
-            this.circularPictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(72, 80);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 0;
-            this.circularPictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -442,17 +433,6 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "MIRINDI";
             // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularPictureBox2.Image = global::CEPGUI.Properties.Resources.IMG_5481;
-            this.circularPictureBox2.Location = new System.Drawing.Point(880, 6);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(65, 59);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 15;
-            this.circularPictureBox2.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -473,6 +453,27 @@
             this.label10.Size = new System.Drawing.Size(184, 17);
             this.label10.TabIndex = 91;
             this.label10.Text = "D@v Coding Concept 2020";
+            // 
+            // circularPictureBox2
+            // 
+            this.circularPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.circularPictureBox2.Image = global::CEPGUI.Properties.Resources.IMG_5481;
+            this.circularPictureBox2.Location = new System.Drawing.Point(880, 6);
+            this.circularPictureBox2.Name = "circularPictureBox2";
+            this.circularPictureBox2.Size = new System.Drawing.Size(65, 59);
+            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox2.TabIndex = 15;
+            this.circularPictureBox2.TabStop = false;
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.logocep;
+            this.circularPictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(72, 80);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 0;
+            this.circularPictureBox1.TabStop = false;
             // 
             // PrincipalForm
             // 
@@ -496,10 +497,10 @@
             this.spanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

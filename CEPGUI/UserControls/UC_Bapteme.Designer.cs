@@ -42,23 +42,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPast = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTerr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMere = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPere = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColBapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNaiss = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgBaptiser = new System.Windows.Forms.DataGridView();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgMembre = new System.Windows.Forms.DataGridView();
+            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColBapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPast = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMembre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBaptiser)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button5
@@ -93,6 +91,7 @@
             this.button3.TabIndex = 209;
             this.toolTip1.SetToolTip(this.button3, "Expoter le tableau vers excel");
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -109,6 +108,7 @@
             this.button1.TabIndex = 207;
             this.toolTip1.SetToolTip(this.button1, "Cliquer pour ajouter des fidèles");
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox4
             // 
@@ -167,121 +167,57 @@
             this.label1.TabIndex = 210;
             this.label1.Text = "Gestion des baptemes";
             // 
-            // ColId
+            // dgBaptiser
             // 
-            this.ColId.DataPropertyName = "Id";
-            this.ColId.HeaderText = "Id";
-            this.ColId.Name = "ColId";
-            this.ColId.ReadOnly = true;
-            this.ColId.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column12.DataPropertyName = "DateEnregistrement";
-            this.Column12.HeaderText = "Date Enregistrer";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 146;
-            // 
-            // ColPast
-            // 
-            this.ColPast.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPast.DataPropertyName = "Pasteur";
-            this.ColPast.HeaderText = "Pasteur";
-            this.ColPast.Name = "ColPast";
-            this.ColPast.ReadOnly = true;
-            this.ColPast.Width = 93;
-            // 
-            // ColPhone
-            // 
-            this.ColPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPhone.DataPropertyName = "Telephone";
-            this.ColPhone.HeaderText = "Téléphone";
-            this.ColPhone.Name = "ColPhone";
-            this.ColPhone.ReadOnly = true;
-            this.ColPhone.Width = 117;
-            // 
-            // ColTerr
-            // 
-            this.ColTerr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColTerr.DataPropertyName = "TerrOrigine";
-            this.ColTerr.HeaderText = "Terr. Origine";
-            this.ColTerr.Name = "ColTerr";
-            this.ColTerr.ReadOnly = true;
-            this.ColTerr.Width = 116;
-            // 
-            // ColProv
-            // 
-            this.ColProv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColProv.DataPropertyName = "ProvOrigine";
-            this.ColProv.HeaderText = "Province d\'origine";
-            this.ColProv.Name = "ColProv";
-            this.ColProv.ReadOnly = true;
-            this.ColProv.Width = 157;
-            // 
-            // ColMere
-            // 
-            this.ColMere.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColMere.DataPropertyName = "Mere";
-            this.ColMere.HeaderText = "Nom de la mère";
-            this.ColMere.Name = "ColMere";
-            this.ColMere.ReadOnly = true;
-            this.ColMere.Width = 109;
-            // 
-            // ColPere
-            // 
-            this.ColPere.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPere.DataPropertyName = "Pere";
-            this.ColPere.HeaderText = "Nom du père";
-            this.ColPere.Name = "ColPere";
-            this.ColPere.ReadOnly = true;
-            this.ColPere.Width = 125;
-            // 
-            // ColBapt
-            // 
-            this.ColBapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColBapt.DataPropertyName = "DateBapteme";
-            this.ColBapt.HeaderText = "Date de Bapteme";
-            this.ColBapt.Name = "ColBapt";
-            this.ColBapt.ReadOnly = true;
-            this.ColBapt.Width = 161;
-            // 
-            // ColNaiss
-            // 
-            this.ColNaiss.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColNaiss.DataPropertyName = "DateNaissance";
-            this.ColNaiss.HeaderText = "Date de naissance";
-            this.ColNaiss.Name = "ColNaiss";
-            this.ColNaiss.ReadOnly = true;
-            this.ColNaiss.Width = 165;
-            // 
-            // ColLieu
-            // 
-            this.ColLieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColLieu.DataPropertyName = "LieuNaissance";
-            this.ColLieu.HeaderText = "Lieu de Naissance";
-            this.ColLieu.Name = "ColLieu";
-            this.ColLieu.ReadOnly = true;
-            this.ColLieu.Width = 158;
-            // 
-            // ColSexe
-            // 
-            this.ColSexe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColSexe.DataPropertyName = "Sexe";
-            this.ColSexe.HeaderText = "Sexe";
-            this.ColSexe.Name = "ColSexe";
-            this.ColSexe.ReadOnly = true;
-            this.ColSexe.Width = 71;
-            // 
-            // ColNom
-            // 
-            this.ColNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColNom.DataPropertyName = "Noms";
-            this.ColNom.HeaderText = "Noms & Postnom";
-            this.ColNom.Name = "ColNom";
-            this.ColNom.ReadOnly = true;
-            this.ColNom.Width = 150;
+            this.dgBaptiser.AllowUserToAddRows = false;
+            this.dgBaptiser.AllowUserToDeleteRows = false;
+            this.dgBaptiser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgBaptiser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgBaptiser.BackgroundColor = System.Drawing.Color.White;
+            this.dgBaptiser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBaptiser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgBaptiser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgBaptiser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColNum,
+            this.ColNom,
+            this.ColSexe,
+            this.ColBapt,
+            this.Column1,
+            this.ColPast,
+            this.ColId,
+            this.Column2});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgBaptiser.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgBaptiser.Location = new System.Drawing.Point(5, 94);
+            this.dgBaptiser.Name = "dgBaptiser";
+            this.dgBaptiser.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBaptiser.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgBaptiser.RowHeadersVisible = false;
+            this.dgBaptiser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgBaptiser.Size = new System.Drawing.Size(997, 438);
+            this.dgBaptiser.TabIndex = 208;
             // 
             // ColNum
             // 
@@ -292,69 +228,108 @@
             this.ColNum.ReadOnly = true;
             this.ColNum.Width = 53;
             // 
-            // dgMembre
+            // ColNom
             // 
-            this.dgMembre.AllowUserToAddRows = false;
-            this.dgMembre.AllowUserToDeleteRows = false;
-            this.dgMembre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgMembre.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgMembre.BackgroundColor = System.Drawing.Color.White;
-            this.dgMembre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgMembre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgMembre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMembre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColNum,
-            this.ColNom,
-            this.ColSexe,
-            this.ColLieu,
-            this.ColNaiss,
-            this.ColBapt,
-            this.ColPere,
-            this.ColMere,
-            this.ColProv,
-            this.ColTerr,
-            this.ColPhone,
-            this.ColPast,
-            this.Column12,
-            this.ColId});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgMembre.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgMembre.Location = new System.Drawing.Point(5, 94);
-            this.dgMembre.Name = "dgMembre";
-            this.dgMembre.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgMembre.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgMembre.RowHeadersVisible = false;
-            this.dgMembre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgMembre.Size = new System.Drawing.Size(997, 438);
-            this.dgMembre.TabIndex = 208;
+            this.ColNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNom.DataPropertyName = "Noms";
+            this.ColNom.HeaderText = "Noms & Postnom";
+            this.ColNom.Name = "ColNom";
+            this.ColNom.ReadOnly = true;
+            this.ColNom.Width = 150;
+            // 
+            // ColSexe
+            // 
+            this.ColSexe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColSexe.DataPropertyName = "Sexe";
+            this.ColSexe.HeaderText = "Sexe";
+            this.ColSexe.Name = "ColSexe";
+            this.ColSexe.ReadOnly = true;
+            this.ColSexe.Width = 71;
+            // 
+            // ColBapt
+            // 
+            this.ColBapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColBapt.DataPropertyName = "DateBapteme";
+            this.ColBapt.HeaderText = "Date de Bapteme";
+            this.ColBapt.Name = "ColBapt";
+            this.ColBapt.ReadOnly = true;
+            this.ColBapt.Width = 161;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.DataPropertyName = "LieuBapteme";
+            this.Column1.HeaderText = "Lieu de Bapteme";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 152;
+            // 
+            // ColPast
+            // 
+            this.ColPast.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColPast.DataPropertyName = "Pasteur";
+            this.ColPast.HeaderText = "Pasteur";
+            this.ColPast.Name = "ColPast";
+            this.ColPast.ReadOnly = true;
+            this.ColPast.Width = 93;
+            // 
+            // ColId
+            // 
+            this.ColId.DataPropertyName = "Id";
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "RefPrevision";
+            this.Column2.HeaderText = "RefPrevision";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(510, 35);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(371, 53);
+            this.groupBox1.TabIndex = 216;
+            this.groupBox1.TabStop = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(163, 17);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(170, 25);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Tous les baptemes";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(15, 17);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(111, 25);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Baptisés ici";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // UC_Bapteme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -363,13 +338,16 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.serchTxt);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgMembre);
+            this.Controls.Add(this.dgBaptiser);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UC_Bapteme";
             this.Size = new System.Drawing.Size(1006, 576);
+            this.Load += new System.EventHandler(this.UC_Bapteme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMembre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgBaptiser)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,20 +364,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox serchTxt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPast;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTerr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColProv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMere;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPere;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColBapt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNaiss;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColLieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSexe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
+        public System.Windows.Forms.DataGridView dgBaptiser;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
-        public System.Windows.Forms.DataGridView dgMembre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSexe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColBapt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPast;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

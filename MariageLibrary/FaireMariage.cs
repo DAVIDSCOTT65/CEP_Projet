@@ -19,6 +19,8 @@ namespace MariageLibrary
         public DateTime DateMariage { get; set; }
          public string Pasteur { get; set; }
 
+        public string CoupleM { get; set; }
+        public string CoupleP { get; set; }
         public string Conjoint { get; set; }
         public string Conjointe { get; set; }
         public string Parrain { get; set; }
@@ -54,7 +56,7 @@ namespace MariageLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT_MARIAGES_CELEBRES";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader dr = cmd.ExecuteReader();
@@ -95,12 +97,15 @@ namespace MariageLibrary
 
             m.Num = i;
             m.Id = Convert.ToInt32(dr["Id"].ToString());
+            m.CoupleM = dr["Couples"].ToString();
+            m.CoupleP = dr["Couple_Parrainage"].ToString();
+            m.DateMariage = Convert.ToDateTime(dr["DateMariage"].ToString());
+            m.Pasteur = dr["Pasteur"].ToString();
+
             m.Conjoint = dr["Conjoint"].ToString();
             m.Conjointe = dr["Conjointe"].ToString();
-            m.Parrain = dr["Parrain"].ToString();
-            m.Marraine = dr["Marraine"].ToString();
-            m.DateMariage = Convert.ToDateTime(dr["DateCelebration"].ToString());
-            m.Pasteur = dr["Pasteur"].ToString();
+            m.Parrain = dr["NomsParrain"].ToString();
+            m.Marraine = dr["NomsMarraine"].ToString();
 
 
             return m;

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MariageLibrary;
+using CEPGUI.Forms;
 
 namespace CEPGUI.UserControls
 {
@@ -19,7 +21,18 @@ namespace CEPGUI.UserControls
 
         private void UC_Mariage_Load(object sender, EventArgs e)
         {
+            SelectDatas(new FaireMariage());
+        }
+        void SelectDatas(FaireMariage f)
+        {
+            dgMariage.DataSource = f.ListOfMariageCelebrer();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmMariage fr = new FrmMariage();
+
+            fr.ShowDialog();
         }
     }
 }
