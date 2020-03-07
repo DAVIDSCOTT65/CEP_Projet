@@ -36,5 +36,19 @@ namespace CEPGUI.UserControls
         {
             dgActivite.DataSource = org.ListOfActivites();
         }
+
+        private void serchTxt_TextChanged(object sender, EventArgs e)
+        {
+            Search(new OrganiserActivite());
+        }
+        void Search(OrganiserActivite org)
+        {
+            dgActivite.DataSource = org.Research(serchTxt.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dn.ExportInExcel(dgActivite);
+        }
     }
 }

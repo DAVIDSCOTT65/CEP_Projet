@@ -76,7 +76,7 @@ namespace MariageLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM FaireMariage WHERE (Conjoint LIKE '%" + recherche + "%' OR Conjoint LIKE '%" + recherche + "' OR Conjoint LIKE '" + recherche + "%') ORDER By Id DESC";
+                cmd.CommandText = "SELECT * FROM Affichage_Mariages_Celebrer WHERE (Couples LIKE '%" + recherche + "%' OR Couples LIKE '%" + recherche + "' OR Couples LIKE '" + recherche + "%') ORDER By Id DESC";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();
@@ -109,6 +109,29 @@ namespace MariageLibrary
 
 
             return m;
+        }
+        public int CountMariage()
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "COUNT_MARIAGE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr["NbrMar"] == DBNull.Value)
+                        Id = 0;
+                    else
+                        Id = Convert.ToInt32(dr["NbrMar"].ToString());
+                }
+                dr.Dispose();
+            }
+            return Id;
+
         }
     }
 }

@@ -11,6 +11,8 @@ using FinanceLibrary;
 using DepartementLibrary;
 using MembreLibrary;
 using CommuniqueLibrary;
+using BaptemeLibrary;
+using MariageLibrary;
 
 namespace CEPGUI.UserControls
 {
@@ -21,6 +23,8 @@ namespace CEPGUI.UserControls
         Membre m = new Membre();
         CommuniquerConcerner c = new CommuniquerConcerner();
         OrganiserActivite org = new OrganiserActivite();
+        Baptiser b = new Baptiser();
+        FaireMariage f = new FaireMariage();
         public Home()
         {
             InitializeComponent();
@@ -40,6 +44,8 @@ namespace CEPGUI.UserControls
             lblMembre.Text = m.CountMembre().ToString() + " Fidèles";
             lblAnnonce.Text = c.CountCommunique().ToString() + " Annonces";
             lblActiv.Text = org.CountActivite().ToString() + " Activités";
+            lblBapeme.Text = b.CountBapteme().ToString() + " Baptemes";
+            lblMariage.Text = f.CountMariage().ToString() + " Mariages";
         }
 
 

@@ -32,11 +32,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblBapeme = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblMariage = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -95,7 +95,7 @@
             this.panel7.BackgroundImage = global::CEPGUI.Properties.Resources._1600_103;
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.lblBapeme);
             this.panel7.Controls.Add(this.pictureBox8);
             this.panel7.Location = new System.Drawing.Point(603, 320);
             this.panel7.Name = "panel7";
@@ -113,16 +113,16 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Nombre des baptisés";
             // 
-            // label15
+            // lblBapeme
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(120, 40);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 22);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "250 Baptemes";
+            this.lblBapeme.AutoSize = true;
+            this.lblBapeme.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBapeme.ForeColor = System.Drawing.Color.White;
+            this.lblBapeme.Location = new System.Drawing.Point(120, 40);
+            this.lblBapeme.Name = "lblBapeme";
+            this.lblBapeme.Size = new System.Drawing.Size(140, 22);
+            this.lblBapeme.TabIndex = 6;
+            this.lblBapeme.Text = "250 Baptemes";
             // 
             // pictureBox8
             // 
@@ -142,7 +142,7 @@
             this.panel8.BackgroundImage = global::CEPGUI.Properties.Resources._30_17210X20_2;
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.label13);
+            this.panel8.Controls.Add(this.lblMariage);
             this.panel8.Controls.Add(this.pictureBox6);
             this.panel8.Location = new System.Drawing.Point(325, 320);
             this.panel8.Name = "panel8";
@@ -160,23 +160,23 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Mariages célébrer";
             // 
-            // label13
+            // lblMariage
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(108, 40);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(164, 27);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "100 Mariages";
+            this.lblMariage.AutoSize = true;
+            this.lblMariage.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMariage.ForeColor = System.Drawing.Color.White;
+            this.lblMariage.Location = new System.Drawing.Point(108, 40);
+            this.lblMariage.Name = "lblMariage";
+            this.lblMariage.Size = new System.Drawing.Size(164, 27);
+            this.lblMariage.TabIndex = 6;
+            this.lblMariage.Text = "100 Mariages";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::CEPGUI.Properties.Resources.Newlyweds_80px1;
             this.pictureBox6.Location = new System.Drawing.Point(3, 16);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(110, 99);
+            this.pictureBox6.Size = new System.Drawing.Size(99, 99);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
@@ -577,8 +577,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblActiv;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblMariage;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblBapeme;
     }
 }

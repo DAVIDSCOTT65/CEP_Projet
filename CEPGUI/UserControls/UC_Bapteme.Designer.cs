@@ -155,6 +155,7 @@
             this.serchTxt.Size = new System.Drawing.Size(423, 27);
             this.serchTxt.TabIndex = 205;
             this.serchTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.serchTxt.TextChanged += new System.EventHandler(this.serchTxt_TextChanged);
             // 
             // label1
             // 

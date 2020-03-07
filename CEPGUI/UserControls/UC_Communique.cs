@@ -84,5 +84,10 @@ namespace CEPGUI.UserControls
         {
             dgCommunique.DataSource = m.Research(serchTxt.Text, departCombo.Text);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dn.ExportInExcel(dgCommunique);
+        }
     }
 }

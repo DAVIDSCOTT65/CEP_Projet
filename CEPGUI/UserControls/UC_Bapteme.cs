@@ -62,5 +62,22 @@ namespace CEPGUI.UserControls
 
             fr.ShowDialog();
         }
+
+        private void serchTxt_TextChanged(object sender, EventArgs e)
+        {
+            //Seach(new Baptiser());
+        }
+        void Seach(Baptiser b)
+        {
+            try
+            {
+                dgBaptiser.DataSource = b.Research(serchTxt.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

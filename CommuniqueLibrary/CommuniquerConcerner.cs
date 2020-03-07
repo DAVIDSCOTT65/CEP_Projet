@@ -81,7 +81,7 @@ namespace CommuniqueLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM Affichage_Details_Communique WHERE (DetailsCommunique LIKE '%" + recherche + "%' OR DetailsCommunique LIKE '%" + recherche + "' OR DetailsCommunique LIKE '" + recherche + "%') AND Departement='" + depart + "'";
+                cmd.CommandText = "SELECT * FROM Affichage_Details_Communique WHERE (DetailsCommunique LIKE '%" + recherche + "%' OR DetailsCommunique LIKE '%" + recherche + "' OR DetailsCommunique LIKE '" + recherche + "%') AND Departement='" + depart + "' AND DatePublication>=GETDATE()";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();

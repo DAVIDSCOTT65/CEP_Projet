@@ -62,5 +62,10 @@ namespace CEPGUI.UserControls
         {
             dn.RapportEntreeToday();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dn.ExportInExcel(dgFinance);
+        }
     }
 }

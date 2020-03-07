@@ -76,7 +76,7 @@ namespace DepartementLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM OrganiserActivite WHERE (DateActivite LIKE '%" + recherche + "%' OR DateActivite LIKE '%" + recherche + "' OR DateActivite LIKE '" + recherche + "%') ORDER By Id DESC";
+                cmd.CommandText = "SELECT * FROM Affichage_Details_Activite WHERE (Activite LIKE '%" + recherche + "%' OR Activite LIKE '%" + recherche + "' OR Activite LIKE '" + recherche + "%') ORDER By Id DESC";
                 //cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader rd = cmd.ExecuteReader();
