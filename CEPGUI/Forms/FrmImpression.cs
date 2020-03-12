@@ -111,7 +111,158 @@ namespace CEPGUI.Forms
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
         }
+        public void RegistreReceptionEnfant()
+        {
+            try
+            {
+                
 
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetRegistreEnfants";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Reception_Enfant");
+
+                    CR_Registre_Enfant entree = new CR_Registre_Enfant();
+                    entree.SetDataSource(ds);
+
+                    crystalReportViewer1.ReportSource = entree;
+                    crystalReportViewer1.Refresh();
+
+
+
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
+        public void RegistreMembres()
+        {
+            try
+            {
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetRegistreMembres";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Membres");
+
+                    CR_Registre_Membre entree = new CR_Registre_Membre();
+                    entree.SetDataSource(ds);
+
+                    crystalReportViewer1.ReportSource = entree;
+                    crystalReportViewer1.Refresh();
+
+
+
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
+        public void RegistreMariages()
+        {
+            try
+            {
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetRegistreMariages";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Mariages_Celebrer");
+
+                    CR_Registre_Mariage entree = new CR_Registre_Mariage();
+                    entree.SetDataSource(ds);
+
+                    crystalReportViewer1.ReportSource = entree;
+                    crystalReportViewer1.Refresh();
+
+
+
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
+        public void RegistreBaptemes()
+        {
+            try
+            {
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetRegistreBapteme";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Details_Baptiser");
+
+                    CR_Registre_Bapteme entree = new CR_Registre_Bapteme();
+                    entree.SetDataSource(ds);
+
+                    crystalReportViewer1.ReportSource = entree;
+                    crystalReportViewer1.Refresh();
+
+
+
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void monthCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (yearCombo.Text != "")

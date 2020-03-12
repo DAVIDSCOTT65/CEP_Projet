@@ -142,5 +142,12 @@ namespace CEPGUI.UserControls
             FrmMariage frm = new FrmMariage();
             frm.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FrmImpression fr = new FrmImpression();
+            fr.RegistreMembres();
+            fr.ShowDialog();
+        }
     }
 }

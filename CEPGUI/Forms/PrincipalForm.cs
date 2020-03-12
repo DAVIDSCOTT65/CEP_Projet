@@ -20,7 +20,7 @@ namespace CEPGUI
         {
             InitializeComponent();
             Pw = 314;
-            Hided = false;
+            Hided = true;
         }
 
         private void PrincipalForm_Load(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace CEPGUI
                 spanel.Width = spanel.Width - 20;
                 centralPanel.Width = centralPanel.Width + 20;
                 userPanel.Width = userPanel.Width + 20;
-                if (spanel.Width<= 79)
+                if (spanel.Width<= 53)
                 {
                     timer1.Stop();
                     Hided = true;
@@ -139,6 +139,11 @@ namespace CEPGUI
         private void button7_Click(object sender, EventArgs e)
         {
             ChargerUser(new UC_Mariage());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new UC_Reception());
         }
     }
 }

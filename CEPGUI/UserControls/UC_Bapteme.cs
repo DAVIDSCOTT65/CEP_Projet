@@ -79,5 +79,12 @@ namespace CEPGUI.UserControls
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmImpression fr = new FrmImpression();
+            fr.RegistreBaptemes();
+            fr.ShowDialog();
+        }
     }
 }

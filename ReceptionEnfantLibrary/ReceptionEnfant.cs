@@ -61,7 +61,7 @@ namespace ReceptionEnfantLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "SELECT_RECEPTION_ENFANT";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 IDataReader dr = cmd.ExecuteReader();
@@ -105,11 +105,13 @@ namespace ReceptionEnfantLibrary
             m.Noms = dr["Noms"].ToString();
             m.Sexe = dr["Sexe"].ToString();
             m.DateNaissance = Convert.ToDateTime(dr["DateNaissance"].ToString());
+            m.DateReception = Convert.ToDateTime(dr["DateReception"].ToString());
             m.Pere = dr["NomPere"].ToString();
             m.Mere = dr["NomMere"].ToString();
             m.ProvOrigine = dr["ProvinceOrigine"].ToString();
             m.TerrOrigine = dr["TerritOrigine"].ToString();
             m.Pasteur = dr["Pasteur"].ToString();
+            m.DateEnregistrement = Convert.ToDateTime(dr["DateEnregistrer"].ToString());
 
             return m;
         }

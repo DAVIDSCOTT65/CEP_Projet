@@ -74,6 +74,30 @@
       <DependentUpon>CR_Entree.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EtatSorties\CR_Registre_Bapteme.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Registre_Bapteme.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EtatSorties\CR_Registre_Enfant.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Registre_Enfant.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EtatSorties\CR_Registre_Mariage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Registre_Mariage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EtatSorties\CR_Registre_Membre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Registre_Membre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\AffectactionDepartement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +275,12 @@
     <Compile Include="UserControls\UC_Membre.Designer.cs">
       <DependentUpon>UC_Membre.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Reception.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Reception.Designer.cs">
+      <DependentUpon>UC_Reception.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EtatSorties\CR_Depense.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Depense.cs</LastGenOutput>
@@ -258,6 +288,22 @@
     <EmbeddedResource Include="EtatSorties\CR_Entree.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Entree.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Registre_Bapteme.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Registre_Bapteme.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Registre_Enfant.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Registre_Enfant.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Registre_Mariage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Registre_Mariage.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Registre_Membre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Registre_Membre.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AffectactionDepartement.resx">
       <DependentUpon>AffectactionDepartement.cs</DependentUpon>
@@ -355,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Membre.resx">
       <DependentUpon>UC_Membre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Reception.resx">
+      <DependentUpon>UC_Reception.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -611,6 +660,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Romance_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Church_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conference_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Feed_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send Mass Email_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giving Tickets_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Children_32px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newlyweds_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snowflake_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

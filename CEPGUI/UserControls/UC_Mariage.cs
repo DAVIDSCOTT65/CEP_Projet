@@ -60,5 +60,12 @@ namespace CEPGUI.UserControls
         {
             dgMariage.DataSource = m.Research(serchTxt.Text);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmImpression frm = new FrmImpression();
+            frm.RegistreMariages();
+            frm.ShowDialog();
+        }
     }
 }
