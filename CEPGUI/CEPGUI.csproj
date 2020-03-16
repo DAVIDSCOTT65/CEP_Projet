@@ -128,6 +128,12 @@
     <Compile Include="Forms\FrmAddMariage.Designer.cs">
       <DependentUpon>FrmAddMariage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAgent.Designer.cs">
+      <DependentUpon>FrmAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmBapteme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,12 @@
     <Compile Include="UserControls\UC_Reception.Designer.cs">
       <DependentUpon>UC_Reception.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Utilisateurs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Utilisateurs.Designer.cs">
+      <DependentUpon>UC_Utilisateurs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EtatSorties\CR_Depense.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Depense.cs</LastGenOutput>
@@ -326,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAddMariage.resx">
       <DependentUpon>FrmAddMariage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAgent.resx">
+      <DependentUpon>FrmAgent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmBapteme.resx">
       <DependentUpon>FrmBapteme.cs</DependentUpon>
@@ -414,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Reception.resx">
       <DependentUpon>UC_Reception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Utilisateurs.resx">
+      <DependentUpon>UC_Utilisateurs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -700,6 +718,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Snowflake_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

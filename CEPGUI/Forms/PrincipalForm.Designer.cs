@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.spanel = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -50,22 +51,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.centralPanel = new System.Windows.Forms.Panel();
             this.userPanel = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.circularPictureBox2 = new CEPGUI.Class.CircularPictureBox();
+            this.lblFonction = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.avatarPic = new CEPGUI.Class.CircularPictureBox();
+            this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
             this.panel1.SuspendLayout();
             this.spanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.userPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,6 +95,7 @@
             // 
             this.spanel.BackColor = System.Drawing.Color.Transparent;
             this.spanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.spanel.Controls.Add(this.button12);
             this.spanel.Controls.Add(this.button11);
             this.spanel.Controls.Add(this.button10);
             this.spanel.Controls.Add(this.button9);
@@ -116,6 +118,23 @@
             this.spanel.Size = new System.Drawing.Size(53, 749);
             this.spanel.TabIndex = 1;
             this.spanel.Paint += new System.Windows.Forms.PaintEventHandler(this.spanel_Paint);
+            // 
+            // button12
+            // 
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Image = global::CEPGUI.Properties.Resources.Male_User_32px;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(1, 653);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(295, 40);
+            this.button12.TabIndex = 18;
+            this.button12.Text = "          Bapteme";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -361,18 +380,6 @@
             this.label2.Text = "www.cpgoma.cd";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.logocep;
-            this.circularPictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(46, 69);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 0;
-            this.circularPictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -396,47 +403,37 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userPanel.BackColor = System.Drawing.Color.Transparent;
             this.userPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userPanel.Controls.Add(this.label9);
-            this.userPanel.Controls.Add(this.label8);
-            this.userPanel.Controls.Add(this.circularPictureBox2);
+            this.userPanel.Controls.Add(this.lblFonction);
+            this.userPanel.Controls.Add(this.lblNom);
+            this.userPanel.Controls.Add(this.avatarPic);
             this.userPanel.Controls.Add(this.label1);
             this.userPanel.Location = new System.Drawing.Point(1, 0);
             this.userPanel.Name = "userPanel";
             this.userPanel.Size = new System.Drawing.Size(983, 73);
             this.userPanel.TabIndex = 3;
             // 
-            // label9
+            // lblFonction
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(798, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 17);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "David Scott";
+            this.lblFonction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFonction.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFonction.Location = new System.Drawing.Point(700, 48);
+            this.lblFonction.Name = "lblFonction";
+            this.lblFonction.Size = new System.Drawing.Size(198, 17);
+            this.lblFonction.TabIndex = 17;
+            this.lblFonction.Text = "Admin";
+            this.lblFonction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // lblNom
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(810, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 17);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "MIRINDI";
-            // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularPictureBox2.Image = global::CEPGUI.Properties.Resources.IMG_5481;
-            this.circularPictureBox2.Location = new System.Drawing.Point(906, 6);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(65, 59);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 15;
-            this.circularPictureBox2.TabStop = false;
+            this.lblNom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNom.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNom.Location = new System.Drawing.Point(697, 21);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(201, 17);
+            this.lblNom.TabIndex = 16;
+            this.lblNom.Text = "MIRINDI";
+            this.lblNom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNom.Click += new System.EventHandler(this.lblNom_Click);
             // 
             // label1
             // 
@@ -458,6 +455,29 @@
             this.label10.Size = new System.Drawing.Size(184, 17);
             this.label10.TabIndex = 91;
             this.label10.Text = "D@v Coding Concept 2020";
+            // 
+            // avatarPic
+            // 
+            this.avatarPic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.avatarPic.Image = global::CEPGUI.Properties.Resources.IMG_5481;
+            this.avatarPic.Location = new System.Drawing.Point(906, 6);
+            this.avatarPic.Name = "avatarPic";
+            this.avatarPic.Size = new System.Drawing.Size(65, 59);
+            this.avatarPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatarPic.TabIndex = 15;
+            this.avatarPic.TabStop = false;
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.logocep;
+            this.circularPictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(46, 69);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 0;
+            this.circularPictureBox1.TabStop = false;
             // 
             // PrincipalForm
             // 
@@ -481,10 +501,10 @@
             this.spanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,12 +534,13 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel centralPanel;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private Class.CircularPictureBox circularPictureBox2;
+        private System.Windows.Forms.Label lblFonction;
+        private System.Windows.Forms.Label lblNom;
+        private Class.CircularPictureBox avatarPic;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }

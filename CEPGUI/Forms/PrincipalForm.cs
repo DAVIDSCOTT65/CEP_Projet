@@ -1,4 +1,5 @@
-﻿using CEPGUI.Forms;
+﻿using CEPGUI.Class;
+using CEPGUI.Forms;
 using CEPGUI.UserControls;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,17 @@ namespace CEPGUI
             PubCon.testFile();
             var form = new ConnectUser();
             form.ShowDialog();
+            loadPhoto(UserSession.GetInstance().Id.ToString(), avatarPic);
+            lblNom.Text = UserSession.GetInstance().UserName;
+            lblFonction.Text = UserSession.GetInstance().Fonction;
             ChargerUser(new Home());
+
+            
+        }
+        void loadPhoto(string id, PictureBox pic)
+        {
+            DynamicClasses dn = new DynamicClasses();
+            dn.retreivePhoto(id, pic, "SELECT_PHOTO");
         }
         public void ChargerUser(UserControl userc)
         {
@@ -144,6 +155,16 @@ namespace CEPGUI
         private void button11_Click(object sender, EventArgs e)
         {
             ChargerUser(new UC_Reception());
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ChargerUser(new UC_Utilisateurs());
+        }
+
+        private void lblNom_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

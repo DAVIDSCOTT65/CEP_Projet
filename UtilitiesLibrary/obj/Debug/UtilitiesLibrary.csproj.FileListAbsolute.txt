@@ -6,3 +6,4 @@ E:\DAVID\PROJETBDD\ProjetCEP\UtilitiesLibrary\bin\Debug\ManageSingleConnexion.dl
 E:\DAVID\PROJETBDD\ProjetCEP\UtilitiesLibrary\bin\Debug\ParametreLibrary.dll
 E:\DAVID\PROJETBDD\ProjetCEP\UtilitiesLibrary\bin\Debug\ManageSingleConnexion.pdb
 E:\DAVID\PROJETBDD\ProjetCEP\UtilitiesLibrary\bin\Debug\ParametreLibrary.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\UtilitiesLibrary\obj\Debug\UtilitiesLibrary.csprojResolveAssemblyReference.cache
