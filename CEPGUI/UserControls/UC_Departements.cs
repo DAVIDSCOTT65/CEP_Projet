@@ -70,7 +70,7 @@ namespace CEPGUI.UserControls
 
         private void departCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if(departCombo.Text != "")
                 ChargementDataGrid(new Membre());
             
         }

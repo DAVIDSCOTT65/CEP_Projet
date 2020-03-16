@@ -263,6 +263,44 @@ namespace CEPGUI.Forms
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
         }
+        public void RegistreAnnonces()
+        {
+            try
+            {
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetRegistreAnnonce";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Pivot_Annonce");
+
+                    CR_Registre_Annonce entree = new CR_Registre_Annonce();
+                    entree.SetDataSource(ds);
+
+                    crystalReportViewer1.ReportSource = entree;
+                    crystalReportViewer1.Refresh();
+
+
+
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void monthCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (yearCombo.Text != "")

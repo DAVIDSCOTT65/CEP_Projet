@@ -89,5 +89,12 @@ namespace CEPGUI.UserControls
         {
             dn.ExportInExcel(dgCommunique);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmImpression fr = new FrmImpression();
+            fr.RegistreAnnonces();
+            fr.ShowDialog();
+        }
     }
 }

@@ -118,6 +118,8 @@ namespace CEPGUI.Forms
                     MessageBox.Show("Annonce enregistrer avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgDepart.Rows.Clear();
                     annonceTxt.Text = "Rédiger l'annonce ................................................";
+                    dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
+
                 }
             }
             catch (Exception ex)

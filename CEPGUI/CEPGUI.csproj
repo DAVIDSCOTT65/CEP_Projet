@@ -74,6 +74,12 @@
       <DependentUpon>CR_Entree.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EtatSorties\CR_Registre_Annonce.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Registre_Annonce.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="EtatSorties\CR_Registre_Bapteme.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -288,6 +294,10 @@
     <EmbeddedResource Include="EtatSorties\CR_Entree.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Entree.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Registre_Annonce.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Registre_Annonce.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="EtatSorties\CR_Registre_Bapteme.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
