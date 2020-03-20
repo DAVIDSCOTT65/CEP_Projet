@@ -13,6 +13,7 @@ using MembreLibrary;
 using CommuniqueLibrary;
 using BaptemeLibrary;
 using MariageLibrary;
+using CEPGUI.Forms;
 
 namespace CEPGUI.UserControls
 {
@@ -52,6 +53,12 @@ namespace CEPGUI.UserControls
         private void pictureBox9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmEglise fr = new FrmEglise();
+            fr.Show();
         }
     }
 }
