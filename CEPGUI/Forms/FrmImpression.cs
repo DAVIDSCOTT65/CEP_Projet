@@ -301,6 +301,86 @@ namespace CEPGUI.Forms
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
         }
+        public void RapportEntreeTrimestre(int year)
+        {
+            try
+            {
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetEntreeTrimestre";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@year", 50, DbType.Int32, year));
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Finance_Entree_Trimestre");
+
+                    CR_Entrees_Trimestre entree = new CR_Entrees_Trimestre();
+                    entree.SetDataSource(ds);
+
+                    crystalReportViewer1.ReportSource = entree;
+                    crystalReportViewer1.Refresh();
+
+
+
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
+        public void RapportDepenseTrimestre(int year)
+        {
+            try
+            {
+
+
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "GetDepenseTrimestre";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@year", 50, DbType.Int32, year));
+
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter dscmd = new SqlDataAdapter((SqlCommand)cmd);
+                    dscmd.Fill(ds, "Affichage_Finance_Depense_Trimestre");
+
+                    CR_Sorties_Trimestre sortie = new CR_Sorties_Trimestre();
+                    sortie.SetDataSource(ds);
+
+                    crystalReportViewer1.ReportSource = sortie;
+                    crystalReportViewer1.Refresh();
+
+
+
+
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void monthCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (yearCombo.Text != "")
@@ -318,7 +398,6 @@ namespace CEPGUI.Forms
             }
                 
         }
-
         private void yearCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (monthCombo.Text != "")
@@ -334,6 +413,27 @@ namespace CEPGUI.Forms
                         break;
                 }
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                if (yearCombo.Text != "")
+                {
+                    switch (rapport)
+                    {
+                        case "Entrees":
+                            RapportEntreeTrimestre(Convert.ToInt32(yearCombo.Text.Trim()));
+
+                            break;
+                        case "Depenses":
+                            RapportDepenseTrimestre(Convert.ToInt32(yearCombo.Text.Trim()));
+                            break;
+                    }
+                }
+            }
+            
         }
     }
 }

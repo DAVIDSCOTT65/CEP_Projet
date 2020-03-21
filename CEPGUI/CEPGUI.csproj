@@ -74,6 +74,12 @@
       <DependentUpon>CR_Entree.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EtatSorties\CR_Entrees_Trimestre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Entrees_Trimestre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="EtatSorties\CR_Registre_Annonce.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,6 +108,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CR_Registre_Membre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EtatSorties\CR_Sorties_Trimestre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Sorties_Trimestre.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\AffectactionDepartement.cs">
@@ -313,6 +325,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Entree.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Entrees_Trimestre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Entrees_Trimestre.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="EtatSorties\CR_Registre_Annonce.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Registre_Annonce.cs</LastGenOutput>
@@ -332,6 +348,10 @@
     <EmbeddedResource Include="EtatSorties\CR_Registre_Membre.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Registre_Membre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Sorties_Trimestre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Sorties_Trimestre.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AffectactionDepartement.resx">
       <DependentUpon>AffectactionDepartement.cs</DependentUpon>
