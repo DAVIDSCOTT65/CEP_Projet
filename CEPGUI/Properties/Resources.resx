@@ -184,6 +184,9 @@
   <data name="Male User_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Male User_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Settings_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Money_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,8 +226,8 @@
   <data name="Children_32px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Children_32px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Love_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Love_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logocep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logocep.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Giving Tickets_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Giving Tickets_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -237,6 +240,9 @@
   </data>
   <data name="Couple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Couple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Love_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Love_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Snowflake_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Snowflake_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -252,6 +258,9 @@
   </data>
   <data name="images (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images (3)1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="City Church_80px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\City Church_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Microsoft Excel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Microsoft Excel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -340,16 +349,13 @@
   <data name="images (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images (3).jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logocep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logocep.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Money_70px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money_70px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="30-17210X20-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\30-17210X20-21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="City Church_80px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\City Church_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Settings_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

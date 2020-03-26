@@ -166,5 +166,11 @@ namespace CEPGUI
         {
 
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            FrmBackRestore fr = new FrmBackRestore();
+            fr.Show();
+        }
     }
 }

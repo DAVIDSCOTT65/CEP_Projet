@@ -78,3 +78,5 @@ E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.UserControls.UC_Reception.r
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.UserControls.UC_Utilisateurs.resources
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmAgent.resources
 E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmEglise.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmBackRestore.resources
+E:\DAVID\PROJETBDD\ProjetCEP\CEPGUI\obj\Debug\CEPGUI.Forms.FrmSms.resources

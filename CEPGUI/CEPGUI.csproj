@@ -146,6 +146,12 @@
     <Compile Include="Forms\FrmAgent.Designer.cs">
       <DependentUpon>FrmAgent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmBackRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBackRestore.Designer.cs">
+      <DependentUpon>FrmBackRestore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmBapteme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,12 @@
     </Compile>
     <Compile Include="Forms\FrmReceptionEnfant.Designer.cs">
       <DependentUpon>FrmReceptionEnfant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSms.Designer.cs">
+      <DependentUpon>FrmSms.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmSource.cs">
       <SubType>Form</SubType>
@@ -368,6 +380,9 @@
     <EmbeddedResource Include="Forms\FrmAgent.resx">
       <DependentUpon>FrmAgent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBackRestore.resx">
+      <DependentUpon>FrmBackRestore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmBapteme.resx">
       <DependentUpon>FrmBapteme.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmReceptionEnfant.resx">
       <DependentUpon>FrmReceptionEnfant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSms.resx">
+      <DependentUpon>FrmSms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSource.resx">
       <DependentUpon>FrmSource.cs</DependentUpon>
@@ -750,6 +768,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Male User_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

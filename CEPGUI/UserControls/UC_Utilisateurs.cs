@@ -45,7 +45,7 @@ namespace CEPGUI.UserControls
                     frm.emailTxt.Text = dgAgent["ColEmail", i].Value.ToString();
                     frm.fonctionTxt.Text = dgAgent["ColFonction", i].Value.ToString();
                     frm.userTxt.Text = dgAgent["ColPseudo", i].Value.ToString();
-                    frm.fonctionTxt.ReadOnly = true;
+                    //frm.fonctionTxt.ReadOnly = true;
                     frm.phoneTxt.Text = dgAgent["ColContact", i].Value.ToString();
 
                     if (dgAgent["ColSex", i].Value.ToString() == "M")
