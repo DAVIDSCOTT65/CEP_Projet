@@ -223,7 +223,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.Money_70px;
+            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.Paper_Money_40px;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 50);

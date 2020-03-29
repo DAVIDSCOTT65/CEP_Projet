@@ -67,9 +67,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.baptTxt = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.baptTxt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,7 +153,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label6.Location = new System.Drawing.Point(111, 25);
+            this.label6.Location = new System.Drawing.Point(84, 27);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(240, 24);
@@ -443,6 +443,14 @@
             this.label20.TabIndex = 228;
             this.label20.Text = "*";
             // 
+            // baptTxt
+            // 
+            this.baptTxt.Location = new System.Drawing.Point(143, 247);
+            this.baptTxt.Name = "baptTxt";
+            this.baptTxt.Size = new System.Drawing.Size(300, 27);
+            this.baptTxt.TabIndex = 230;
+            this.baptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -460,21 +468,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.User_Groups_70px;
+            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.Conference_40px;
             this.pictureBox1.Location = new System.Drawing.Point(13, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 196;
             this.pictureBox1.TabStop = false;
-            // 
-            // baptTxt
-            // 
-            this.baptTxt.Location = new System.Drawing.Point(143, 247);
-            this.baptTxt.Name = "baptTxt";
-            this.baptTxt.Size = new System.Drawing.Size(300, 27);
-            this.baptTxt.TabIndex = 230;
-            this.baptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmMembre
             // 

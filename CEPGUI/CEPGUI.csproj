@@ -775,6 +775,33 @@
   <ItemGroup>
     <None Include="Resources\Settings_32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Department_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Feed_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wedding Day_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Group Woman Man_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collaboration_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paper Money_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Romance_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conference_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Budget_40px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

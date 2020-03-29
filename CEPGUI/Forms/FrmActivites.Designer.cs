@@ -53,11 +53,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.descTxt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.descTxt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -183,7 +183,7 @@
             this.dgDepart.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgDepart.RowHeadersVisible = false;
             this.dgDepart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDepart.Size = new System.Drawing.Size(147, 345);
+            this.dgDepart.Size = new System.Drawing.Size(147, 327);
             this.dgDepart.TabIndex = 279;
             // 
             // ColId
@@ -315,6 +315,22 @@
             this.label3.TabIndex = 280;
             this.label3.Text = "*";
             // 
+            // descTxt
+            // 
+            this.descTxt.Location = new System.Drawing.Point(105, 134);
+            this.descTxt.Multiline = true;
+            this.descTxt.Name = "descTxt";
+            this.descTxt.Size = new System.Drawing.Size(291, 133);
+            this.descTxt.TabIndex = 282;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(1, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 64);
+            this.label7.TabIndex = 283;
+            this.label7.Text = "Description Max(100)";
+            // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -349,29 +365,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.User_Groups_70px;
+            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.Activity_Feed_40px;
             this.pictureBox1.Location = new System.Drawing.Point(14, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 250;
             this.pictureBox1.TabStop = false;
-            // 
-            // descTxt
-            // 
-            this.descTxt.Location = new System.Drawing.Point(105, 134);
-            this.descTxt.Multiline = true;
-            this.descTxt.Name = "descTxt";
-            this.descTxt.Size = new System.Drawing.Size(291, 133);
-            this.descTxt.TabIndex = 282;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(1, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 64);
-            this.label7.TabIndex = 283;
-            this.label7.Text = "Description Max(100)";
             // 
             // FrmActivites
             // 

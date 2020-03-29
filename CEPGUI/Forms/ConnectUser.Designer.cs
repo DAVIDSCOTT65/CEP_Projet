@@ -61,7 +61,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(32, 298);
+            this.button1.Location = new System.Drawing.Point(32, 239);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(394, 38);
@@ -74,7 +74,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(147, 248);
+            this.linkLabel1.Location = new System.Drawing.Point(147, 189);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(152, 21);
             this.linkLabel1.TabIndex = 55;
@@ -86,7 +86,7 @@
             this.userTxt.AcceptsTab = true;
             this.userTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTxt.Location = new System.Drawing.Point(55, 149);
+            this.userTxt.Location = new System.Drawing.Point(55, 90);
             this.userTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userTxt.Name = "userTxt";
             this.userTxt.Size = new System.Drawing.Size(345, 20);
@@ -98,7 +98,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(55, 172);
+            this.panel3.Location = new System.Drawing.Point(55, 113);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(345, 1);
             this.panel3.TabIndex = 58;
@@ -106,7 +106,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Location = new System.Drawing.Point(55, 228);
+            this.panel4.Location = new System.Drawing.Point(55, 169);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(345, 1);
             this.panel4.TabIndex = 59;
@@ -116,7 +116,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label6.Location = new System.Drawing.Point(48, 62);
+            this.label6.Location = new System.Drawing.Point(44, 21);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(356, 39);
@@ -127,7 +127,7 @@
             // 
             this.passTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passTxt.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.passTxt.Location = new System.Drawing.Point(55, 207);
+            this.passTxt.Location = new System.Drawing.Point(55, 148);
             this.passTxt.Name = "passTxt";
             this.passTxt.Size = new System.Drawing.Size(345, 19);
             this.passTxt.TabIndex = 54;
@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(451, 368);
+            this.ClientSize = new System.Drawing.Size(451, 296);
             this.Controls.Add(this.passTxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel4);

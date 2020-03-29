@@ -64,5 +64,10 @@ namespace CEPGUI
             comboBox2.Items.Add(string.Format(@"{0}", Environment.MachineName));
             comboBox2.SelectedIndex = 3;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

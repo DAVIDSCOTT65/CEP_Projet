@@ -156,7 +156,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(396, 27);
             this.textBox1.TabIndex = 41;
-            this.textBox1.Text = "QUINKA_STOCK";
+            this.textBox1.Text = "CEP_DATABASE";
             // 
             // label4
             // 
@@ -221,6 +221,7 @@
             this.button2.TabIndex = 48;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

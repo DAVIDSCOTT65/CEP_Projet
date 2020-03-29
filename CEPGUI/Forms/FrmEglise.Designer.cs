@@ -34,6 +34,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEglise));
             this.btnSave = new System.Windows.Forms.Button();
             this.dgMaison = new System.Windows.Forms.DataGridView();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAcro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPhone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone3 = new System.Windows.Forms.MaskedTextBox();
             this.phone2 = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -58,20 +68,12 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAcro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPhone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.photo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgMaison)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -144,6 +146,95 @@
             this.dgMaison.TabIndex = 173;
             this.dgMaison.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMaison_CellContentClick);
             this.dgMaison.SelectionChanged += new System.EventHandler(this.dgMaison_SelectionChanged);
+            // 
+            // ColId
+            // 
+            this.ColId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColId.DataPropertyName = "Id";
+            this.ColId.HeaderText = "N°";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Width = 53;
+            // 
+            // ColNom
+            // 
+            this.ColNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNom.DataPropertyName = "Nom";
+            this.ColNom.HeaderText = "Identité";
+            this.ColNom.Name = "ColNom";
+            this.ColNom.ReadOnly = true;
+            this.ColNom.Width = 98;
+            // 
+            // ColCom
+            // 
+            this.ColCom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColCom.DataPropertyName = "Communaute";
+            this.ColCom.HeaderText = "Communauté";
+            this.ColCom.Name = "ColCom";
+            this.ColCom.ReadOnly = true;
+            this.ColCom.Width = 146;
+            // 
+            // ColAcro
+            // 
+            this.ColAcro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColAcro.DataPropertyName = "Acronyme";
+            this.ColAcro.HeaderText = "Acronyme";
+            this.ColAcro.Name = "ColAcro";
+            this.ColAcro.ReadOnly = true;
+            this.ColAcro.Width = 116;
+            // 
+            // ColAdd
+            // 
+            this.ColAdd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColAdd.DataPropertyName = "Adresse";
+            this.ColAdd.HeaderText = "Adresse";
+            this.ColAdd.Name = "ColAdd";
+            this.ColAdd.ReadOnly = true;
+            this.ColAdd.Width = 96;
+            // 
+            // ColPhone
+            // 
+            this.ColPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColPhone.DataPropertyName = "Telephone1";
+            this.ColPhone.HeaderText = "Contact1";
+            this.ColPhone.Name = "ColPhone";
+            this.ColPhone.ReadOnly = true;
+            this.ColPhone.Width = 112;
+            // 
+            // ColPhone2
+            // 
+            this.ColPhone2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColPhone2.DataPropertyName = "Telephone2";
+            this.ColPhone2.HeaderText = "Contact2";
+            this.ColPhone2.Name = "ColPhone2";
+            this.ColPhone2.ReadOnly = true;
+            this.ColPhone2.Width = 112;
+            // 
+            // ColEmail
+            // 
+            this.ColEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEmail.DataPropertyName = "Mail";
+            this.ColEmail.HeaderText = "Email";
+            this.ColEmail.Name = "ColEmail";
+            this.ColEmail.ReadOnly = true;
+            this.ColEmail.Width = 76;
+            // 
+            // ColSite
+            // 
+            this.ColSite.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColSite.DataPropertyName = "Siteweb";
+            this.ColSite.HeaderText = "SiteWeb";
+            this.ColSite.Name = "ColSite";
+            this.ColSite.ReadOnly = true;
+            this.ColSite.Width = 99;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Logo";
+            this.Column1.HeaderText = "Logo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             // 
             // phone3
             // 
@@ -405,7 +496,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 42);
+            this.label1.Location = new System.Drawing.Point(87, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 32);
             this.label1.TabIndex = 169;
@@ -428,94 +519,15 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // ColId
+            // photo
             // 
-            this.ColId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColId.DataPropertyName = "Id";
-            this.ColId.HeaderText = "N°";
-            this.ColId.Name = "ColId";
-            this.ColId.ReadOnly = true;
-            this.ColId.Width = 53;
-            // 
-            // ColNom
-            // 
-            this.ColNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColNom.DataPropertyName = "Nom";
-            this.ColNom.HeaderText = "Identité";
-            this.ColNom.Name = "ColNom";
-            this.ColNom.ReadOnly = true;
-            this.ColNom.Width = 98;
-            // 
-            // ColCom
-            // 
-            this.ColCom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColCom.DataPropertyName = "Communaute";
-            this.ColCom.HeaderText = "Communauté";
-            this.ColCom.Name = "ColCom";
-            this.ColCom.ReadOnly = true;
-            this.ColCom.Width = 146;
-            // 
-            // ColAcro
-            // 
-            this.ColAcro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColAcro.DataPropertyName = "Acronyme";
-            this.ColAcro.HeaderText = "Acronyme";
-            this.ColAcro.Name = "ColAcro";
-            this.ColAcro.ReadOnly = true;
-            this.ColAcro.Width = 116;
-            // 
-            // ColAdd
-            // 
-            this.ColAdd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColAdd.DataPropertyName = "Adresse";
-            this.ColAdd.HeaderText = "Adresse";
-            this.ColAdd.Name = "ColAdd";
-            this.ColAdd.ReadOnly = true;
-            this.ColAdd.Width = 96;
-            // 
-            // ColPhone
-            // 
-            this.ColPhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPhone.DataPropertyName = "Telephone1";
-            this.ColPhone.HeaderText = "Contact1";
-            this.ColPhone.Name = "ColPhone";
-            this.ColPhone.ReadOnly = true;
-            this.ColPhone.Width = 112;
-            // 
-            // ColPhone2
-            // 
-            this.ColPhone2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPhone2.DataPropertyName = "Telephone2";
-            this.ColPhone2.HeaderText = "Contact2";
-            this.ColPhone2.Name = "ColPhone2";
-            this.ColPhone2.ReadOnly = true;
-            this.ColPhone2.Width = 112;
-            // 
-            // ColEmail
-            // 
-            this.ColEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColEmail.DataPropertyName = "Mail";
-            this.ColEmail.HeaderText = "Email";
-            this.ColEmail.Name = "ColEmail";
-            this.ColEmail.ReadOnly = true;
-            this.ColEmail.Width = 76;
-            // 
-            // ColSite
-            // 
-            this.ColSite.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColSite.DataPropertyName = "Siteweb";
-            this.ColSite.HeaderText = "SiteWeb";
-            this.ColSite.Name = "ColSite";
-            this.ColSite.ReadOnly = true;
-            this.ColSite.Width = 99;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Logo";
-            this.Column1.HeaderText = "Logo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
+            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
+            this.photo.Location = new System.Drawing.Point(12, 11);
+            this.photo.Name = "photo";
+            this.photo.Size = new System.Drawing.Size(66, 71);
+            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.photo.TabIndex = 174;
+            this.photo.TabStop = false;
             // 
             // FrmEglise
             // 
@@ -523,6 +535,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(732, 619);
+            this.Controls.Add(this.photo);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgMaison);
             this.Controls.Add(this.groupBox1);
@@ -544,6 +557,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,5 +601,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSite;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        public System.Windows.Forms.PictureBox photo;
     }
 }

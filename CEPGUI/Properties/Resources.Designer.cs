@@ -143,6 +143,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Activity_Feed_40px {
+            get {
+                object obj = ResourceManager.GetObject("Activity Feed_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Activity_Feed_50px {
             get {
                 object obj = ResourceManager.GetObject("Activity Feed_50px", resourceCulture);
@@ -196,6 +206,26 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap Add_32px {
             get {
                 object obj = ResourceManager.GetObject("Add_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Add_User_Group_Woman_Man_40px {
+            get {
+                object obj = ResourceManager.GetObject("Add User Group Woman Man_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Budget_40px {
+            get {
+                object obj = ResourceManager.GetObject("Budget_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +343,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Collaboration_40px {
+            get {
+                object obj = ResourceManager.GetObject("Collaboration_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Conference_32px {
             get {
                 object obj = ResourceManager.GetObject("Conference_32px", resourceCulture);
@@ -326,6 +366,16 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap Conference_32px1 {
             get {
                 object obj = ResourceManager.GetObject("Conference_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conference_40px {
+            get {
+                object obj = ResourceManager.GetObject("Conference_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +426,16 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap Department_32px {
             get {
                 object obj = ResourceManager.GetObject("Department_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Department_40px {
+            get {
+                object obj = ResourceManager.GetObject("Department_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -663,6 +723,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Paper_Money_40px {
+            get {
+                object obj = ResourceManager.GetObject("Paper Money_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refresh_32px {
             get {
                 object obj = ResourceManager.GetObject("Refresh_32px", resourceCulture);
@@ -686,6 +756,16 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap Romance_32px1 {
             get {
                 object obj = ResourceManager.GetObject("Romance_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Romance_40px {
+            get {
+                object obj = ResourceManager.GetObject("Romance_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -846,6 +926,16 @@ namespace CEPGUI.Properties {
         internal static System.Drawing.Bitmap User_Groups_80px6 {
             get {
                 object obj = ResourceManager.GetObject("User Groups_80px6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wedding_Day_40px {
+            get {
+                object obj = ResourceManager.GetObject("Wedding Day_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -57,13 +57,15 @@
             this.nomsTxt = new System.Windows.Forms.TextBox();
             this.gbAgent = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.photo = new System.Windows.Forms.PictureBox();
             this.btnParc = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbAgent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.SuspendLayout();
@@ -426,6 +428,30 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Nom complet";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(364, 572);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 44);
+            this.button1.TabIndex = 108;
+            this.button1.Text = "Effacer";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CEPGUI.Properties.Resources.Add_User_Group_Woman_Man_40px;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 85;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -464,26 +490,13 @@
             this.btnParc.UseVisualStyleBackColor = false;
             this.btnParc.Click += new System.EventHandler(this.btnParc_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(364, 572);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 44);
-            this.button1.TabIndex = 108;
-            this.button1.Text = "Effacer";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // FrmAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(734, 622);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.pictureBox6);
@@ -497,7 +510,7 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmAgent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgent";
@@ -507,6 +520,7 @@
             this.groupBox2.PerformLayout();
             this.gbAgent.ResumeLayout(false);
             this.gbAgent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             this.ResumeLayout(false);
@@ -548,5 +562,6 @@
         public System.Windows.Forms.GroupBox gbAgent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
