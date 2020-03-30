@@ -32,7 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pastTxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dateTxt = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateTxt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,16 +87,6 @@
             this.label12.Size = new System.Drawing.Size(67, 21);
             this.label12.TabIndex = 327;
             this.label12.Text = "Couple";
-            // 
-            // dateTxt
-            // 
-            this.dateTxt.Location = new System.Drawing.Point(75, 243);
-            this.dateTxt.Mask = "00/00/0000";
-            this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(300, 27);
-            this.dateTxt.TabIndex = 321;
-            this.dateTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dateTxt.ValidatingType = typeof(System.DateTime);
             // 
             // label8
             // 
@@ -235,12 +225,21 @@
             this.pictureBox1.TabIndex = 318;
             this.pictureBox1.TabStop = false;
             // 
+            // dateTxt
+            // 
+            this.dateTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTxt.Location = new System.Drawing.Point(75, 243);
+            this.dateTxt.Name = "dateTxt";
+            this.dateTxt.Size = new System.Drawing.Size(300, 27);
+            this.dateTxt.TabIndex = 335;
+            // 
             // FrmFaireMariage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(423, 383);
+            this.Controls.Add(this.dateTxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblParrain);
             this.Controls.Add(this.label3);
@@ -248,7 +247,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pastTxt);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.dateTxt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label16);
@@ -278,7 +276,6 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox pastTxt;
         private System.Windows.Forms.Label label12;
-        public System.Windows.Forms.MaskedTextBox dateTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label16;
@@ -293,5 +290,6 @@
         public System.Windows.Forms.Label lblParrain;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.DateTimePicker dateTxt;
     }
 }

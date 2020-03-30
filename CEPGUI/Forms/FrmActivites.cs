@@ -96,7 +96,7 @@ namespace CEPGUI.Forms
         {
             activCombo.Text = "";
             descTxt.Clear();
-            dateTxt.Clear();
+            dateTxt.Text = DateTime.Today.ToString();
             heureTxt.Clear();
         }
         private void AddToDataGrid()

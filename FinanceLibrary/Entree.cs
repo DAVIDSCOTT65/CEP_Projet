@@ -18,6 +18,9 @@ namespace FinanceLibrary
         public int RefDepart { get; set; }
         public int RefSource { get; set; }
         public double Montant { get; set; }
+        public double FC { get; set; }
+        public double Dollar { get; set; }
+        public DateTime DateConcernee { get; set; }
         public DateTime DateEntree { get; set; }
         public string Source { get; set; }
         public string Departement { get; set; }
@@ -30,12 +33,15 @@ namespace FinanceLibrary
                 cmd.CommandText = "INSERT_ENTREE";
                 cmd.CommandType = CommandType.StoredProcedure;
                 
-                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
-                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refdepart", 5, DbType.Int32, d.RefDepart));
-                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refsource", 5, DbType.Int32, d.RefSource));
-                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@montant", 10, DbType.Double, d.Montant));
-                
-                 cmd.ExecuteNonQuery();
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refdepart", 5, DbType.Int32, d.RefDepart));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refsource", 5, DbType.Int32, d.RefSource));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@montant", 10, DbType.Double, d.Montant));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@fc", 10, DbType.Double, d.FC));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@dollar", 10, DbType.Double, d.Dollar));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 20, DbType.Date, d.DateConcernee));
+
+                cmd.ExecuteNonQuery();
 
                 if (d.Id > 0)
                     MessageBox.Show("Modification effectuer avec succès", "Mofification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -95,7 +101,9 @@ namespace FinanceLibrary
             m.Source = dr["Designation"].ToString();
             m.Departement = dr["Departement"].ToString();
             m.Montant = Convert.ToDouble(dr["Montant"].ToString());
-            m.DateEntree = Convert.ToDateTime(dr["DateEntree"].ToString());
+            m.FC = Convert.ToDouble(dr["MontantFC"].ToString());
+            m.Dollar = Convert.ToDouble(dr["MontantDollars"].ToString());
+            m.DateConcernee = Convert.ToDateTime(dr["DateConcerne"].ToString());
 
 
             return m;

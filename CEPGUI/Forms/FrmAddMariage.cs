@@ -58,7 +58,7 @@ namespace CEPGUI.Forms
         {
             id = 0;
             lieuTxt.Clear();
-            dateTxt.Clear();
+            dateTxt.Text = DateTime.Today.ToString();
             pastTxt.Clear();
         }
         private void button2_Click(object sender, EventArgs e)

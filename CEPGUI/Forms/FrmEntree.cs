@@ -52,28 +52,38 @@ namespace CEPGUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Enregistrer();
+            if (UserSession.GetInstance().Fonction == "Financier")
+                Enregistrer();
+            else
+            {
+
+            }
         }
         private void Enregistrer()
         {
             try
             {
-                if (Convert.ToDouble(montantTxt.Text) <= 0 || montantTxt.Text == "" || sourceCombo.Text == "")
-                    MessageBox.Show("Veuillez completé tous les champs svp ", "Champs vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                DateTime datepublication;
+                datepublication = Convert.ToDateTime(concernDate.Text);
+                if (Convert.ToDouble(montantTxt.Text) <= 0 || montantTxt.Text == "" || sourceCombo.Text == "" || datepublication.Date > DateTime.Today)
+                    MessageBox.Show("Veuillez completé tous les champs svp ou vérifier la date ", "Champs vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 else
                 {
                     Entree ent = new Entree();
 
-                    
-                        ent.Id = id;
-                        ent.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
-                        ent.RefSource = dn.retourId(sourceCombo.Text, "@designation", "GET_ID_SOURCE");
-                        ent.Montant = Convert.ToDouble(montantTxt.Text);
 
-                        ent.SaveDatas(ent);
+                    ent.Id = id;
+                    ent.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
+                    ent.RefSource = dn.retourId(sourceCombo.Text, "@designation", "GET_ID_SOURCE");
+                    ent.Montant = Convert.ToDouble(montantTxt.Text);
+                    ent.FC = Convert.ToDouble(fcTxt.Text);
+                    ent.Dollar = Convert.ToDouble(dollarTxt.Text);
+                    ent.DateConcernee = Convert.ToDateTime(concernDate.Text);
 
-                        
-                    
+                    ent.SaveDatas(ent);
+
+
+
                     Initialise();
 
                 }
@@ -91,6 +101,9 @@ namespace CEPGUI.Forms
             montantTxt.Text = "0";
             departCombo.SelectedIndex = -1;
             sourceCombo.SelectedIndex = -1;
+            fcTxt.Text = "0";
+            dollarTxt.Text = "0";
+            concernDate.Text = DateTime.Today.ToString();
         }
 
         private void montantTxt_KeyPress(object sender, KeyPressEventArgs e)
@@ -100,6 +113,34 @@ namespace CEPGUI.Forms
                 e.Handled = true;
                 MessageBox.Show("Valeur monnaitaire uniquement");
             }
+        }
+
+        private void montantTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fcTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsControl(e.KeyChar)) && !(Char.IsDigit(e.KeyChar)))
+            {
+                e.Handled = true;
+                MessageBox.Show("Valeur monnaitaire uniquement");
+            }
+        }
+
+        private void dollarTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Valeur monnaitaire uniquement");
+            }
+        }
+
+        private void fcTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

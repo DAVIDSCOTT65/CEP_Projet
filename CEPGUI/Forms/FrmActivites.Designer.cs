@@ -46,7 +46,6 @@
             this.activCombo = new System.Windows.Forms.ComboBox();
             this.departTxt = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTxt = new System.Windows.Forms.MaskedTextBox();
             this.heureTxt = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateTxt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -249,16 +249,6 @@
             this.label13.TabIndex = 275;
             this.label13.Text = "*";
             // 
-            // dateTxt
-            // 
-            this.dateTxt.Location = new System.Drawing.Point(105, 273);
-            this.dateTxt.Mask = "00/00/0000";
-            this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(94, 27);
-            this.dateTxt.TabIndex = 270;
-            this.dateTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dateTxt.ValidatingType = typeof(System.DateTime);
-            // 
             // heureTxt
             // 
             this.heureTxt.Location = new System.Drawing.Point(319, 273);
@@ -309,7 +299,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(205, 273);
+            this.label3.Location = new System.Drawing.Point(225, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 21);
             this.label3.TabIndex = 280;
@@ -373,12 +363,21 @@
             this.pictureBox1.TabIndex = 250;
             this.pictureBox1.TabStop = false;
             // 
+            // dateTxt
+            // 
+            this.dateTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTxt.Location = new System.Drawing.Point(104, 273);
+            this.dateTxt.Name = "dateTxt";
+            this.dateTxt.Size = new System.Drawing.Size(115, 27);
+            this.dateTxt.TabIndex = 284;
+            // 
             // FrmActivites
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(646, 479);
+            this.Controls.Add(this.dateTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.descTxt);
             this.Controls.Add(this.button3);
@@ -388,7 +387,6 @@
             this.Controls.Add(this.activCombo);
             this.Controls.Add(this.departTxt);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dateTxt);
             this.Controls.Add(this.heureTxt);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
@@ -436,7 +434,6 @@
         private System.Windows.Forms.ComboBox activCombo;
         private System.Windows.Forms.ComboBox departTxt;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.MaskedTextBox dateTxt;
         public System.Windows.Forms.MaskedTextBox heureTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
@@ -446,5 +443,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox descTxt;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTxt;
     }
 }

@@ -83,7 +83,7 @@ namespace CEPGUI
                 spanel.Width = spanel.Width - 20;
                 centralPanel.Width = centralPanel.Width + 20;
                 userPanel.Width = userPanel.Width + 20;
-                if (spanel.Width<= 53)
+                if (spanel.Width<= 54)
                 {
                     timer1.Stop();
                     Hided = true;

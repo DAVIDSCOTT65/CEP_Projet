@@ -38,8 +38,8 @@ namespace CEPGUI.Forms
             try
             {
                 DateTime datecelebr;
-                datecelebr = Convert.ToDateTime(dateTxt.Text);
-                if (lieuTxt.Text == "" || dateTxt.Text == "" || pastTxt.Text == "" || datecelebr < DateTime.Today)
+                datecelebr = Convert.ToDateTime(recptTxt.Text);
+                if (lieuTxt.Text == "" || recptTxt.Text == "" || pastTxt.Text == "" || datecelebr < DateTime.Today)
                 {
                     MessageBox.Show("Impossible d'enregistrer, Champs vides ou dates supérieur", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
@@ -49,7 +49,7 @@ namespace CEPGUI.Forms
 
                     b.Id = Id;
                     b.Lieu = lieuTxt.Text;
-                    b.DateCelebration = Convert.ToDateTime(dateTxt.Text);
+                    b.DateCelebration = Convert.ToDateTime(recptTxt.Text);
                     b.Pasteur = pastTxt.Text;
 
                     b.SaveDatas(b);
@@ -68,7 +68,7 @@ namespace CEPGUI.Forms
         {
             Id = 0;
             lieuTxt.Clear();
-            dateTxt.Clear();
+            recptTxt.Text = DateTime.Today.ToString();
             pastTxt.Clear();
         }
     }

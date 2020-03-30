@@ -112,8 +112,8 @@ namespace CEPGUI.Forms
             rbtnM.Checked = false;
             rbtnF.Checked = false;
             lieuTxt.Clear();
-            naissTxt.Clear();
-            baptTxt.Clear();
+            naissTxt.Text = DateTime.Today.ToString();
+            baptTxt.Text = DateTime.Today.ToString();
             pereTxt.Clear();
             mereTxt.Clear();
             provTxt.Clear();

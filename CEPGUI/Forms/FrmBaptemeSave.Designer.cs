@@ -42,10 +42,10 @@
             this.pastTxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.dateTxt = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.recptTxt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,16 +186,6 @@
             this.label17.TabIndex = 312;
             this.label17.Text = "*";
             // 
-            // dateTxt
-            // 
-            this.dateTxt.Location = new System.Drawing.Point(85, 139);
-            this.dateTxt.Mask = "00/00/0000";
-            this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(300, 27);
-            this.dateTxt.TabIndex = 304;
-            this.dateTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dateTxt.ValidatingType = typeof(System.DateTime);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -225,19 +215,27 @@
             this.label16.TabIndex = 311;
             this.label16.Text = "*";
             // 
+            // recptTxt
+            // 
+            this.recptTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.recptTxt.Location = new System.Drawing.Point(85, 139);
+            this.recptTxt.Name = "recptTxt";
+            this.recptTxt.Size = new System.Drawing.Size(300, 27);
+            this.recptTxt.TabIndex = 314;
+            // 
             // FrmBaptemeSave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(423, 247);
+            this.Controls.Add(this.recptTxt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lieuTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pastTxt);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.dateTxt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label16);
@@ -278,9 +276,9 @@
         public System.Windows.Forms.TextBox pastTxt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
-        public System.Windows.Forms.MaskedTextBox dateTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DateTimePicker recptTxt;
     }
 }

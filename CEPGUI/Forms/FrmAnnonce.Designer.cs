@@ -35,6 +35,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnnonce));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,12 +47,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.annonceTxt = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTxt = new System.Windows.Forms.MaskedTextBox();
             this.dgDepart = new System.Windows.Forms.DataGridView();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dateTxt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,23 @@
             this.toolTip1.SetToolTip(this.button1, "Enregistrer dans la base des données");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button4.Image = global::CEPGUI.Properties.Resources.Add_32px;
+            this.button4.Location = new System.Drawing.Point(722, 104);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(40, 28);
+            this.button4.TabIndex = 208;
+            this.toolTip1.SetToolTip(this.button4, "Ajouter un département");
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel4
             // 
@@ -185,15 +202,6 @@
             this.label3.TabIndex = 218;
             this.label3.Text = "A annoncer le";
             // 
-            // dateTxt
-            // 
-            this.dateTxt.Location = new System.Drawing.Point(138, 106);
-            this.dateTxt.Mask = "00/00/0000";
-            this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(106, 27);
-            this.dateTxt.TabIndex = 219;
-            this.dateTxt.ValidatingType = typeof(System.DateTime);
-            // 
             // dgDepart
             // 
             this.dgDepart.AllowUserToAddRows = false;
@@ -265,22 +273,13 @@
             this.pictureBox1.TabIndex = 213;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // dateTxt
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button4.Image = global::CEPGUI.Properties.Resources.Add_32px;
-            this.button4.Location = new System.Drawing.Point(722, 104);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 28);
-            this.button4.TabIndex = 208;
-            this.toolTip1.SetToolTip(this.button4, "Ajouter un département");
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.dateTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTxt.Location = new System.Drawing.Point(138, 106);
+            this.dateTxt.Name = "dateTxt";
+            this.dateTxt.Size = new System.Drawing.Size(107, 27);
+            this.dateTxt.TabIndex = 221;
             // 
             // FrmAnnonce
             // 
@@ -288,8 +287,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(772, 645);
-            this.Controls.Add(this.dgDepart);
             this.Controls.Add(this.dateTxt);
+            this.Controls.Add(this.dgDepart);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.annonceTxt);
             this.Controls.Add(this.panel4);
@@ -337,9 +336,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox annonceTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox dateTxt;
         public System.Windows.Forms.DataGridView dgDepart;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DateTimePicker dateTxt;
     }
 }

@@ -89,8 +89,8 @@ namespace CEPGUI.Forms
             sex = "";
             rbtnM.Checked = false;
             rbtnF.Checked = false;
-            naissTxt.Clear();
-            recptTxt.Clear();
+            naissTxt.Text = DateTime.Today.ToString();
+            recptTxt.Text = DateTime.Today.ToString();
             pereTxt.Clear();
             mereTxt.Clear();
             provTxt.Clear();

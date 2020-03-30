@@ -40,8 +40,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.recptTxt = new System.Windows.Forms.MaskedTextBox();
-            this.naissTxt = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,6 +61,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.naissTxt = new System.Windows.Forms.DateTimePicker();
+            this.recptTxt = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -173,26 +173,6 @@
             this.label16.Size = new System.Drawing.Size(16, 21);
             this.label16.TabIndex = 264;
             this.label16.Text = "*";
-            // 
-            // recptTxt
-            // 
-            this.recptTxt.Location = new System.Drawing.Point(144, 210);
-            this.recptTxt.Mask = "00/00/0000";
-            this.recptTxt.Name = "recptTxt";
-            this.recptTxt.Size = new System.Drawing.Size(300, 27);
-            this.recptTxt.TabIndex = 233;
-            this.recptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.recptTxt.ValidatingType = typeof(System.DateTime);
-            // 
-            // naissTxt
-            // 
-            this.naissTxt.Location = new System.Drawing.Point(144, 177);
-            this.naissTxt.Mask = "00/00/0000";
-            this.naissTxt.Name = "naissTxt";
-            this.naissTxt.Size = new System.Drawing.Size(300, 27);
-            this.naissTxt.TabIndex = 232;
-            this.naissTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.naissTxt.ValidatingType = typeof(System.DateTime);
             // 
             // label10
             // 
@@ -408,12 +388,30 @@
             this.pictureBox1.TabIndex = 250;
             this.pictureBox1.TabStop = false;
             // 
+            // naissTxt
+            // 
+            this.naissTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.naissTxt.Location = new System.Drawing.Point(144, 175);
+            this.naissTxt.Name = "naissTxt";
+            this.naissTxt.Size = new System.Drawing.Size(300, 27);
+            this.naissTxt.TabIndex = 267;
+            // 
+            // recptTxt
+            // 
+            this.recptTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.recptTxt.Location = new System.Drawing.Point(144, 210);
+            this.recptTxt.Name = "recptTxt";
+            this.recptTxt.Size = new System.Drawing.Size(300, 27);
+            this.recptTxt.TabIndex = 268;
+            // 
             // FrmReceptionEnfant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(473, 476);
+            this.Controls.Add(this.recptTxt);
+            this.Controls.Add(this.naissTxt);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pastTxt);
@@ -423,8 +421,6 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.recptTxt);
-            this.Controls.Add(this.naissTxt);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
@@ -474,8 +470,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
-        public System.Windows.Forms.MaskedTextBox recptTxt;
-        public System.Windows.Forms.MaskedTextBox naissTxt;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -497,5 +491,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker naissTxt;
+        private System.Windows.Forms.DateTimePicker recptTxt;
     }
 }

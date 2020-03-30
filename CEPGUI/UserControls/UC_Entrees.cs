@@ -35,7 +35,35 @@ namespace CEPGUI.UserControls
         {
             dgFinance.DataSource = ent.ListOfEntree();
         }
+        void doubleclic_grid()
+        {
+            try
+            {
+                if (UserSession.GetInstance().Fonction == "Administrateur")
+                {
+                    FrmEntree frm = new FrmEntree();
+                    int i;
+                    i = dgFinance.CurrentRow.Index;
 
+                    frm.id = Convert.ToInt32(dgFinance["ColId", i].Value.ToString());
+                    frm.montantTxt.Text = dgFinance["ColMont", i].Value.ToString();
+                    frm.fcTxt.Text = dgFinance["ColFc", i].Value.ToString();
+                    frm.dollarTxt.Text = dgFinance["ColDoll", i].Value.ToString();
+                    frm.departCombo.Text = dgFinance["ColDepart", i].Value.ToString();
+                    frm.sourceCombo.Text = dgFinance["ColSource", i].Value.ToString();
+                    frm.concernDate.Text = dgFinance["ColDate", i].Value.ToString();
+
+                    frm.ShowDialog();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void serchTxt_TextChanged(object sender, EventArgs e)
         {
             try
@@ -66,6 +94,16 @@ namespace CEPGUI.UserControls
         private void button3_Click(object sender, EventArgs e)
         {
             dn.ExportInExcel(dgFinance);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SelectDatas(new Entree());
+        }
+
+        private void dgFinance_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            doubleclic_grid();
         }
     }
 }

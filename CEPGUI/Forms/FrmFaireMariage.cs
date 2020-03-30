@@ -63,7 +63,8 @@ namespace CEPGUI.Forms
         {
             lblConjoint.Text = "";
             lblParrain.Text = "";
-            dateTxt.Clear();
+            dateTxt.Text = DateTime.Today.ToString();
+
             pastTxt.Clear();
         }
 

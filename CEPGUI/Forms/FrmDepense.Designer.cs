@@ -35,11 +35,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.montantTxt = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.sourceCombo = new System.Windows.Forms.ComboBox();
@@ -52,7 +50,9 @@
             this.lblCaiss = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.montantTxt = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montantTxt)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -108,16 +108,6 @@
             this.label7.TabIndex = 195;
             this.label7.Text = "*";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(397, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 21);
-            this.label5.TabIndex = 194;
-            this.label5.Text = "*";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -144,16 +134,6 @@
             this.label4.Size = new System.Drawing.Size(80, 21);
             this.label4.TabIndex = 191;
             this.label4.Text = "Montant";
-            // 
-            // montantTxt
-            // 
-            this.montantTxt.Location = new System.Drawing.Point(94, 89);
-            this.montantTxt.Name = "montantTxt";
-            this.montantTxt.Size = new System.Drawing.Size(300, 27);
-            this.montantTxt.TabIndex = 190;
-            this.montantTxt.Text = "0";
-            this.montantTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.montantTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.montantTxt_KeyPress);
             // 
             // button4
             // 
@@ -270,7 +250,7 @@
             // lblCaiss
             // 
             this.lblCaiss.AutoSize = true;
-            this.lblCaiss.Location = new System.Drawing.Point(419, 89);
+            this.lblCaiss.Location = new System.Drawing.Point(399, 89);
             this.lblCaiss.Name = "lblCaiss";
             this.lblCaiss.Size = new System.Drawing.Size(19, 21);
             this.lblCaiss.TabIndex = 200;
@@ -287,12 +267,27 @@
             this.label3.Text = "$";
             this.toolTip1.SetToolTip(this.label3, "Montant total en caisse");
             // 
+            // montantTxt
+            // 
+            this.montantTxt.DecimalPlaces = 2;
+            this.montantTxt.Location = new System.Drawing.Point(94, 90);
+            this.montantTxt.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.montantTxt.Name = "montantTxt";
+            this.montantTxt.Size = new System.Drawing.Size(300, 27);
+            this.montantTxt.TabIndex = 202;
+            this.montantTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FrmDepense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(474, 273);
+            this.Controls.Add(this.montantTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCaiss);
             this.Controls.Add(this.button5);
@@ -300,11 +295,9 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.montantTxt);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.sourceCombo);
@@ -324,6 +317,7 @@
             this.Text = "Dépenses";
             this.Load += new System.EventHandler(this.FrmDepense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montantTxt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,15 +330,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox montantTxt;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox sourceCombo;
-        private System.Windows.Forms.ComboBox departCombo;
+        public System.Windows.Forms.ComboBox sourceCombo;
+        public System.Windows.Forms.ComboBox departCombo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
@@ -353,5 +345,6 @@
         private System.Windows.Forms.Label lblCaiss;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.NumericUpDown montantTxt;
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBapteme));
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.confBtn = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.membreCombo = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblConf = new System.Windows.Forms.Label();
             this.dgBapt = new System.Windows.Forms.DataGridView();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFidele = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,13 +61,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.recptTxt = new System.Windows.Forms.DateTimePicker();
             this.button6 = new System.Windows.Forms.Button();
             this.lieuTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pastTxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.recptTxt = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -81,7 +82,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.lblConf = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgBapt)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -203,6 +203,16 @@
             this.groupBox3.TabIndex = 317;
             this.groupBox3.TabStop = false;
             // 
+            // lblConf
+            // 
+            this.lblConf.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblConf.Location = new System.Drawing.Point(6, 37);
+            this.lblConf.Name = "lblConf";
+            this.lblConf.Size = new System.Drawing.Size(340, 19);
+            this.lblConf.TabIndex = 303;
+            this.lblConf.Text = "Confirmer la date";
+            this.lblConf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // dgBapt
             // 
             this.dgBapt.AllowUserToAddRows = false;
@@ -213,14 +223,14 @@
             this.dgBapt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgBapt.BackgroundColor = System.Drawing.Color.White;
             this.dgBapt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBapt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBapt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgBapt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBapt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNum,
@@ -234,25 +244,25 @@
             this.ColId,
             this.Column1,
             this.Column5});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgBapt.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgBapt.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgBapt.Location = new System.Drawing.Point(12, 64);
             this.dgBapt.Name = "dgBapt";
             this.dgBapt.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgBapt.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgBapt.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgBapt.RowHeadersVisible = false;
             this.dgBapt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgBapt.Size = new System.Drawing.Size(790, 305);
@@ -423,6 +433,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.recptTxt);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.button1);
@@ -431,7 +442,6 @@
             this.groupBox2.Controls.Add(this.pastTxt);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.recptTxt);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label16);
@@ -441,6 +451,14 @@
             this.groupBox2.Size = new System.Drawing.Size(448, 165);
             this.groupBox2.TabIndex = 316;
             this.groupBox2.TabStop = false;
+            // 
+            // recptTxt
+            // 
+            this.recptTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.recptTxt.Location = new System.Drawing.Point(75, 28);
+            this.recptTxt.Name = "recptTxt";
+            this.recptTxt.Size = new System.Drawing.Size(300, 27);
+            this.recptTxt.TabIndex = 322;
             // 
             // button6
             // 
@@ -503,18 +521,6 @@
             this.label17.Size = new System.Drawing.Size(16, 21);
             this.label17.TabIndex = 298;
             this.label17.Text = "*";
-            // 
-            // recptTxt
-            // 
-            this.recptTxt.Location = new System.Drawing.Point(75, 29);
-            this.recptTxt.Mask = "00/00/0000";
-            this.recptTxt.Name = "recptTxt";
-            this.recptTxt.Size = new System.Drawing.Size(300, 27);
-            this.recptTxt.TabIndex = 269;
-            this.recptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.recptTxt.ValidatingType = typeof(System.DateTime);
-            this.recptTxt.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.recptTxt_MaskInputRejected);
-            this.recptTxt.TextChanged += new System.EventHandler(this.recptTxt_TextChanged);
             // 
             // label5
             // 
@@ -668,16 +674,6 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // lblConf
-            // 
-            this.lblConf.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblConf.Location = new System.Drawing.Point(6, 37);
-            this.lblConf.Name = "lblConf";
-            this.lblConf.Size = new System.Drawing.Size(340, 19);
-            this.lblConf.TabIndex = 303;
-            this.lblConf.Text = "Confirmer la date";
-            this.lblConf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FrmBapteme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -745,7 +741,6 @@
         public System.Windows.Forms.TextBox pastTxt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
-        public System.Windows.Forms.MaskedTextBox recptTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label16;
@@ -774,5 +769,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label lblConf;
+        private System.Windows.Forms.DateTimePicker recptTxt;
     }
 }

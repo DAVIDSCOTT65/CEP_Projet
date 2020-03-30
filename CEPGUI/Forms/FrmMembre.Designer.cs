@@ -60,16 +60,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnF = new System.Windows.Forms.RadioButton();
             this.rbtnM = new System.Windows.Forms.RadioButton();
-            this.naissTxt = new System.Windows.Forms.MaskedTextBox();
             this.phoneTxt = new System.Windows.Forms.MaskedTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.baptTxt = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.naissTxt = new System.Windows.Forms.DateTimePicker();
+            this.baptTxt = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -374,16 +374,6 @@
             this.rbtnM.UseVisualStyleBackColor = true;
             this.rbtnM.CheckedChanged += new System.EventHandler(this.rbtnM_CheckedChanged);
             // 
-            // naissTxt
-            // 
-            this.naissTxt.Location = new System.Drawing.Point(143, 213);
-            this.naissTxt.Mask = "00/00/0000";
-            this.naissTxt.Name = "naissTxt";
-            this.naissTxt.Size = new System.Drawing.Size(300, 27);
-            this.naissTxt.TabIndex = 5;
-            this.naissTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.naissTxt.ValidatingType = typeof(System.DateTime);
-            // 
             // phoneTxt
             // 
             this.phoneTxt.Location = new System.Drawing.Point(143, 411);
@@ -443,14 +433,6 @@
             this.label20.TabIndex = 228;
             this.label20.Text = "*";
             // 
-            // baptTxt
-            // 
-            this.baptTxt.Location = new System.Drawing.Point(143, 247);
-            this.baptTxt.Name = "baptTxt";
-            this.baptTxt.Size = new System.Drawing.Size(300, 27);
-            this.baptTxt.TabIndex = 230;
-            this.baptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -476,6 +458,22 @@
             this.pictureBox1.TabIndex = 196;
             this.pictureBox1.TabStop = false;
             // 
+            // naissTxt
+            // 
+            this.naissTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.naissTxt.Location = new System.Drawing.Point(143, 214);
+            this.naissTxt.Name = "naissTxt";
+            this.naissTxt.Size = new System.Drawing.Size(300, 27);
+            this.naissTxt.TabIndex = 231;
+            // 
+            // baptTxt
+            // 
+            this.baptTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.baptTxt.Location = new System.Drawing.Point(143, 246);
+            this.baptTxt.Name = "baptTxt";
+            this.baptTxt.Size = new System.Drawing.Size(300, 27);
+            this.baptTxt.TabIndex = 232;
+            // 
             // FrmMembre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -483,13 +481,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(473, 529);
             this.Controls.Add(this.baptTxt);
+            this.Controls.Add(this.naissTxt);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.phoneTxt);
-            this.Controls.Add(this.naissTxt);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pastTxt);
@@ -573,13 +571,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.RadioButton rbtnF;
         public System.Windows.Forms.RadioButton rbtnM;
-        public System.Windows.Forms.MaskedTextBox naissTxt;
         public System.Windows.Forms.MaskedTextBox phoneTxt;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        public System.Windows.Forms.TextBox baptTxt;
+        public System.Windows.Forms.DateTimePicker naissTxt;
+        public System.Windows.Forms.DateTimePicker baptTxt;
     }
 }

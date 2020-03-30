@@ -149,5 +149,10 @@ namespace CEPGUI.UserControls
             fr.RegistreMembres();
             fr.ShowDialog();
         }
+
+        private void dgMembre_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
