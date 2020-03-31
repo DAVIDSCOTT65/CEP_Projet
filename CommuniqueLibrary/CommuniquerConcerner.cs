@@ -128,6 +128,8 @@ namespace CommuniqueLibrary
             m.Depart = dr["Departement"].ToString();
             m.DetailsComm = dr["DetailsCommunique"].ToString();
             m.DatePublication = Convert.ToDateTime(dr["DatePublication"].ToString());
+            m.RefComm= Convert.ToInt32(dr["RefCommunique"].ToString());
+            m.RefDepart = Convert.ToInt32(dr["RefDepart"].ToString());
 
 
             return m;

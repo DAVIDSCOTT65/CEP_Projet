@@ -31,8 +31,8 @@ namespace CommuniqueLibrary
 
                 cmd.ExecuteNonQuery();
 
-                if (d.Id > 0)
-                    MessageBox.Show("Modification effectuer avec succès", "Mofification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //if (d.Id > 0)
+                //    MessageBox.Show("Modification effectuer avec succès", "Mofification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }

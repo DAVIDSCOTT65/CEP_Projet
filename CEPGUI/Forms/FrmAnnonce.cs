@@ -15,6 +15,8 @@ namespace CEPGUI.Forms
     public partial class FrmAnnonce : Form
     {
         DynamicClasses dn = new DynamicClasses();
+        public int id = 0;
+        public int idCom = 0;
         public FrmAnnonce()
         {
             InitializeComponent();
@@ -37,7 +39,8 @@ namespace CEPGUI.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AddToDataGrid();
+            FrmDepartement fr = new FrmDepartement();
+            fr.ShowDialog();
         }
         private void RemoveItem()
         {
@@ -78,6 +81,7 @@ namespace CEPGUI.Forms
         void SaveCommuniquer()
         {
             Communiquer com = new Communiquer();
+            com.Id = idCom;
             com.DetailsComm = annonceTxt.Text;
             com.DatePublication = Convert.ToDateTime(dateTxt.Text);
 
@@ -103,6 +107,7 @@ namespace CEPGUI.Forms
                         SaveCommuniquer();
                         for (int i = 0; i < (dgDepart.Rows.Count); i++)
                         {
+                            com.Id = id;
                             com.RefDepart = Convert.ToInt32(dgDepart[0, i].Value.ToString());
                             com.RefComm = Convert.ToInt32(dn.retourId(departCombo.Text.Trim(), "@design", "GET_ID_COMMUNIQUE"));
                             com.SaveDatas(com);
@@ -112,10 +117,11 @@ namespace CEPGUI.Forms
                     else if (dgDepart.Rows.Count == 0)
                     {
                         SaveCommuniquer();
+                        com.Id = id;
                         com.RefComm = Convert.ToInt32(dn.retourId(departCombo.Text.Trim(), "@design", "GET_ID_COMMUNIQUE"));
                         com.SaveDatas(com);
                     }
-                    MessageBox.Show("Annonce enregistrer avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Annonce enregistrer avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgDepart.Rows.Clear();
                     annonceTxt.Text = "Rédiger l'annonce ................................................";
                     dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
@@ -127,6 +133,11 @@ namespace CEPGUI.Forms
 
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
+        }
+
+        private void departCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddToDataGrid();
         }
     }
 }

@@ -26,12 +26,38 @@ namespace CEPGUI.UserControls
             FrmAnnonce frm = new FrmAnnonce();
             frm.ShowDialog();
         }
+        void doubleclic_grid()
+        {
+            try
+            {
+                if (UserSession.GetInstance().Fonction == "Administrateur")
+                {
+                    FrmAnnonce frm = new FrmAnnonce();
+                    int i;
+                    i = dgCommunique.CurrentRow.Index;
 
+                    frm.id = Convert.ToInt32(dgCommunique["ColId", i].Value.ToString());
+                    frm.annonceTxt.Text = dgCommunique["ColAnnonce", i].Value.ToString();
+                    frm.dateTxt.Text = dgCommunique["ColDate", i].Value.ToString();
+                    frm.dgDepart.Rows.Add(dgCommunique["ColRefDepart", i].Value.ToString(), dgCommunique["ColDepart", i].Value.ToString());
+
+                    frm.ShowDialog();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void UC_Communique_Load(object sender, EventArgs e)
         {
             
             dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
-            departCombo.SelectedIndex = 0;
+            //departCombo.SelectedIndex = 0;
+            checkBox1.Checked = true;
         }
         void SelectDatas(CommuniquerConcerner com,string depart)
         {
@@ -95,6 +121,11 @@ namespace CEPGUI.UserControls
             FrmImpression fr = new FrmImpression();
             fr.RegistreAnnonces();
             fr.ShowDialog();
+        }
+
+        private void dgCommunique_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            doubleclic_grid();
         }
     }
 }

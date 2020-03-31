@@ -48,7 +48,7 @@ namespace DepartementLibrary
 
             }
         }
-        public List<OrganiserActivite> ListOfActivites()
+        public List<OrganiserActivite> ListOfActivites(string depart)
         {
             List<OrganiserActivite> lst = new List<OrganiserActivite>();
 
@@ -56,8 +56,18 @@ namespace DepartementLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "SELECT_ACTIVITES";
+                if (depart == "Tous")
+                {
+                    cmd.CommandText = "SELECT_ACTIVITES_POUR_TOUS";
+
+                }
+                else
+                {
+                    cmd.CommandText = "SELECT_ACTIVITES";
+                }
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@depart", 200, DbType.String, depart));
 
                 IDataReader dr = cmd.ExecuteReader();
 
@@ -124,6 +134,9 @@ namespace DepartementLibrary
             m.Departement = dr["Departement"].ToString();
             m.Activite = dr["Activite"].ToString();
             m.Description = dr["Description"].ToString();
+            m.DateCreation = Convert.ToDateTime(dr["DateActivite"].ToString());
+            m.Heure= dr["HeureActivite"].ToString();
+            m.RefDepart= Convert.ToInt32(dr["RefDepart"].ToString());
 
             return m;
         }

@@ -431,8 +431,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox activCombo;
-        private System.Windows.Forms.ComboBox departTxt;
+        public System.Windows.Forms.ComboBox activCombo;
+        public System.Windows.Forms.ComboBox departTxt;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.MaskedTextBox heureTxt;
         private System.Windows.Forms.Label label9;
@@ -441,8 +441,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox descTxt;
+        public System.Windows.Forms.TextBox descTxt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTxt;
+        public System.Windows.Forms.DateTimePicker dateTxt;
     }
 }

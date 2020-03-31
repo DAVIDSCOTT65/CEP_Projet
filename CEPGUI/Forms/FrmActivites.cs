@@ -15,6 +15,7 @@ namespace CEPGUI.Forms
     public partial class FrmActivites : Form
     {
         DynamicClasses dn = new DynamicClasses();
+        public int id = 0;
         public FrmActivites()
         {
             InitializeComponent();
@@ -64,6 +65,7 @@ namespace CEPGUI.Forms
 
                         for (int i = 0; i < (dgDepart.Rows.Count); i++)
                         {
+                            org.Id = id;
                             org.RefDepart = Convert.ToInt32(dgDepart[0, i].Value.ToString());
                             org.RefActivite = Convert.ToInt32(dn.retourId(activCombo.Text.Trim(), "@design", "GET_ID_ACTIVITE"));
                             org.Description = descTxt.Text;
@@ -75,6 +77,7 @@ namespace CEPGUI.Forms
                     }
                     else if (dgDepart.Rows.Count == 0)
                     {
+                        org.Id = id;
                         org.RefActivite = Convert.ToInt32(dn.retourId(activCombo.Text.Trim(), "@design", "GET_ID_ACTIVITE"));
                         org.Description = descTxt.Text;
                         org.DateActivite = Convert.ToDateTime(dateTxt.Text);

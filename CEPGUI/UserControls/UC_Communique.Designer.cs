@@ -34,26 +34,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Communique));
             this.dgCommunique = new System.Windows.Forms.DataGridView();
-            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departCombo = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAnnonce = new System.Windows.Forms.Label();
             this.serchTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDepart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAnnonce = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRefDepart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRefComm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgCommunique)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -79,12 +79,12 @@
             this.dgCommunique.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCommunique.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNum,
-            this.Column1,
-            this.Column3,
-            this.Column2,
+            this.ColDepart,
+            this.ColDate,
+            this.ColAnnonce,
             this.ColId,
-            this.Column4,
-            this.Column5,
+            this.ColRefDepart,
+            this.ColRefComm,
             this.Column6});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -109,72 +109,7 @@
             this.dgCommunique.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgCommunique.Size = new System.Drawing.Size(948, 438);
             this.dgCommunique.TabIndex = 211;
-            // 
-            // ColNum
-            // 
-            this.ColNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColNum.DataPropertyName = "Num";
-            this.ColNum.HeaderText = "N°";
-            this.ColNum.Name = "ColNum";
-            this.ColNum.ReadOnly = true;
-            this.ColNum.Width = 53;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "Depart";
-            this.Column1.HeaderText = "Département";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 143;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.DataPropertyName = "DatePublication";
-            this.Column3.HeaderText = "Date de publication";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 176;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "DetailsComm";
-            this.Column2.HeaderText = "Details Annonce";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // ColId
-            // 
-            this.ColId.DataPropertyName = "Id";
-            this.ColId.HeaderText = "Id";
-            this.ColId.Name = "ColId";
-            this.ColId.ReadOnly = true;
-            this.ColId.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "RefDepart";
-            this.Column4.HeaderText = "RefDepart";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "RefComm";
-            this.Column5.HeaderText = "RefComm";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "DateCreation";
-            this.Column6.HeaderText = "DateCreation";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
+            this.dgCommunique.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgCommunique_MouseDoubleClick);
             // 
             // departCombo
             // 
@@ -184,7 +119,7 @@
             this.departCombo.FormattingEnabled = true;
             this.departCombo.Items.AddRange(new object[] {
             "Tout le département"});
-            this.departCombo.Location = new System.Drawing.Point(489, 51);
+            this.departCombo.Location = new System.Drawing.Point(470, 51);
             this.departCombo.Name = "departCombo";
             this.departCombo.Size = new System.Drawing.Size(226, 29);
             this.departCombo.TabIndex = 210;
@@ -234,13 +169,30 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
             this.button1.Image = global::CEPGUI.Properties.Resources.Add_32px;
-            this.button1.Location = new System.Drawing.Point(821, 50);
+            this.button1.Location = new System.Drawing.Point(822, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 28);
             this.button1.TabIndex = 204;
-            this.toolTip1.SetToolTip(this.button1, "Affecter un membre à un département");
+            this.toolTip1.SetToolTip(this.button1, "Nouveau");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button2.Image = global::CEPGUI.Properties.Resources.icons8_Print_25px_1;
+            this.button2.Location = new System.Drawing.Point(911, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 28);
+            this.button2.TabIndex = 218;
+            this.toolTip1.SetToolTip(this.button2, "Imprimer");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -270,7 +222,7 @@
             // 
             this.serchTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.serchTxt.Location = new System.Drawing.Point(28, 51);
+            this.serchTxt.Location = new System.Drawing.Point(9, 51);
             this.serchTxt.Name = "serchTxt";
             this.serchTxt.Size = new System.Drawing.Size(428, 27);
             this.serchTxt.TabIndex = 202;
@@ -292,11 +244,12 @@
             // 
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(721, 53);
+            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(701, 58);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(100, 25);
+            this.checkBox1.Size = new System.Drawing.Size(115, 20);
             this.checkBox1.TabIndex = 209;
-            this.checkBox1.Text = "Pour tous";
+            this.checkBox1.Text = "Dep. Confondus";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -305,28 +258,78 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(455, 51);
+            this.pictureBox4.Location = new System.Drawing.Point(436, 51);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 203;
             this.pictureBox4.TabStop = false;
             // 
-            // button2
+            // ColNum
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button2.Image = global::CEPGUI.Properties.Resources.icons8_Print_25px_1;
-            this.button2.Location = new System.Drawing.Point(911, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 28);
-            this.button2.TabIndex = 218;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ColNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNum.DataPropertyName = "Num";
+            this.ColNum.HeaderText = "N°";
+            this.ColNum.Name = "ColNum";
+            this.ColNum.ReadOnly = true;
+            this.ColNum.Width = 53;
+            // 
+            // ColDepart
+            // 
+            this.ColDepart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDepart.DataPropertyName = "Depart";
+            this.ColDepart.HeaderText = "Département";
+            this.ColDepart.Name = "ColDepart";
+            this.ColDepart.ReadOnly = true;
+            this.ColDepart.Width = 143;
+            // 
+            // ColDate
+            // 
+            this.ColDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDate.DataPropertyName = "DatePublication";
+            this.ColDate.HeaderText = "Date de publication";
+            this.ColDate.Name = "ColDate";
+            this.ColDate.ReadOnly = true;
+            this.ColDate.Width = 176;
+            // 
+            // ColAnnonce
+            // 
+            this.ColAnnonce.DataPropertyName = "DetailsComm";
+            this.ColAnnonce.HeaderText = "Details Annonce";
+            this.ColAnnonce.Name = "ColAnnonce";
+            this.ColAnnonce.ReadOnly = true;
+            // 
+            // ColId
+            // 
+            this.ColId.DataPropertyName = "Id";
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Visible = false;
+            // 
+            // ColRefDepart
+            // 
+            this.ColRefDepart.DataPropertyName = "RefDepart";
+            this.ColRefDepart.HeaderText = "RefDepart";
+            this.ColRefDepart.Name = "ColRefDepart";
+            this.ColRefDepart.ReadOnly = true;
+            this.ColRefDepart.Visible = false;
+            // 
+            // ColRefComm
+            // 
+            this.ColRefComm.DataPropertyName = "RefComm";
+            this.ColRefComm.HeaderText = "RefComm";
+            this.ColRefComm.Name = "ColRefComm";
+            this.ColRefComm.ReadOnly = true;
+            this.ColRefComm.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "DateCreation";
+            this.Column6.HeaderText = "DateCreation";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
             // 
             // UC_Communique
             // 
@@ -371,14 +374,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDepart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAnnonce;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColRefDepart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColRefComm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
