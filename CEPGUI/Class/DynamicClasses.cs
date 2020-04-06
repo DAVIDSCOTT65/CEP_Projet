@@ -137,6 +137,56 @@ namespace CEPGUI.Class
             }
             return identifiant;
         }
+        public string retourMarraine(string condition)
+        {
+            string identifiant = "";
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_MARRAINE";
+                
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@noms", 100, DbType.String, condition));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    identifiant = rd["NomsMarraine"].ToString();
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+        }
+        public string retourParrain(string condition)
+        {
+            string identifiant = "";
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT_PARRAIN";
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@noms", 100, DbType.String, condition));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    identifiant = rd["NomsParrain"].ToString();
+                }
+                rd.Close();
+                rd.Dispose();
+                cmd.Dispose();
+            }
+            return identifiant;
+        }
         public int retourIdParrainnage(string parrain, string marraine, string procedure)
         {
             int identifiant = 0;

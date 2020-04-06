@@ -249,7 +249,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Location = new System.Drawing.Point(473, 38);
+            this.panel4.Location = new System.Drawing.Point(472, 38);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 438);
             this.panel4.TabIndex = 252;
@@ -345,7 +345,7 @@
             // 
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(437, -1);
+            this.button2.Location = new System.Drawing.Point(435, -1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 37);
             this.button2.TabIndex = 243;
@@ -491,7 +491,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker naissTxt;
-        private System.Windows.Forms.DateTimePicker recptTxt;
+        public System.Windows.Forms.DateTimePicker naissTxt;
+        public System.Windows.Forms.DateTimePicker recptTxt;
     }
 }

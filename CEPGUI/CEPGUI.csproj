@@ -62,6 +62,12 @@
     </Compile>
     <Compile Include="Class\DynamicClasses.cs" />
     <Compile Include="Class\UserSession.cs" />
+    <Compile Include="DialogForms\FrmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogForms\FrmAlert.Designer.cs">
+      <DependentUpon>FrmAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="EtatSorties\CR_Depense.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -329,6 +335,9 @@
     <Compile Include="UserControls\UC_Utilisateurs.Designer.cs">
       <DependentUpon>UC_Utilisateurs.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DialogForms\FrmAlert.resx">
+      <DependentUpon>FrmAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EtatSorties\CR_Depense.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Depense.cs</LastGenOutput>
@@ -801,6 +810,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Budget_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

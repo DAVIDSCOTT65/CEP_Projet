@@ -47,7 +47,7 @@
             this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNaiss = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColBapt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRecept = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPere = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMere = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +75,7 @@
             this.button5.TabIndex = 215;
             this.toolTip1.SetToolTip(this.button5, "Actualiser");
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -109,6 +110,7 @@
             this.button1.TabIndex = 207;
             this.toolTip1.SetToolTip(this.button1, "Cliquer pour ajouter des fidèles");
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox4
             // 
@@ -191,7 +193,7 @@
             this.ColNom,
             this.ColSexe,
             this.ColNaiss,
-            this.ColBapt,
+            this.ColRecept,
             this.ColPere,
             this.ColMere,
             this.ColProv,
@@ -222,6 +224,8 @@
             this.dgRecept.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgRecept.Size = new System.Drawing.Size(997, 438);
             this.dgRecept.TabIndex = 208;
+            this.dgRecept.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRecept_CellContentClick);
+            this.dgRecept.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgRecept_MouseDoubleClick);
             // 
             // ColNum
             // 
@@ -259,14 +263,14 @@
             this.ColNaiss.ReadOnly = true;
             this.ColNaiss.Width = 165;
             // 
-            // ColBapt
+            // ColRecept
             // 
-            this.ColBapt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColBapt.DataPropertyName = "DateReception";
-            this.ColBapt.HeaderText = "Date de Réception";
-            this.ColBapt.Name = "ColBapt";
-            this.ColBapt.ReadOnly = true;
-            this.ColBapt.Width = 168;
+            this.ColRecept.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColRecept.DataPropertyName = "DateReception";
+            this.ColRecept.HeaderText = "Date de Réception";
+            this.ColRecept.Name = "ColRecept";
+            this.ColRecept.ReadOnly = true;
+            this.ColRecept.Width = 168;
             // 
             // ColPere
             // 
@@ -386,11 +390,12 @@
         private System.Windows.Forms.TextBox serchTxt;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgRecept;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSexe;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNaiss;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColBapt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColRecept;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPere;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMere;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColProv;
@@ -398,6 +403,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPast;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
-        private System.Windows.Forms.Button button2;
     }
 }

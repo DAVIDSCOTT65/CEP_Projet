@@ -78,7 +78,7 @@ CREATE TABLE Bapteme
 )
 CREATE TABLE Parrainage
 (
-	Id INT,
+	Id INT IDENTITY(1,1),
 	NomsParrain NVARCHAR(100) NOT NULL,
 	NomsMarraine NVARCHAR(100) NOT NULL,
 	DateCreation DATETIME DEFAULT GETDATE(),

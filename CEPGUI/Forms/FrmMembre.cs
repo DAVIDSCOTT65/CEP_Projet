@@ -1,4 +1,5 @@
-﻿using MembreLibrary;
+﻿using CEPGUI.DialogForms;
+using MembreLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,14 @@ namespace CEPGUI.Forms
             InitializeComponent();
             this.ActiveControl = nomTxt;
         }
-
+        public void Alert(string msg, FrmAlert.enmType type)
+        {
+            FrmAlert frm = new FrmAlert();
+            frm.ShowAlert(msg, type);
+        }
         private void button2_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
@@ -38,7 +44,7 @@ namespace CEPGUI.Forms
             {
                 if (nomTxt.Text == "" || sexe == "" || lieuTxt.Text == "" || datenaissaissance.Date >= DateTime.Today)
                 {
-                    MessageBox.Show("Impossible d'enregistrer, Champs vides ou dates supérieur", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    this.Alert("Champs vide detectés", FrmAlert.enmType.Error);
                 }
                 else
                 {
@@ -47,10 +53,10 @@ namespace CEPGUI.Forms
                         DateTime dateBapt;
                         dateBapt = Convert.ToDateTime(baptTxt.Text);
                         if(dateBapt.Date>DateTime.Today)
-                            MessageBox.Show("Impossible d'enregistrer une date de bapteme qui n'est pas encore arriver\n Laisser le champs date bapteme vide ou bien inserer une date valide", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            this.Alert("Date pas encore arrivée", FrmAlert.enmType.Warning);
                         else if(dateBapt.Date <= datenaissaissance.Date)
                         {
-                            MessageBox.Show("Impossible d'enregistrer une date de bapteme inférieur à la date de naissance\n Laisser le champs date bapteme vide ou bien inserer une date valide", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            this.Alert("Vérifier date bapteme et naissance", FrmAlert.enmType.Warning);
                         }
                         else
                         {
@@ -70,7 +76,8 @@ namespace CEPGUI.Forms
                             m.Pasteur = pastTxt.Text;
                             //Appel de la methode SaveDatas pour enregistrer dans la BDD
                             m.SaveDatas(m);
-                            
+                            this.Alert("Membre save", FrmAlert.enmType.Success);
+
                         }
                     }
                     else
@@ -91,11 +98,13 @@ namespace CEPGUI.Forms
                         m.Pasteur = pastTxt.Text;
                         //Appel de la methode SaveDatas pour enregistrer dans la BDD
                         m.SaveDatas(m);
+                        this.Alert("Membre save", FrmAlert.enmType.Success);
                     }
                     //Initialisation des champs
                     Initialiser();
                     //Message de confirmation
-                    MessageBox.Show("Enregistrement reussie", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Enregistrement reussie", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
                 
             }

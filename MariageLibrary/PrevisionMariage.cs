@@ -58,10 +58,12 @@ namespace MariageLibrary
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idModif", 5, DbType.Int32, d.Id));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@idP", 5, DbType.Int32, d.RefParrainage));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refmariage", 5, DbType.Int32, d.RefMariage));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refconjoint", 5, DbType.Int32, d.RefConjoint));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refconjointe", 5, DbType.Int32, d.RefConjointe));
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@refparrainage", 5, DbType.Int32, d.RefParrainage));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@parrain", 100, DbType.String, d.Parrain));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@marraine", 100, DbType.String, d.Marraine));
 
                 cmd.ExecuteNonQuery();
 

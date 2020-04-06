@@ -55,11 +55,25 @@ namespace CEPGUI.Forms
         }
         private void FrmMariage_Load(object sender, EventArgs e)
         {
-            dn.chargeNomsCombo(cmbDate, "DatePasteur", "SELECT_DATE_PASTEUR");
+            Chargement();
+        }
+        void Chargement()
+        {
+            try
+            {
+                dn.chargeNomsCombo(cmbDate, "DatePasteur", "SELECT_DATE_PASTEUR");
 
-            pre.AutoCompleteMode("AUTO_COMPLETE_CONJOINT", conjointTxt);
-            pre.AutoCompleteMode("AUTO_COMPLETE_CONJOINTE", conjointeTxt);
-            cmbDate.SelectedIndex = 0;
+                pre.AutoCompleteMode("AUTO_COMPLETE_CONJOINT", conjointTxt);
+                pre.AutoCompleteMode("AUTO_COMPLETE_CONJOINTE", conjointeTxt);
+                pre.AutoCompleteMode("AUTO_COMPLETE_MARRAINE", marraineTxt);
+                pre.AutoCompleteMode("AUTO_COMPLETE_PARRAIN", parrainTxt);
+                cmbDate.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
         void SelectData(PrevisionMariage prev)
         {
@@ -121,7 +135,10 @@ namespace CEPGUI.Forms
             pre.RefMariage = dn.retourId(cmbDate.Text, "@design", "GET_ID_MARIAGE");
             pre.RefConjoint = dn.retourId(conjointTxt.Text, "@design", "GET_ID_MEMBRE");
             pre.RefConjointe = dn.retourId(conjointeTxt.Text, "@design", "GET_ID_MEMBRE");
-            pre.RefParrainage = dn.retourIdParrainnage(parrainTxt.Text.Trim(), marraineTxt.Text.Trim(), "GET_ID_PARRAINNAGE");
+            //pre.RefParrainage = dn.retourIdParrainnage(parrainTxt.Text.Trim(), marraineTxt.Text.Trim(), "GET_ID_PARRAINNAGE");
+            pre.RefParrainage = idParrainage;
+            pre.Parrain = parrainTxt.Text;
+            pre.Marraine = marraineTxt.Text;
 
             pre.SaveDatas(pre);
 
@@ -137,13 +154,13 @@ namespace CEPGUI.Forms
             }
             else
             {
-                Parrainage p = new Parrainage();
+                //Parrainage p = new Parrainage();
 
-                p.Id = idParrainage;
-                p.Parrain = parrainTxt.Text;
-                p.Marraine = marraineTxt.Text;
+                //p.Id = idParrainage;
+                //p.Parrain = parrainTxt.Text;
+                //p.Marraine = marraineTxt.Text;
 
-                p.SaveDatas(p);
+                //p.SaveDatas(p);
 
                 //Enregistrement Prevision Mariage
                 EnregistrerPrevision();
@@ -179,7 +196,7 @@ namespace CEPGUI.Forms
 
         private void marraineTxt_TextChanged(object sender, EventArgs e)
         {
-
+            //parrainTxt.Text = dn.retourParrain(marraineTxt.Text.Trim());
         }
 
         private void parrainTxt_MouseClick(object sender, MouseEventArgs e)
@@ -213,6 +230,22 @@ namespace CEPGUI.Forms
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void conjointeTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void parrainTxt_TextChanged(object sender, EventArgs e)
+        {
+            marraineTxt.Text=dn.retourMarraine(parrainTxt.Text.Trim());
+            
+        }
+
+        private void parrainTxt_Validated(object sender, EventArgs e)
+        {
+            //marraineTxt.Enabled = false;
         }
     }
 }

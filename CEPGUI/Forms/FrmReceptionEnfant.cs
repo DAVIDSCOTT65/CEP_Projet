@@ -41,6 +41,8 @@ namespace CEPGUI.Forms
                 }
                 else
                 {
+                    int dif = 0;
+                    dif = DateTime.Today.Year - datenaissaissance.Year;
                     DateTime daterecpt;
                     daterecpt = Convert.ToDateTime(recptTxt.Text);
                     if (daterecpt > DateTime.Today)
@@ -53,24 +55,32 @@ namespace CEPGUI.Forms
                     }
                     else
                     {
-                        ReceptionEnfant r = new ReceptionEnfant();
+                        if(dif<5)
+                        {
+                            ReceptionEnfant r = new ReceptionEnfant();
 
-                        r.Id = id;
-                        r.Noms = nomTxt.Text;
-                        r.Sexe = sex;
-                        r.DateNaissance = Convert.ToDateTime(naissTxt.Text);
-                        r.DateReception = Convert.ToDateTime(recptTxt.Text);
-                        r.ProvOrigine = provTxt.Text;
-                        r.TerrOrigine = terrTxt.Text;
-                        r.Pere = pereTxt.Text;
-                        r.Mere = mereTxt.Text;
-                        r.Pasteur = pastTxt.Text;
+                            r.Id = id;
+                            r.Noms = nomTxt.Text;
+                            r.Sexe = sex;
+                            r.DateNaissance = Convert.ToDateTime(naissTxt.Text);
+                            r.DateReception = Convert.ToDateTime(recptTxt.Text);
+                            r.ProvOrigine = provTxt.Text;
+                            r.TerrOrigine = terrTxt.Text;
+                            r.Pere = pereTxt.Text;
+                            r.Mere = mereTxt.Text;
+                            r.Pasteur = pastTxt.Text;
 
-                        r.SaveDatas(r);
-                        //Initialisation des champs
-                        Initialiser();
-                        //Message de confirmation
-                        MessageBox.Show("Enregistrement reussie", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            r.SaveDatas(r);
+                            //Initialisation des champs
+                            Initialiser();
+                            //Message de confirmation
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("Seul les enfants de moins de 5ans sont acceptés", "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        }
+                       
                     }
 
                 }

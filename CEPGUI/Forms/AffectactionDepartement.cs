@@ -1,4 +1,5 @@
 ﻿using CEPGUI.Class;
+using CEPGUI.DialogForms;
 using MembreLibrary;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace CEPGUI.Forms
         {
             InitializeComponent();
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -30,7 +31,11 @@ namespace CEPGUI.Forms
         {
             ChargementDatas();
         }
-
+        public void Alert(string msg, FrmAlert.enmType type)
+        {
+            FrmAlert frm = new FrmAlert();
+            frm.ShowAlert(msg,type);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             EnregistrerData();
@@ -54,6 +59,8 @@ namespace CEPGUI.Forms
                     ap.SaveDatas(ap);
 
                     Initialise();
+
+                    this.Alert("Success Alert",FrmAlert.enmType.Success);
                 }
                 
             }

@@ -69,7 +69,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.naissTxt = new System.Windows.Forms.DateTimePicker();
-            this.baptTxt = new System.Windows.Forms.DateTimePicker();
+            this.baptTxt = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -468,11 +468,13 @@
             // 
             // baptTxt
             // 
-            this.baptTxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.baptTxt.Location = new System.Drawing.Point(143, 246);
+            this.baptTxt.Location = new System.Drawing.Point(143, 247);
+            this.baptTxt.Mask = "00/00/0000";
             this.baptTxt.Name = "baptTxt";
             this.baptTxt.Size = new System.Drawing.Size(300, 27);
             this.baptTxt.TabIndex = 232;
+            this.baptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.baptTxt.ValidatingType = typeof(System.DateTime);
             // 
             // FrmMembre
             // 
@@ -578,6 +580,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.DateTimePicker naissTxt;
-        public System.Windows.Forms.DateTimePicker baptTxt;
+        public System.Windows.Forms.MaskedTextBox baptTxt;
     }
 }
