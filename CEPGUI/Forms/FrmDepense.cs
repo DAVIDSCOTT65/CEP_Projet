@@ -66,7 +66,10 @@ namespace CEPGUI.Forms
                     dep.Montant = Convert.ToDouble(montantTxt.Text);
                     dep.SaveDatas(dep);
 
+                    dn.Alert("Dépense enregistrée", DialogForms.FrmAlert.enmType.Success);
+
                     Initialise();
+
 
                     lblCaiss.Text = dep.GetCaisse().ToString();
                 }

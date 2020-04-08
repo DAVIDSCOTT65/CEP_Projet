@@ -1,4 +1,5 @@
-﻿using ReceptionEnfantLibrary;
+﻿using CEPGUI.Class;
+using ReceptionEnfantLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +72,7 @@ namespace CEPGUI.Forms
                             r.Pasteur = pastTxt.Text;
 
                             r.SaveDatas(r);
+                            DynamicClasses.GetInstance().Alert("Enfant save", DialogForms.FrmAlert.enmType.Success);
                             //Initialisation des champs
                             Initialiser();
                             //Message de confirmation
@@ -103,9 +105,10 @@ namespace CEPGUI.Forms
             recptTxt.Text = DateTime.Today.ToString();
             pereTxt.Clear();
             mereTxt.Clear();
-            provTxt.Clear();
+            provTxt.Text = "";
             terrTxt.Clear();
             pastTxt.Clear();
+            
         }
 
         private void rbtnM_CheckedChanged(object sender, EventArgs e)

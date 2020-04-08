@@ -1,4 +1,5 @@
-﻿using CEPGUI.DialogForms;
+﻿using CEPGUI.Class;
+using CEPGUI.DialogForms;
 using MembreLibrary;
 using System;
 using System.Collections.Generic;
@@ -16,16 +17,13 @@ namespace CEPGUI.Forms
     {
         public int id = 0;
         public string sexe = "";
+        DynamicClasses dn = new DynamicClasses();
         public FrmMembre()
         {
             InitializeComponent();
             this.ActiveControl = nomTxt;
         }
-        public void Alert(string msg, FrmAlert.enmType type)
-        {
-            FrmAlert frm = new FrmAlert();
-            frm.ShowAlert(msg, type);
-        }
+        
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -44,7 +42,7 @@ namespace CEPGUI.Forms
             {
                 if (nomTxt.Text == "" || sexe == "" || lieuTxt.Text == "" || datenaissaissance.Date >= DateTime.Today)
                 {
-                    this.Alert("Champs vide detectés", FrmAlert.enmType.Error);
+                    dn.Alert("Champs vides détectés", FrmAlert.enmType.Error);
                 }
                 else
                 {
@@ -53,10 +51,10 @@ namespace CEPGUI.Forms
                         DateTime dateBapt;
                         dateBapt = Convert.ToDateTime(baptTxt.Text);
                         if(dateBapt.Date>DateTime.Today)
-                            this.Alert("Date pas encore arrivée", FrmAlert.enmType.Warning);
+                            dn.Alert("Date pas encore arrivée", FrmAlert.enmType.Warning);
                         else if(dateBapt.Date <= datenaissaissance.Date)
                         {
-                            this.Alert("Vérifier date bapteme et naissance", FrmAlert.enmType.Warning);
+                            dn.Alert("Vérifier date bapteme et naissance", FrmAlert.enmType.Warning);
                         }
                         else
                         {
@@ -76,7 +74,7 @@ namespace CEPGUI.Forms
                             m.Pasteur = pastTxt.Text;
                             //Appel de la methode SaveDatas pour enregistrer dans la BDD
                             m.SaveDatas(m);
-                            this.Alert("Membre save", FrmAlert.enmType.Success);
+                            dn.Alert("Membre save", FrmAlert.enmType.Success);
 
                         }
                     }
@@ -98,7 +96,7 @@ namespace CEPGUI.Forms
                         m.Pasteur = pastTxt.Text;
                         //Appel de la methode SaveDatas pour enregistrer dans la BDD
                         m.SaveDatas(m);
-                        this.Alert("Membre save", FrmAlert.enmType.Success);
+                        dn.Alert("Membre save", FrmAlert.enmType.Success);
                     }
                     //Initialisation des champs
                     Initialiser();
@@ -125,7 +123,7 @@ namespace CEPGUI.Forms
             baptTxt.Text = DateTime.Today.ToString();
             pereTxt.Clear();
             mereTxt.Clear();
-            provTxt.Clear();
+            provTxt.Text = "";
             terrTxt.Clear();
             phoneTxt.Clear();
             pastTxt.Clear();

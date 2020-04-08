@@ -1,4 +1,5 @@
-﻿using FinanceLibrary;
+﻿using CEPGUI.Class;
+using FinanceLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,13 +28,21 @@ namespace CEPGUI.Forms
         {
             try
             {
-                TypeDepense typ = new TypeDepense();
-                typ.Id = id;
-                typ.Designation = designTxt.Text;
+                if(designTxt.Text=="")
+                    DynamicClasses.GetInstance().Alert("Champs vides détectés", DialogForms.FrmAlert.enmType.Error);
+                else
+                {
+                    TypeDepense typ = new TypeDepense();
+                    typ.Id = id;
+                    typ.Designation = designTxt.Text;
 
-                typ.SaveDatas(typ);
+                    typ.SaveDatas(typ);
 
-                designTxt.Clear();
+                    DynamicClasses.GetInstance().Alert("Type save", DialogForms.FrmAlert.enmType.Success);
+
+                    designTxt.Clear();
+                }
+                
             }
             catch (Exception ex)
             {

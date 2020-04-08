@@ -31,11 +31,6 @@ namespace CEPGUI.Forms
         {
             ChargementDatas();
         }
-        public void Alert(string msg, FrmAlert.enmType type)
-        {
-            FrmAlert frm = new FrmAlert();
-            frm.ShowAlert(msg,type);
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             EnregistrerData();
@@ -46,7 +41,7 @@ namespace CEPGUI.Forms
             {
                 if(id<0 || departCombo.Text=="" || membreCombo.Text=="")
                 {
-                    MessageBox.Show("Completer tous les champs svp", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dn.Alert("Champs vides détectés", FrmAlert.enmType.Error);
                 }
                 else
                 {
@@ -60,7 +55,7 @@ namespace CEPGUI.Forms
 
                     Initialise();
 
-                    this.Alert("Success Alert",FrmAlert.enmType.Success);
+                    dn.Alert("Success Alert",FrmAlert.enmType.Success);
                 }
                 
             }

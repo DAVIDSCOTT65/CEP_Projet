@@ -1,4 +1,5 @@
-﻿using DepartementLibrary;
+﻿using CEPGUI.Class;
+using DepartementLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,13 +29,21 @@ namespace CEPGUI.Forms
         {
             try
             {
-                Departements depart = new Departements();
-                depart.Id = id;
-                depart.Departement = departTxt.Text;
+                if (departTxt.Text == "")
+                    DynamicClasses.GetInstance().Alert("Champs vide détecté", DialogForms.FrmAlert.enmType.Error);
+                else
+                {
+                    Departements depart = new Departements();
+                    depart.Id = id;
+                    depart.Departement = departTxt.Text;
 
-                depart.SaveDatas(depart);
+                    depart.SaveDatas(depart);
 
-                departTxt.Clear();
+                    DynamicClasses.GetInstance().Alert("Département save", DialogForms.FrmAlert.enmType.Success);
+
+                    departTxt.Clear();
+                }
+                
             }
             catch (Exception ex)
             {

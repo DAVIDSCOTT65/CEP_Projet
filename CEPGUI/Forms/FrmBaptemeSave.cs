@@ -1,4 +1,5 @@
 ﻿using BaptemeLibrary;
+using CEPGUI.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,6 +54,8 @@ namespace CEPGUI.Forms
                     b.Pasteur = pastTxt.Text;
 
                     b.SaveDatas(b);
+
+                    DynamicClasses.GetInstance().Alert("Programme save", DialogForms.FrmAlert.enmType.Success);
 
                     Initialise();
                 }

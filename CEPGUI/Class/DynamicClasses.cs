@@ -1,4 +1,5 @@
-﻿using CEPGUI.EtatSorties;
+﻿using CEPGUI.DialogForms;
+using CEPGUI.EtatSorties;
 using CEPGUI.Forms;
 using ManageSingleConnexion;
 using ParametreLibrary;
@@ -28,7 +29,11 @@ namespace CEPGUI.Class
                 _intance = new DynamicClasses();
             return _intance;
         }
-
+        public void Alert(string msg, FrmAlert.enmType type)
+        {
+            FrmAlert frm = new FrmAlert();
+            frm.ShowAlert(msg, type);
+        }
         public int loginTest(string nom, string password)
         {
             int count = 0;

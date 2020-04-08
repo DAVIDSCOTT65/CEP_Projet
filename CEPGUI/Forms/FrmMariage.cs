@@ -96,7 +96,7 @@ namespace CEPGUI.Forms
             {
                 if(conjointeTxt.Text=="" || conjointTxt.Text=="" || conjointeTxt.Text == "Conjointe" || conjointTxt.Text == "Conjoint" || parrainTxt.Text=="" || marraineTxt.Text=="" || parrainTxt.Text == "Parrain" || marraineTxt.Text == "Marraine" || cmbDate.Text=="")
                 {
-                    MessageBox.Show("Champs vide detecté", "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    dn.Alert("Champs vides détectés", DialogForms.FrmAlert.enmType.Error);
                 }
                 else
                 {

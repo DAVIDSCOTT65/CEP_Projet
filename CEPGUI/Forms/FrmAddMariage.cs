@@ -1,4 +1,5 @@
-﻿using MariageLibrary;
+﻿using CEPGUI.Class;
+using MariageLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,8 @@ namespace CEPGUI.Forms
                     m.Pasteur = pastTxt.Text;
 
                     m.SaveDatas(m);
+
+                    DynamicClasses.GetInstance().Alert("Date mariage save", DialogForms.FrmAlert.enmType.Success);
 
                     Initialise();
                 }

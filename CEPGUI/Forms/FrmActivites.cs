@@ -1,4 +1,5 @@
 ﻿using CEPGUI.Class;
+using CEPGUI.DialogForms;
 using DepartementLibrary;
 using System;
 using System.Collections.Generic;
@@ -84,7 +85,7 @@ namespace CEPGUI.Forms
                         org.Heure = heureTxt.Text;
                         org.SaveDatas(org);
                     }
-                    MessageBox.Show("Activité enregistrer avec succès", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dn.Alert("Affectaction reussie", FrmAlert.enmType.Success);
                     dgDepart.Rows.Clear();
                     Initialiser();
                 }

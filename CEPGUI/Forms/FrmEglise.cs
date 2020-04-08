@@ -33,21 +33,31 @@ namespace CEPGUI.Forms
         {
             try
             {
-                Eglise m = new Eglise();
+                if (nomTxt.Text=="" || commTxt.Text=="" || accroTxt.Text=="" || addTxt.Text=="" || phoneTxt.Text=="" || phone2.Text=="" ||mailTxt.Text=="" || siteTxt.Text=="")
+                {
+                    DynamicClasses.GetInstance().Alert("Champs vides détectés", DialogForms.FrmAlert.enmType.Error);
+                }
+                else
+                {
+                    Eglise m = new Eglise();
 
-                m.Nom = nomTxt.Text;
-                m.Communaute = commTxt.Text;
-                m.Acronyme = accroTxt.Text;
-                m.Adresse = addTxt.Text;
-                m.Telephone1 = phoneTxt.Text;
-                m.Telephone2 = phone2.Text;
-                m.Mail = mailTxt.Text;
-                m.Logo = logo.Image;
-                m.Siteweb = siteTxt.Text;
+                    m.Nom = nomTxt.Text;
+                    m.Communaute = commTxt.Text;
+                    m.Acronyme = accroTxt.Text;
+                    m.Adresse = addTxt.Text;
+                    m.Telephone1 = phoneTxt.Text;
+                    m.Telephone2 = phone2.Text;
+                    m.Mail = mailTxt.Text;
+                    m.Logo = logo.Image;
+                    m.Siteweb = siteTxt.Text;
 
-                m.Enregistrer(m);
+                    m.Enregistrer(m);
 
-                SelectData(new Eglise());
+                    DynamicClasses.GetInstance().Alert("Infos save", DialogForms.FrmAlert.enmType.Success);
+
+                    SelectData(new Eglise());
+                }
+                
             }
             catch (Exception ex)
             {

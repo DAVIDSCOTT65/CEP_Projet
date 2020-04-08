@@ -52,11 +52,11 @@ namespace CEPGUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (UserSession.GetInstance().Fonction == "Financier")
+            if (UserSession.GetInstance().Fonction == "Financier" || UserSession.GetInstance().Fonction == "Administrateur")
                 Enregistrer();
             else
             {
-
+                dn.Alert("Niveau d'abilité insufisant", DialogForms.FrmAlert.enmType.Warning);
             }
         }
         private void Enregistrer()
@@ -82,7 +82,7 @@ namespace CEPGUI.Forms
 
                     ent.SaveDatas(ent);
 
-
+                    dn.Alert("Entrées save", DialogForms.FrmAlert.enmType.Success);
 
                     Initialise();
 

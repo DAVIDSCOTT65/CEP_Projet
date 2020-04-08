@@ -48,7 +48,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.terrTxt = new System.Windows.Forms.TextBox();
-            this.provTxt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -70,6 +69,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.naissTxt = new System.Windows.Forms.DateTimePicker();
             this.baptTxt = new System.Windows.Forms.MaskedTextBox();
+            this.provTxt = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -260,14 +260,6 @@
             this.terrTxt.Size = new System.Drawing.Size(300, 27);
             this.terrTxt.TabIndex = 10;
             this.terrTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // provTxt
-            // 
-            this.provTxt.Location = new System.Drawing.Point(143, 346);
-            this.provTxt.Name = "provTxt";
-            this.provTxt.Size = new System.Drawing.Size(300, 27);
-            this.provTxt.TabIndex = 9;
-            this.provTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
@@ -476,12 +468,51 @@
             this.baptTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.baptTxt.ValidatingType = typeof(System.DateTime);
             // 
+            // provTxt
+            // 
+            this.provTxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.provTxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.provTxt.FormattingEnabled = true;
+            this.provTxt.Items.AddRange(new object[] {
+            "Equateur",
+            "Sud-Ubangi",
+            "Nord-Ubangi",
+            "Mongala",
+            "Bas-Uele",
+            "Haut-Uele",
+            "Ituri",
+            "Kongo Central",
+            "Kinshasa",
+            "Mai-Ndombe",
+            "Kwilu",
+            "Kwango",
+            "Tshuapa",
+            "Tshuapa",
+            "Tshopo",
+            "Sankuru",
+            "Kasai",
+            "Kasai Oriental",
+            "Kasai Central",
+            "Lomami",
+            "Nord-Kivu",
+            "Sud-Kivu",
+            "Maniema",
+            "Tanganyika",
+            "Haut-Katanga",
+            "Lualaba",
+            "Haut-Lomami"});
+            this.provTxt.Location = new System.Drawing.Point(143, 345);
+            this.provTxt.Name = "provTxt";
+            this.provTxt.Size = new System.Drawing.Size(300, 29);
+            this.provTxt.TabIndex = 233;
+            // 
             // FrmMembre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(473, 529);
+            this.Controls.Add(this.provTxt);
             this.Controls.Add(this.baptTxt);
             this.Controls.Add(this.naissTxt);
             this.Controls.Add(this.label19);
@@ -496,7 +527,6 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.terrTxt);
-            this.Controls.Add(this.provTxt);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
@@ -561,7 +591,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox terrTxt;
-        public System.Windows.Forms.TextBox provTxt;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -581,5 +610,6 @@
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.DateTimePicker naissTxt;
         public System.Windows.Forms.MaskedTextBox baptTxt;
+        public System.Windows.Forms.ComboBox provTxt;
     }
 }

@@ -1,4 +1,5 @@
-﻿using FinanceLibrary;
+﻿using CEPGUI.Class;
+using FinanceLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,13 +24,21 @@ namespace CEPGUI.Forms
         {
             try
             {
-                SourceEntree source = new SourceEntree();
-                source.Id = id;
-                source.Designation = designTxt.Text;
+                if(designTxt.Text=="")
+                    DynamicClasses.GetInstance().Alert("Champs vides détectés", DialogForms.FrmAlert.enmType.Error);
+                else
+                {
+                    SourceEntree source = new SourceEntree();
+                    source.Id = id;
+                    source.Designation = designTxt.Text;
 
-                source.SaveDatas(source);
+                    source.SaveDatas(source);
 
-                designTxt.Clear();
+                    DynamicClasses.GetInstance().Alert("Source save", DialogForms.FrmAlert.enmType.Success);
+
+                    designTxt.Clear();
+                }
+                
             }
             catch (Exception ex)
             {

@@ -1,4 +1,5 @@
-﻿using DepartementLibrary;
+﻿using CEPGUI.Class;
+using DepartementLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,8 @@ namespace CEPGUI.Forms
                     a.Activite = designTxt.Text;
 
                     a.SaveDatas(a);
+
+                    DynamicClasses.GetInstance().Alert("Activité ajoutée", DialogForms.FrmAlert.enmType.Success);
 
                     designTxt.Clear();
                 }

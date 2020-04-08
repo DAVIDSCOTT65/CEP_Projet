@@ -125,6 +125,7 @@ namespace CEPGUI.Forms
                     dgDepart.Rows.Clear();
                     annonceTxt.Text = "Rédiger l'annonce ................................................";
                     dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
+                    dn.Alert("Annonce ajouter", DialogForms.FrmAlert.enmType.Success);
 
                 }
             }

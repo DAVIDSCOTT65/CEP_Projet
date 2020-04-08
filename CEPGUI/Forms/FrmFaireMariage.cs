@@ -1,4 +1,5 @@
-﻿using MariageLibrary;
+﻿using CEPGUI.Class;
+using MariageLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,7 +47,7 @@ namespace CEPGUI.Forms
 
                     fm.SaveDatas(fm);
 
-                    MessageBox.Show(lblConjoint.Text + " mariés au " + dateTxt.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DynamicClasses.GetInstance().Alert(lblConjoint.Text + " mariés au " + dateTxt.Text, DialogForms.FrmAlert.enmType.Success);
 
                     Initialiser();
 

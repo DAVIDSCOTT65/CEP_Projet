@@ -61,6 +61,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class\DynamicClasses.cs" />
+    <Compile Include="Class\Provinces.cs" />
     <Compile Include="Class\UserSession.cs" />
     <Compile Include="DialogForms\FrmAlert.cs">
       <SubType>Form</SubType>

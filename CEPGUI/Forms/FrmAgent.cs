@@ -43,12 +43,12 @@ namespace CEPGUI.Forms
             {
                 if (nomsTxt.Text == "" || adresseTxt.Text == "" || fonctionTxt.Text == "" || phoneTxt.Text == "" || emailTxt.Text == "" || sexe == "")
                 {
-                    MessageBox.Show("Completez tous les champs svp !!!", "Champs Obligatiore", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                    DynamicClasses.GetInstance().Alert("Utilisateur save", DialogForms.FrmAlert.enmType.Success);
                 }
                 else
                 {
                     if (passTxt.Text != passConfTxt.Text)
-                        MessageBox.Show("Les deux mot de passe doivent etre identique", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        DynamicClasses.GetInstance().Alert("Vérifier passwords", DialogForms.FrmAlert.enmType.Warning);
                     else
                         SaveDatas();
                 }
@@ -71,6 +71,8 @@ namespace CEPGUI.Forms
             ag.Photo = photo.Image;
 
             ag.Enreistrer(ag);
+
+            DynamicClasses.GetInstance().Alert("Utilisateur save", DialogForms.FrmAlert.enmType.Success);
 
         }
 
