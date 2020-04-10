@@ -74,6 +74,7 @@
             this.button5.TabIndex = 215;
             this.toolTip1.SetToolTip(this.button5, "Actualiser");
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 

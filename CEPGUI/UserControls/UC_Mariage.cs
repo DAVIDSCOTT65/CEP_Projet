@@ -67,5 +67,11 @@ namespace CEPGUI.UserControls
             frm.RegistreMariages();
             frm.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SelectDatas(new FaireMariage());
+            lblTotal.Text = dgMariage.RowCount.ToString() + " Mariages";
+        }
     }
 }

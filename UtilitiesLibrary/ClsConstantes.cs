@@ -10,12 +10,13 @@ namespace UtilitiesLibrary
     {
         public class Table
         {
-            public static string InitialDirectory = "C:\\cheminBdCEP";
-            public static string serveur = "C:\\cheminBdCEP\\serveur.txt";
-            public static string database = "C:\\cheminBdCEP\\database.txt";
-            public static string user = "C:\\cheminBdCEP\\user.txt";
-            public static string password = "C:\\cheminBdCEP\\password.txt";
-            public static string cheminBackup = "C:\\BackupCEP";
+            public static string PrincipalDirectory = "C:\\SENEVE";
+            public static string InitialDirectory = "C:\\SENEVE\\CheminBDD";
+            public static string serveur = "C:\\SENEVE\\CheminBDD\\serveur.txt";
+            public static string database = "C:\\SENEVE\\CheminBDD\\database.txt";
+            public static string user = "C:\\SENEVE\\CheminBDD\\user.txt";
+            public static string password = "C:\\SENEVE\\CheminBDD\\password.txt";
+            public static string cheminBackup = "C:\\SENEVE\\Backup";
 
 
         }

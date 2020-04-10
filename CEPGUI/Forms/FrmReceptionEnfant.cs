@@ -1,4 +1,5 @@
 ﻿using CEPGUI.Class;
+using MariageLibrary;
 using ReceptionEnfantLibrary;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace CEPGUI.Forms
     {
         public int id = 0;
         string sex = "";
+        PrevisionMariage pre = new PrevisionMariage();
         public FrmReceptionEnfant()
         {
             InitializeComponent();
@@ -119,6 +121,12 @@ namespace CEPGUI.Forms
         private void rbtnF_CheckedChanged(object sender, EventArgs e)
         {
             sex = "F";
+        }
+
+        private void FrmReceptionEnfant_Load(object sender, EventArgs e)
+        {
+            pre.AutoCompleteMode("AUTO_COMPLETE_PERE", pereTxt);
+            pre.AutoCompleteMode("AUTO_COMPLETE_MERE", mereTxt);
         }
     }
 }

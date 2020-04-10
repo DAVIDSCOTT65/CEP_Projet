@@ -1,5 +1,6 @@
 ﻿using CEPGUI.Class;
 using CEPGUI.DialogForms;
+using MariageLibrary;
 using MembreLibrary;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace CEPGUI.Forms
         public int id = 0;
         public string sexe = "";
         DynamicClasses dn = new DynamicClasses();
+        PrevisionMariage pre = new PrevisionMariage();
         public FrmMembre()
         {
             InitializeComponent();
@@ -141,7 +143,8 @@ namespace CEPGUI.Forms
 
         private void FrmMembre_Load(object sender, EventArgs e)
         {
-
+            pre.AutoCompleteMode("AUTO_COMPLETE_PERE", pereTxt);
+            pre.AutoCompleteMode("AUTO_COMPLETE_MERE", mereTxt);
         }
     }
 }

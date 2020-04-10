@@ -263,7 +263,7 @@ namespace CEPGUI.Forms
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
         }
-        public void RegistreAnnonces()
+        public void RegistreAnnonces(string proc)
         {
             try
             {
@@ -273,7 +273,7 @@ namespace CEPGUI.Forms
                     ImplementeConnexion.Instance.Conn.Open();
                 using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    cmd.CommandText = "GetRegistreAnnonce";
+                    cmd.CommandText = proc;
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     DataSet ds = new DataSet();

@@ -195,6 +195,8 @@
             // 
             // mereTxt
             // 
+            this.mereTxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.mereTxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.mereTxt.Location = new System.Drawing.Point(144, 276);
             this.mereTxt.Name = "mereTxt";
             this.mereTxt.Size = new System.Drawing.Size(300, 27);
@@ -203,6 +205,8 @@
             // 
             // pereTxt
             // 
+            this.pereTxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.pereTxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.pereTxt.Location = new System.Drawing.Point(144, 243);
             this.pereTxt.Name = "pereTxt";
             this.pereTxt.Size = new System.Drawing.Size(300, 27);
@@ -337,7 +341,7 @@
             // 
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(435, -1);
+            this.button2.Location = new System.Drawing.Point(435, 1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 37);
             this.button2.TabIndex = 243;
@@ -350,7 +354,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(-2, -1);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 1);
             this.panel1.TabIndex = 241;
@@ -480,6 +484,7 @@
             this.Name = "FrmReceptionEnfant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receptionner un enfant";
+            this.Load += new System.EventHandler(this.FrmReceptionEnfant_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

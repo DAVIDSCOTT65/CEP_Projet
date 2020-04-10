@@ -220,6 +220,8 @@
             // 
             // pereTxt
             // 
+            this.pereTxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.pereTxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.pereTxt.Location = new System.Drawing.Point(143, 279);
             this.pereTxt.Name = "pereTxt";
             this.pereTxt.Size = new System.Drawing.Size(300, 27);
@@ -290,6 +292,8 @@
             // 
             // mereTxt
             // 
+            this.mereTxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.mereTxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.mereTxt.Location = new System.Drawing.Point(143, 312);
             this.mereTxt.Name = "mereTxt";
             this.mereTxt.Size = new System.Drawing.Size(300, 27);

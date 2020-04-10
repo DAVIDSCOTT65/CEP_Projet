@@ -508,7 +508,7 @@
             // avatarPic
             // 
             this.avatarPic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.avatarPic.Image = global::CEPGUI.Properties.Resources.IMG_5481;
+            this.avatarPic.Image = global::CEPGUI.Properties.Resources.customer_48px;
             this.avatarPic.Location = new System.Drawing.Point(907, 6);
             this.avatarPic.Name = "avatarPic";
             this.avatarPic.Size = new System.Drawing.Size(65, 59);

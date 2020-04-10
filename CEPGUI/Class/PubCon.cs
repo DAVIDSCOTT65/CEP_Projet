@@ -28,6 +28,7 @@ namespace CEPGUI
 
             else
             {
+                Directory.CreateDirectory(ClsConstantes.Table.PrincipalDirectory);
                 Directory.CreateDirectory(ClsConstantes.Table.InitialDirectory);
             }
 

@@ -119,7 +119,7 @@ namespace CEPGUI.UserControls
         private void button2_Click(object sender, EventArgs e)
         {
             FrmImpression fr = new FrmImpression();
-            fr.RegistreAnnonces();
+            fr.RegistreAnnonces("GetAnnonceToday");
             fr.ShowDialog();
         }
 
