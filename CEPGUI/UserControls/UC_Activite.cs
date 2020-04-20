@@ -79,7 +79,9 @@ namespace CEPGUI.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dn.ExportInExcel(dgActivite);
+            //dn.ExportInExcel(dgActivite);
+            FrmCalendar fr = new FrmCalendar();
+            fr.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

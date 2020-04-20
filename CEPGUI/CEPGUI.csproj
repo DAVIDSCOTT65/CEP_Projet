@@ -189,6 +189,12 @@
     <Compile Include="Forms\FrmBaptemeSave.Designer.cs">
       <DependentUpon>FrmBaptemeSave.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCalendar.Designer.cs">
+      <DependentUpon>FrmCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmDepartement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,12 @@
     </Compile>
     <Compile Include="UserControls\UC_Bapteme.Designer.cs">
       <DependentUpon>UC_Bapteme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_CalendarActivite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_CalendarActivite.Designer.cs">
+      <DependentUpon>UC_CalendarActivite.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Communique.cs">
       <SubType>UserControl</SubType>
@@ -408,6 +420,9 @@
     <EmbeddedResource Include="Forms\FrmBaptemeSave.resx">
       <DependentUpon>FrmBaptemeSave.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCalendar.resx">
+      <DependentUpon>FrmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartement.resx">
       <DependentUpon>FrmDepartement.cs</DependentUpon>
     </EmbeddedResource>
@@ -465,6 +480,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Bapteme.resx">
       <DependentUpon>UC_Bapteme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_CalendarActivite.resx">
+      <DependentUpon>UC_CalendarActivite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Communique.resx">
       <DependentUpon>UC_Communique.cs</DependentUpon>
@@ -832,6 +850,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\customer_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Today_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left Squared_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right Squared_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
