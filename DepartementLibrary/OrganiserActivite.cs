@@ -42,8 +42,8 @@ namespace DepartementLibrary
 
                 cmd.ExecuteNonQuery();
 
-                if (o.Id > 0)
-                    MessageBox.Show("Modification effectuer avec succès", "Mofification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //if (o.Id > 0)
+                //    DynamicClasses.Alert("Activité ajoutée", FrmAlert.enmType.Success);
 
 
             }

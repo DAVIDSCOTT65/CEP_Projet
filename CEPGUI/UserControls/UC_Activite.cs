@@ -79,9 +79,7 @@ namespace CEPGUI.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //dn.ExportInExcel(dgActivite);
-            FrmCalendar fr = new FrmCalendar();
-            fr.Show();
+            dn.ExportInExcel(dgActivite);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -121,6 +119,8 @@ namespace CEPGUI.UserControls
         private void button2_Click(object sender, EventArgs e)
         {
 
+            FrmCalendar fr = new FrmCalendar();
+            fr.Show();
         }
 
         private void dgActivite_MouseDoubleClick(object sender, MouseEventArgs e)

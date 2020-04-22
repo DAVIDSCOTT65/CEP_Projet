@@ -85,7 +85,7 @@ namespace CEPGUI.Forms
                         org.Heure = heureTxt.Text;
                         org.SaveDatas(org);
                     }
-                    dn.Alert("Affectaction reussie", FrmAlert.enmType.Success);
+                    dn.Alert("Activité ajoutée", FrmAlert.enmType.Success);
                     dgDepart.Rows.Clear();
                     Initialiser();
                 }
