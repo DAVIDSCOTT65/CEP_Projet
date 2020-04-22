@@ -34,6 +34,28 @@ namespace CEPGUI.Class
             FrmAlert frm = new FrmAlert();
             frm.ShowAlert(msg, type);
         }
+        public DataTable QueryAsDataTable(string sql)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            SqlDataAdapter da = new SqlDataAdapter(sql, (SqlConnection)ImplementeConnexion.Instance.Conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            return ds.Tables[0];
+        }
+        //public DataTable recherche_Infromation(string NomTable, string Nom, string Postnom, string Prenom, string recherche)
+        //{
+        //    if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+        //        ImplementeConnexion.Instance.Conn.Open();
+        //    con = (SqlConnection)ImplementeConnexion.Instance.Conn;
+        //    sql = new SqlCommand("select * from " + NomTable + " WHERE " + Nom + " LIKE '%" + recherche + "%' or " + Postnom + " LIKE '%" + recherche + "%' or " + Prenom + " LIKE '%" + recherche + "%' ", con);
+        //    dt = null;
+        //    dt = new SqlDataAdapter(sql);
+        //    ds = new DataSet();
+        //    dt.Fill(ds);
+        //    con.Close();
+        //    return ds.Tables[0];
+        //}
         public int loginTest(string nom, string password)
         {
             int count = 0;

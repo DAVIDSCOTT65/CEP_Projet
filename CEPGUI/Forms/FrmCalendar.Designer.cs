@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCalendar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMonthAndYear = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,16 +45,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flDays = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flDays.SuspendLayout();
-            this.flowLayoutPanel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,6 +82,47 @@
             this.panel2.Size = new System.Drawing.Size(160, 76);
             this.panel2.TabIndex = 0;
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::CEPGUI.Properties.Resources.Today_32px;
+            this.button3.Location = new System.Drawing.Point(59, 27);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(46, 38);
+            this.button3.TabIndex = 2;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolTip1.SetToolTip(this.button3, "Mois en cour");
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::CEPGUI.Properties.Resources.Right_Squared_32px;
+            this.button2.Location = new System.Drawing.Point(108, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(46, 38);
+            this.button2.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button2, "Mois prochain");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::CEPGUI.Properties.Resources.Left_Squared_32px;
+            this.button1.Location = new System.Drawing.Point(7, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 38);
+            this.button1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.button1, "Mois d\'avant");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label8);
@@ -104,7 +143,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label8.Location = new System.Drawing.Point(699, 3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 24);
+            this.label8.Size = new System.Drawing.Size(126, 24);
             this.label8.TabIndex = 6;
             this.label8.Text = "Samedi";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,66 +210,11 @@
             // 
             // flDays
             // 
-            this.flDays.Controls.Add(this.flowLayoutPanel14);
             this.flDays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flDays.Location = new System.Drawing.Point(0, 108);
             this.flDays.Name = "flDays";
             this.flDays.Size = new System.Drawing.Size(828, 473);
             this.flDays.TabIndex = 3;
-            // 
-            // flowLayoutPanel14
-            // 
-            this.flowLayoutPanel14.Controls.Add(this.label9);
-            this.flowLayoutPanel14.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel14.Name = "flowLayoutPanel14";
-            this.flowLayoutPanel14.Size = new System.Drawing.Size(107, 73);
-            this.flowLayoutPanel14.TabIndex = 21;
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 23);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "label9";
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::CEPGUI.Properties.Resources.Today_32px;
-            this.button3.Location = new System.Drawing.Point(59, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 38);
-            this.button3.TabIndex = 2;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::CEPGUI.Properties.Resources.Right_Squared_32px;
-            this.button2.Location = new System.Drawing.Point(108, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 38);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::CEPGUI.Properties.Resources.Left_Squared_32px;
-            this.button1.Location = new System.Drawing.Point(7, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 38);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmCalendar
             // 
@@ -246,14 +230,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmCalendar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calendrier des activités";
             this.Load += new System.EventHandler(this.FrmCalendar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.flDays.ResumeLayout(false);
-            this.flowLayoutPanel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -274,8 +257,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flDays;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
