@@ -31,7 +31,7 @@ namespace CEPGUI.Forms
             {
                 if (departTxt.Text == "")
                     DynamicClasses.GetInstance().Alert("Champs vide détecté", DialogForms.FrmAlert.enmType.Error);
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     Departements depart = new Departements();
                     depart.Id = id;

@@ -39,11 +39,11 @@ namespace CEPGUI.Forms
         {
             try
             {
-                if(id<0 || departCombo.Text=="" || membreCombo.Text=="")
+                if(id<0 || departCombo.Text=="" || membreCombo.Text=="" )
                 {
                     dn.Alert("Champs vides détectés", FrmAlert.enmType.Error);
                 }
-                else
+                else if(UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     Appartenir ap = new Appartenir();
 
@@ -55,7 +55,7 @@ namespace CEPGUI.Forms
 
                     Initialise();
 
-                    dn.Alert("Success Alert",FrmAlert.enmType.Success);
+                    dn.Alert("Enregistrer",FrmAlert.enmType.Success);
                 }
                 
             }

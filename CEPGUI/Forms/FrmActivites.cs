@@ -50,16 +50,17 @@ namespace CEPGUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DateTime dateActivite;
-            dateActivite = Convert.ToDateTime(dateTxt.Text);
+            
             try
             {
+                DateTime dateActivite;
+                dateActivite = Convert.ToDateTime(dateTxt.Text);
                 OrganiserActivite org = new OrganiserActivite();
                 if (activCombo.Text == "" || dateTxt.Text == "" || heureTxt.Text == "" || dateActivite.Date < DateTime.Today)
                 {
                     MessageBox.Show("Completer tous les champs obligatoires svp ou vérifier la date.\n N.B: La date ne doit pas etre inférieur à la date d'aujourd'hui", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     if (dgDepart.Rows.Count > 0)
                     {

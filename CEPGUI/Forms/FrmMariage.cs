@@ -98,7 +98,7 @@ namespace CEPGUI.Forms
                 {
                     dn.Alert("Champs vides détectés", DialogForms.FrmAlert.enmType.Error);
                 }
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     if(conjointTxt.Text==parrainTxt.Text || conjointTxt.Text==marraineTxt.Text || conjointeTxt.Text== parrainTxt.Text || conjointeTxt.Text == marraineTxt.Text)
                     {

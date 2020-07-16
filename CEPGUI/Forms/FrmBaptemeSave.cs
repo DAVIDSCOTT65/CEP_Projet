@@ -44,7 +44,7 @@ namespace CEPGUI.Forms
                 {
                     MessageBox.Show("Impossible d'enregistrer, Champs vides ou dates supérieur", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     Bapteme b = new Bapteme();
 

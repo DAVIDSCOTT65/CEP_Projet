@@ -40,8 +40,16 @@ namespace CEPGUI.UserControls
 
         private void UC_CalendarActivite_Load(object sender, EventArgs e)
         {
-            GenerateDayPanel(42);
-            AddLabelDayToToFlDay(3,30);
+            try
+            {
+                GenerateDayPanel(42);
+                AddLabelDayToToFlDay(3, 30);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         private void AddLabelDayToToFlDay(int startDayAtFlNumber, int totalDaysInMonth)
         {

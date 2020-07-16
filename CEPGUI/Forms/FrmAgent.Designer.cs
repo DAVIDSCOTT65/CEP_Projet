@@ -33,6 +33,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.photo = new System.Windows.Forms.PictureBox();
+            this.btnParc = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.phoneTxt = new System.Windows.Forms.MaskedTextBox();
             this.rbtnFem = new System.Windows.Forms.RadioButton();
@@ -49,7 +51,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.adresseTxt = new System.Windows.Forms.TextBox();
-            this.fonctionTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.emailTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,14 +61,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.photo = new System.Windows.Forms.PictureBox();
-            this.btnParc = new System.Windows.Forms.Button();
+            this.fonctionTxt = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.gbAgent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWarning
@@ -125,6 +125,33 @@
             this.groupBox4.Size = new System.Drawing.Size(243, 324);
             this.groupBox4.TabIndex = 104;
             this.groupBox4.TabStop = false;
+            // 
+            // photo
+            // 
+            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
+            this.photo.Location = new System.Drawing.Point(7, 12);
+            this.photo.Name = "photo";
+            this.photo.Size = new System.Drawing.Size(230, 267);
+            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.photo.TabIndex = 36;
+            this.photo.TabStop = false;
+            // 
+            // btnParc
+            // 
+            this.btnParc.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnParc.BackColor = System.Drawing.SystemColors.Control;
+            this.btnParc.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnParc.ForeColor = System.Drawing.Color.Black;
+            this.btnParc.Image = ((System.Drawing.Image)(resources.GetObject("btnParc.Image")));
+            this.btnParc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnParc.Location = new System.Drawing.Point(63, 285);
+            this.btnParc.Name = "btnParc";
+            this.btnParc.Size = new System.Drawing.Size(107, 35);
+            this.btnParc.TabIndex = 84;
+            this.btnParc.Text = "Parcourrir";
+            this.btnParc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnParc.UseVisualStyleBackColor = false;
+            this.btnParc.Click += new System.EventHandler(this.btnParc_Click);
             // 
             // label12
             // 
@@ -324,15 +351,6 @@
             this.adresseTxt.Size = new System.Drawing.Size(279, 95);
             this.adresseTxt.TabIndex = 15;
             // 
-            // fonctionTxt
-            // 
-            this.fonctionTxt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fonctionTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.fonctionTxt.Location = new System.Drawing.Point(166, 214);
-            this.fonctionTxt.Name = "fonctionTxt";
-            this.fonctionTxt.Size = new System.Drawing.Size(279, 27);
-            this.fonctionTxt.TabIndex = 22;
-            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -395,6 +413,7 @@
             this.gbAgent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbAgent.Controls.Add(this.fonctionTxt);
             this.gbAgent.Controls.Add(this.label12);
             this.gbAgent.Controls.Add(this.phoneTxt);
             this.gbAgent.Controls.Add(this.rbtnFem);
@@ -402,7 +421,6 @@
             this.gbAgent.Controls.Add(this.label11);
             this.gbAgent.Controls.Add(this.label10);
             this.gbAgent.Controls.Add(this.adresseTxt);
-            this.gbAgent.Controls.Add(this.fonctionTxt);
             this.gbAgent.Controls.Add(this.label9);
             this.gbAgent.Controls.Add(this.emailTxt);
             this.gbAgent.Controls.Add(this.label5);
@@ -441,6 +459,7 @@
             this.button1.TabIndex = 108;
             this.button1.Text = "Effacer";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -463,32 +482,20 @@
             this.pictureBox6.TabIndex = 110;
             this.pictureBox6.TabStop = false;
             // 
-            // photo
+            // fonctionTxt
             // 
-            this.photo.Image = ((System.Drawing.Image)(resources.GetObject("photo.Image")));
-            this.photo.Location = new System.Drawing.Point(7, 12);
-            this.photo.Name = "photo";
-            this.photo.Size = new System.Drawing.Size(230, 267);
-            this.photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.photo.TabIndex = 36;
-            this.photo.TabStop = false;
-            // 
-            // btnParc
-            // 
-            this.btnParc.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnParc.BackColor = System.Drawing.SystemColors.Control;
-            this.btnParc.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParc.ForeColor = System.Drawing.Color.Black;
-            this.btnParc.Image = ((System.Drawing.Image)(resources.GetObject("btnParc.Image")));
-            this.btnParc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParc.Location = new System.Drawing.Point(63, 285);
-            this.btnParc.Name = "btnParc";
-            this.btnParc.Size = new System.Drawing.Size(107, 35);
-            this.btnParc.TabIndex = 84;
-            this.btnParc.Text = "Parcourrir";
-            this.btnParc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnParc.UseVisualStyleBackColor = false;
-            this.btnParc.Click += new System.EventHandler(this.btnParc_Click);
+            this.fonctionTxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.fonctionTxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.fonctionTxt.FormattingEnabled = true;
+            this.fonctionTxt.Items.AddRange(new object[] {
+            "Administrateur",
+            "Financier",
+            "SA",
+            "Secrétaire"});
+            this.fonctionTxt.Location = new System.Drawing.Point(166, 213);
+            this.fonctionTxt.Name = "fonctionTxt";
+            this.fonctionTxt.Size = new System.Drawing.Size(279, 29);
+            this.fonctionTxt.TabIndex = 206;
             // 
             // FrmAgent
             // 
@@ -516,13 +523,13 @@
             this.Text = "FrmAgent";
             this.Load += new System.EventHandler(this.FrmAgent_Load);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbAgent.ResumeLayout(false);
             this.gbAgent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,7 +560,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox adresseTxt;
-        public System.Windows.Forms.TextBox fonctionTxt;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox emailTxt;
         private System.Windows.Forms.Label label5;
@@ -563,5 +569,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ComboBox fonctionTxt;
     }
 }

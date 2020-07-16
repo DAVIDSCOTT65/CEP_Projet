@@ -38,15 +38,16 @@ namespace CEPGUI.Forms
         }
         void Enregistrer()
         {
-            DateTime datenaissaissance;
-            datenaissaissance = Convert.ToDateTime(naissTxt.Text);
+            
             try
             {
+                DateTime datenaissaissance;
+                datenaissaissance = Convert.ToDateTime(naissTxt.Text);
                 if (nomTxt.Text == "" || sexe == "" || lieuTxt.Text == "" || datenaissaissance.Date >= DateTime.Today)
                 {
                     dn.Alert("Champs vides détectés", FrmAlert.enmType.Error);
                 }
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     if(baptTxt.Text != "")
                     {

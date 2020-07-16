@@ -42,7 +42,7 @@ namespace CEPGUI.Forms
                 {
                     MessageBox.Show("Impossible d'enregistrer, Champs obligatoires vides ou dates supérieur", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     int dif = 0;
                     dif = DateTime.Today.Year - datenaissaissance.Year;

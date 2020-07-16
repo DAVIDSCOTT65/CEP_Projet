@@ -37,15 +37,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.passTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.circularPictureBox1 = new CEPGUI.Class.CircularPictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -94,6 +94,7 @@
             this.linkLabel1.TabIndex = 55;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot password ?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // userTxt
             // 
@@ -152,6 +153,17 @@
             this.panel1.Size = new System.Drawing.Size(452, 72);
             this.panel1.TabIndex = 61;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(52)))), ((int)(((byte)(72)))));
+            this.label1.Location = new System.Drawing.Point(135, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 28);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Connection";
+            // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -168,6 +180,16 @@
             this.panel2.Size = new System.Drawing.Size(398, 396);
             this.panel2.TabIndex = 62;
             // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.Male_User_48px;
+            this.circularPictureBox1.Location = new System.Drawing.Point(150, 17);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(96, 91);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.circularPictureBox1.TabIndex = 60;
+            this.circularPictureBox1.TabStop = false;
+            // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -180,17 +202,6 @@
             this.label10.TabIndex = 92;
             this.label10.Text = "D@v Coding Concept 2020";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(52)))), ((int)(((byte)(72)))));
-            this.label1.Location = new System.Drawing.Point(135, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 28);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "Connection";
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -200,16 +211,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(452, 41);
             this.panel5.TabIndex = 63;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Image = global::CEPGUI.Properties.Resources.Male_User_48px;
-            this.circularPictureBox1.Location = new System.Drawing.Point(150, 17);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(96, 91);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.circularPictureBox1.TabIndex = 60;
-            this.circularPictureBox1.TabStop = false;
             // 
             // ConnectUser
             // 
@@ -233,9 +234,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -34,7 +34,10 @@ namespace CEPGUI.Forms
 
         private void richTextBox1_Click(object sender, EventArgs e)
         {
-            
+            if (annonceTxt.Text.Trim() == "Rédiger l'annonce ................................................")
+            {
+                annonceTxt.Text = "";
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -93,14 +96,15 @@ namespace CEPGUI.Forms
         }
         private void Enregistrer()
         {
-            DateTime datepublication;
-            datepublication = Convert.ToDateTime(dateTxt.Text);
+            
             try
             {
+                DateTime datepublication;
+                datepublication = Convert.ToDateTime(dateTxt.Text);
                 CommuniquerConcerner com = new CommuniquerConcerner();
-                if (dateTxt.Text == "" || annonceTxt.Text == "" || annonceTxt.Text == "Rédiger l'annonce ................................................" || datepublication.Date < DateTime.Today)
+                if (dateTxt.Text == "" || annonceTxt.Text == "" || annonceTxt.Text.Trim() == "Rédiger l'annonce ................................................" || datepublication.Date < DateTime.Today)
                     MessageBox.Show("Completer tous les champs obligatoires svp ou vérifier la date de publication.\n N.B: La date de publication ne doit pas etre inférieur à la date d'aujourd'hui", "Information", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     if (dgDepart.Rows.Count > 0)
                     {

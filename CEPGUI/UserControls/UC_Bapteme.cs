@@ -33,24 +33,36 @@ namespace CEPGUI.UserControls
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButton2.Checked==true)
-            {
-                SelectDatas(new Baptiser(), "SELECT_ALL_MEMBRE_BAPTISER");
-                lblTotal.Text = dgBaptiser.Rows.Count.ToString() + " Baptemes";
-            }
+            LoadDatas("SELECT_ALL_MEMBRE_BAPTISER");
                 
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButton1.Checked==true)
-            {
-                SelectDatas(new Baptiser(), "SELECT_MEMBRE_BAPTISER_CEP");
-                lblTotal.Text = dgBaptiser.Rows.Count.ToString() + " Baptemes";
-            }
-                
+            LoadDatas("SELECT_MEMBRE_BAPTISER_CEP");
         }
+        void LoadDatas(string proc)
+        {
+            try
+            {
+                if (radioButton1.Checked == true)
+                {
+                    SelectDatas(new Baptiser(), proc);
+                    lblTotal.Text = dgBaptiser.Rows.Count.ToString() + " Baptemes";
+                }
+                else if(radioButton2.Checked == true)
+                {
+                    SelectDatas(new Baptiser(), proc);
+                    lblTotal.Text = dgBaptiser.Rows.Count.ToString() + " Baptemes";
+                }
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             dn.ExportInExcel(dgBaptiser);
@@ -82,9 +94,17 @@ namespace CEPGUI.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmImpression fr = new FrmImpression();
-            fr.RegistreBaptemes();
-            fr.ShowDialog();
+            try
+            {
+                FrmImpression fr = new FrmImpression();
+                fr.RegistreBaptemes();
+                fr.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

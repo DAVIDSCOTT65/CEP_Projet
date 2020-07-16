@@ -19,6 +19,7 @@ namespace FinanceLibrary
         public int RefSource { get; set; }
         public double Montant { get; set; }
         public double FC { get; set; }
+        public double Valeur1Dollar { get; set; }
         public double Dollar { get; set; }
         public DateTime DateConcernee { get; set; }
         public DateTime DateEntree { get; set; }
@@ -40,6 +41,7 @@ namespace FinanceLibrary
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@fc", 10, DbType.Double, d.FC));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@dollar", 10, DbType.Double, d.Dollar));
                 cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 20, DbType.Date, d.DateConcernee));
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@valeur1", 10, DbType.Double, d.Valeur1Dollar));
 
                 cmd.ExecuteNonQuery();
 
@@ -104,6 +106,7 @@ namespace FinanceLibrary
             m.FC = Convert.ToDouble(dr["MontantFC"].ToString());
             m.Dollar = Convert.ToDouble(dr["MontantDollars"].ToString());
             m.DateConcernee = Convert.ToDateTime(dr["DateConcerne"].ToString());
+            m.Valeur1Dollar = Convert.ToDouble(dr["Valeur1Dollar"].ToString());
 
 
             return m;

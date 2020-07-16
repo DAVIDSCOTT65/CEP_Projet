@@ -26,13 +26,21 @@ namespace CEPGUI.UserControls
         }
         void SelectData(Utilisateurs u)
         {
-            dgAgent.DataSource = u.AllUser();
+            try
+            {
+                dgAgent.DataSource = u.AllUser();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         void doubleclic_grid()
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
+                if (UserSession.GetInstance().Fonction == "Administrateur" || UserSession.GetInstance().Fonction == "SA")
                 {
                     FrmAgent frm = new FrmAgent();
                     int i;
@@ -124,6 +132,11 @@ namespace CEPGUI.UserControls
             {
                 MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

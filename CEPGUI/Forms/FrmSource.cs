@@ -22,9 +22,18 @@ namespace CEPGUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (UserSession.GetInstance().Fonction == "Financier" || UserSession.GetInstance().Fonction == "SA")
+                Enregistrer();
+            else
+            {
+                DynamicClasses.GetInstance().Alert("Niveau Finance Requis", DialogForms.FrmAlert.enmType.Warning);
+            }
+        }
+        void Enregistrer()
+        {
             try
             {
-                if(designTxt.Text=="")
+                if (designTxt.Text == "")
                     DynamicClasses.GetInstance().Alert("Champs vides détectés", DialogForms.FrmAlert.enmType.Error);
                 else
                 {
@@ -38,7 +47,7 @@ namespace CEPGUI.Forms
 
                     designTxt.Clear();
                 }
-                
+
             }
             catch (Exception ex)
             {

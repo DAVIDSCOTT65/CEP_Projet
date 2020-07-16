@@ -116,7 +116,7 @@ namespace CEPGUI.Forms
                 {
                     MessageBox.Show("Champs vide ou date inférieur", "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     prev.Id = idPrev;
                     prev.RefMembre = dn.retourId(membreCombo.Text, "@design", "GET_ID_MEMBRE");
@@ -165,7 +165,7 @@ namespace CEPGUI.Forms
                     MessageBox.Show("Impossible de confirmer ce bapteme, la date n'est pas encore arriver", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     confTxt.Text = recptTxt.Text;
                 }
-                else
+                else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     Baptiser b = new Baptiser();
                     b.Id = idConf;

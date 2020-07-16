@@ -120,7 +120,7 @@ namespace CEPGUI.Forms
 
         private void FrmBackRestore_Load(object sender, EventArgs e)
         {
-
+            radioButton3.Checked = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace CEPGUI.Forms
         }
         private void RestoreDatas()
         {
-            if (UserSession.GetInstance().Fonction == "SA")
+            if (UserSession.GetInstance().Fonction == "Administrateur" || UserSession.GetInstance().Fonction == "SA")
             {
                 if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                     ImplementeConnexion.Instance.Conn.Open();

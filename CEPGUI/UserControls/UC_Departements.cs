@@ -32,7 +32,6 @@ namespace CEPGUI.UserControls
         {
             ChargementCombo();
             departCombo.SelectedIndex = 0;
-            //ChargementDataGrid(new Membre());
         }
         void ChargementDataGrid(Membre m)
         {

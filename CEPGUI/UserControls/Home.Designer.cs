@@ -50,6 +50,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblAnnonce = new System.Windows.Forms.Label();
@@ -65,6 +66,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblMembre = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel8.SuspendLayout();
@@ -235,6 +238,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::CEPGUI.Properties.Resources._1600_103;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.lblActiv);
@@ -324,6 +328,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BackgroundImage = global::CEPGUI.Properties.Resources._8591_widescreen_creative_colors;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.pictureBox9);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.lblAnnonce);
@@ -331,6 +336,22 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(308, 129);
             this.panel5.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackgroundImage = global::CEPGUI.Properties.Resources.icons8_Message_30px;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(269, 97);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 29);
+            this.button2.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.button2, "Messagerie");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox9
             // 
@@ -511,6 +532,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::CEPGUI.Properties.Resources.icons8_Message_30px;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(34, 29);
+            this.button3.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.button3, "Messagerie");
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -598,5 +634,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblBapeme;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

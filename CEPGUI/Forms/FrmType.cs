@@ -22,9 +22,14 @@ namespace CEPGUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Save();
+            if (UserSession.GetInstance().Fonction == "Financier" || UserSession.GetInstance().Fonction == "SA")
+                Enregistrer();
+            else
+            {
+                DynamicClasses.GetInstance().Alert("Niveau Finance Requis", DialogForms.FrmAlert.enmType.Warning);
+            }
         }
-        private void Save()
+        private void Enregistrer()
         {
             try
             {

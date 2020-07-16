@@ -1,0 +1,6 @@
+E:\DAVID\PROJETBDD\ProjetCEP\SMSManager\bin\Debug\SMSManager.exe.config
+E:\DAVID\PROJETBDD\ProjetCEP\SMSManager\bin\Debug\SMSManager.exe
+E:\DAVID\PROJETBDD\ProjetCEP\SMSManager\bin\Debug\SMSManager.pdb
+E:\DAVID\PROJETBDD\ProjetCEP\SMSManager\obj\Debug\SMSManager.csprojResolveAssemblyReference.cache
+E:\DAVID\PROJETBDD\ProjetCEP\SMSManager\obj\Debug\SMSManager.exe
+E:\DAVID\PROJETBDD\ProjetCEP\SMSManager\obj\Debug\SMSManager.pdb

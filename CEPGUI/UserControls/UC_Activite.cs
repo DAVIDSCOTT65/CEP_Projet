@@ -59,8 +59,20 @@ namespace CEPGUI.UserControls
 
         private void UC_Activite_Load(object sender, EventArgs e)
         {
-            dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
-            checkBox1.Checked = true;
+            LoadDatas();
+        }
+        void LoadDatas()
+        {
+            try
+            {
+                dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
+                checkBox1.Checked = true;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         void SelectDatas(OrganiserActivite org, string depart)
         {

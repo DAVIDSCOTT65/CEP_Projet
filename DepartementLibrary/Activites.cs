@@ -37,7 +37,7 @@ namespace DepartementLibrary
 
             }
         }
-        public List<Activites> ListOfActivites()
+        public List<Activites> ListOfActivites(string depart)
         {
             List<Activites> lst = new List<Activites>();
 
@@ -45,8 +45,10 @@ namespace DepartementLibrary
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "";
+                cmd.CommandText = "ACTIVITE_SMS";
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@departement", 100, DbType.String, depart));
 
                 IDataReader dr = cmd.ExecuteReader();
 
@@ -87,10 +89,39 @@ namespace DepartementLibrary
             m.Num = i;
             m.Id = Convert.ToInt32(dr["Id"].ToString());
             m.Activite = dr["Activite"].ToString();
-            m.DateCreation = Convert.ToDateTime(dr["DateCreation"].ToString());
+            m.DateCreation = Convert.ToDateTime(dr["DateActivite"].ToString());
 
 
             return m;
+        }
+        public string GetActiviteSms(string depart)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "ACTIVITE_SMS";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@departement", 100, DbType.String, depart));
+
+                IDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr["Activite"] == DBNull.Value)
+                        Activite = "Rien à affiché";
+                    else
+                        Activite = dr["Activite"].ToString();
+                }
+                else
+                {
+                    Activite = "Rien à affiché";
+                }
+                dr.Dispose();
+            }
+            return Activite;
+
         }
     }
 }

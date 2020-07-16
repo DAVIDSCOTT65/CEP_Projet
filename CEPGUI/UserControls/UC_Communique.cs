@@ -56,13 +56,20 @@ namespace CEPGUI.UserControls
         {
             
             dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
-            //departCombo.SelectedIndex = 0;
             checkBox1.Checked = true;
         }
         void SelectDatas(CommuniquerConcerner com,string depart)
         {
-            dgCommunique.DataSource = com.ListOfCommuniquer(depart);
-            lblAnnonce.Text = dgCommunique.Rows.Count.ToString() + " Annonces";
+            try
+            {
+                dgCommunique.DataSource = com.ListOfCommuniquer(depart);
+                lblAnnonce.Text = dgCommunique.Rows.Count.ToString() + " Annonces";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -69,5 +69,11 @@ namespace CEPGUI.Forms
         {
             userTxt.Text = "";
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword fr = new ForgotPassword();
+            fr.ShowDialog();
+        }
     }
 }

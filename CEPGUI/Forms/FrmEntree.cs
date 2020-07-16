@@ -52,11 +52,11 @@ namespace CEPGUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (UserSession.GetInstance().Fonction == "Financier" || UserSession.GetInstance().Fonction == "Administrateur")
+            if (UserSession.GetInstance().Fonction == "Financier" || UserSession.GetInstance().Fonction == "SA")
                 Enregistrer();
             else
             {
-                dn.Alert("Niveau d'abilité insufisant", DialogForms.FrmAlert.enmType.Warning);
+                dn.Alert("Niveau Finance Requis", DialogForms.FrmAlert.enmType.Warning);
             }
         }
         private void Enregistrer()
@@ -65,7 +65,7 @@ namespace CEPGUI.Forms
             {
                 DateTime datepublication;
                 datepublication = Convert.ToDateTime(concernDate.Text);
-                if (Convert.ToDouble(montantTxt.Text) <= 0 || montantTxt.Text == "" || sourceCombo.Text == "" || datepublication.Date > DateTime.Today)
+                if (Convert.ToDouble(valeur1D.Text) <= 0 || valeur1D.Text == "" || sourceCombo.Text == "" || datepublication.Date > DateTime.Today)
                     MessageBox.Show("Veuillez completé tous les champs svp ou vérifier la date ", "Champs vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 else
                 {
@@ -75,7 +75,8 @@ namespace CEPGUI.Forms
                     ent.Id = id;
                     ent.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
                     ent.RefSource = dn.retourId(sourceCombo.Text, "@designation", "GET_ID_SOURCE");
-                    ent.Montant = Convert.ToDouble(montantTxt.Text);
+                    ent.Montant = (Convert.ToDouble(fcTxt.Text) / Convert.ToDouble(valeur1D.Text)) + Convert.ToDouble(dollarTxt.Text);
+                    ent.Valeur1Dollar = Convert.ToDouble(valeur1D.Text);
                     ent.FC = Convert.ToDouble(fcTxt.Text);
                     ent.Dollar = Convert.ToDouble(dollarTxt.Text);
                     ent.DateConcernee = Convert.ToDateTime(concernDate.Text);
@@ -98,7 +99,7 @@ namespace CEPGUI.Forms
         void Initialise()
         {
             id = 0;
-            montantTxt.Text = "0";
+            valeur1D.Text = "0";
             departCombo.SelectedIndex = -1;
             sourceCombo.SelectedIndex = -1;
             fcTxt.Text = "0";

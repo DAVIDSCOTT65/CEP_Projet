@@ -52,11 +52,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.fcTxt = new System.Windows.Forms.NumericUpDown();
             this.dollarTxt = new System.Windows.Forms.NumericUpDown();
-            this.montantTxt = new System.Windows.Forms.NumericUpDown();
+            this.valeur1D = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fcTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarTxt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montantTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valeur1D)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -264,7 +264,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(258, 96);
+            this.label8.Location = new System.Drawing.Point(405, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 17);
             this.label8.TabIndex = 187;
@@ -275,7 +275,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(418, 96);
+            this.label9.Location = new System.Drawing.Point(235, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 17);
             this.label9.TabIndex = 188;
@@ -286,16 +286,17 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(586, 96);
+            this.label10.Location = new System.Drawing.Point(582, 96);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 17);
+            this.label10.Size = new System.Drawing.Size(63, 17);
             this.label10.TabIndex = 189;
-            this.label10.Text = "FC+$";
+            this.label10.Text = "1$ en FC";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // fcTxt
             // 
             this.fcTxt.DecimalPlaces = 2;
-            this.fcTxt.Location = new System.Drawing.Point(111, 90);
+            this.fcTxt.Location = new System.Drawing.Point(266, 90);
             this.fcTxt.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -309,7 +310,7 @@
             // dollarTxt
             // 
             this.dollarTxt.DecimalPlaces = 2;
-            this.dollarTxt.Location = new System.Drawing.Point(289, 90);
+            this.dollarTxt.Location = new System.Drawing.Point(111, 90);
             this.dollarTxt.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -320,19 +321,19 @@
             this.dollarTxt.TabIndex = 192;
             this.dollarTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // montantTxt
+            // valeur1D
             // 
-            this.montantTxt.DecimalPlaces = 2;
-            this.montantTxt.Location = new System.Drawing.Point(439, 90);
-            this.montantTxt.Maximum = new decimal(new int[] {
+            this.valeur1D.DecimalPlaces = 2;
+            this.valeur1D.Location = new System.Drawing.Point(439, 90);
+            this.valeur1D.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
-            this.montantTxt.Name = "montantTxt";
-            this.montantTxt.Size = new System.Drawing.Size(141, 27);
-            this.montantTxt.TabIndex = 193;
-            this.montantTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valeur1D.Name = "valeur1D";
+            this.valeur1D.Size = new System.Drawing.Size(141, 27);
+            this.valeur1D.TabIndex = 193;
+            this.valeur1D.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FrmEntree
             // 
@@ -340,7 +341,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(699, 292);
-            this.Controls.Add(this.montantTxt);
+            this.Controls.Add(this.valeur1D);
             this.Controls.Add(this.dollarTxt);
             this.Controls.Add(this.fcTxt);
             this.Controls.Add(this.label10);
@@ -376,7 +377,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fcTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarTxt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montantTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valeur1D)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,6 +408,6 @@
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.NumericUpDown fcTxt;
         public System.Windows.Forms.NumericUpDown dollarTxt;
-        public System.Windows.Forms.NumericUpDown montantTxt;
+        public System.Windows.Forms.NumericUpDown valeur1D;
     }
 }

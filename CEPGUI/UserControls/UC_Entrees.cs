@@ -33,7 +33,15 @@ namespace CEPGUI.UserControls
         }
         void SelectDatas(Entree ent)
         {
-            dgFinance.DataSource = ent.ListOfEntree();
+            try
+            {
+                dgFinance.DataSource = ent.ListOfEntree();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         void doubleclic_grid()
         {
@@ -46,7 +54,7 @@ namespace CEPGUI.UserControls
                     i = dgFinance.CurrentRow.Index;
 
                     frm.id = Convert.ToInt32(dgFinance["ColId", i].Value.ToString());
-                    frm.montantTxt.Text = dgFinance["ColMont", i].Value.ToString();
+                    frm.valeur1D.Text = dgFinance["ColVal", i].Value.ToString();
                     frm.fcTxt.Text = dgFinance["ColFc", i].Value.ToString();
                     frm.dollarTxt.Text = dgFinance["ColDoll", i].Value.ToString();
                     frm.departCombo.Text = dgFinance["ColDepart", i].Value.ToString();

@@ -28,7 +28,15 @@ namespace CEPGUI.UserControls
         }
         void SelectDatas(ReceptionEnfant r)
         {
-            dgRecept.DataSource = r.ListOfEnfantsRecu();
+            try
+            {
+                dgRecept.DataSource = r.ListOfEnfantsRecu();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
             
         }
 
@@ -110,6 +118,11 @@ namespace CEPGUI.UserControls
         {
             SelectDatas(new ReceptionEnfant());
             lblTotal.Text = dgRecept.Rows.Count.ToString() + " Enfants";
+        }
+
+        private void serchTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

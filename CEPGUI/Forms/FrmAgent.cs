@@ -39,19 +39,27 @@ namespace CEPGUI.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (UserSession.GetInstance().Fonction == "Administrateur")
+            try
             {
-                if (nomsTxt.Text == "" || adresseTxt.Text == "" || fonctionTxt.Text == "" || phoneTxt.Text == "" || emailTxt.Text == "" || sexe == "")
+                if (UserSession.GetInstance().Fonction == "Administrateur" || UserSession.GetInstance().Fonction == "SA")
                 {
-                    DynamicClasses.GetInstance().Alert("Utilisateur save", DialogForms.FrmAlert.enmType.Success);
-                }
-                else
-                {
-                    if (passTxt.Text != passConfTxt.Text)
-                        DynamicClasses.GetInstance().Alert("Vérifier passwords", DialogForms.FrmAlert.enmType.Warning);
+                    if (nomsTxt.Text == "" || adresseTxt.Text == "" || fonctionTxt.Text == "" || phoneTxt.Text == "" || emailTxt.Text == "" || sexe == "")
+                    {
+                        DynamicClasses.GetInstance().Alert("Utilisateur save", DialogForms.FrmAlert.enmType.Success);
+                    }
                     else
-                        SaveDatas();
+                    {
+                        if (passTxt.Text != passConfTxt.Text)
+                            DynamicClasses.GetInstance().Alert("Vérifier passwords", DialogForms.FrmAlert.enmType.Warning);
+                        else
+                            SaveDatas();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
             }
                 
         }
@@ -73,6 +81,8 @@ namespace CEPGUI.Forms
             ag.Enreistrer(ag);
 
             DynamicClasses.GetInstance().Alert("Utilisateur save", DialogForms.FrmAlert.enmType.Success);
+
+            Clear();
 
         }
 
@@ -99,6 +109,25 @@ namespace CEPGUI.Forms
         private void button8_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+        void Clear()
+        {
+            nomsTxt.Clear();
+            sexe = "";
+            rbtnFem.Checked = false;
+            rbtnMasc.Checked = false;
+            adresseTxt.Clear();
+            fonctionTxt.Text = "";
+            phoneTxt.Clear();
+            emailTxt.Clear();
+            userTxt.Clear();
+            passTxt.Clear();
+            passConfTxt.Clear();
         }
     }
 }

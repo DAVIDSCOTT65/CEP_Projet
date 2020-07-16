@@ -14,6 +14,8 @@ namespace UtilitiesLibrary
 {
     public class Utilisateurs
     {
+        int i = 0;
+        public int Num { get; set; }
         public int Id { get; set; }
         public string Noms { get; set; }
         public string Sexe { get; set; }
@@ -108,6 +110,9 @@ namespace UtilitiesLibrary
         {
             Utilisateurs u = new Utilisateurs();
 
+            i = i + 1;
+
+            u.Num = i;
             u.Id = Convert.ToInt32(dr["Id"].ToString());
             u.Noms = dr["Noms"].ToString();
             u.Sexe = dr["Sexe"].ToString();

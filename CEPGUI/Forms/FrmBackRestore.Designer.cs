@@ -191,6 +191,7 @@
             this.defaultPath.Name = "defaultPath";
             this.defaultPath.Size = new System.Drawing.Size(413, 23);
             this.defaultPath.TabIndex = 0;
+            this.defaultPath.Text = "C:\\SENEVE\\Backup";
             // 
             // btnreset
             // 

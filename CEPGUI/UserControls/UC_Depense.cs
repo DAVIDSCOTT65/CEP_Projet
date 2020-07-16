@@ -59,7 +59,15 @@ namespace CEPGUI.UserControls
         }
         void SelectDatas(Depenses dep)
         {
-            dgFinance.DataSource = dep.ListOfDepenses();
+            try
+            {
+                dgFinance.DataSource = dep.ListOfDepenses();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgFinance_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -34,8 +34,16 @@ namespace CEPGUI.UserControls
         }
         void ChargementLoad()
         {
-            SelectDatas(new Membre());
-            TotalFidele();
+            try
+            {
+                SelectDatas(new Membre());
+                TotalFidele();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         void TotalFidele()
         {
@@ -78,7 +86,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
+                if (UserSession.GetInstance().Fonction == "Administrateur" || UserSession.GetInstance().Fonction == "SA")
                 {
                     FrmMembre frm = new FrmMembre();
                     int i;
@@ -108,6 +116,10 @@ namespace CEPGUI.UserControls
                     }
 
                     frm.ShowDialog();
+                }
+                else
+                {
+                    dn.Alert("Niveau d'accès admin requis", DialogForms.FrmAlert.enmType.Warning);
                 }
 
 

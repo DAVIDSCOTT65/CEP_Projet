@@ -49,7 +49,12 @@ namespace CEPGUI.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Enregistrer();
+            if (UserSession.GetInstance().Fonction == "Financier" || UserSession.GetInstance().Fonction == "SA")
+                Enregistrer();
+            else
+            {
+                dn.Alert("Niveau Finance Requis", DialogForms.FrmAlert.enmType.Warning);
+            }
         }
         private void Enregistrer()
         {

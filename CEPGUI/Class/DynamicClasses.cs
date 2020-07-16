@@ -43,19 +43,6 @@ namespace CEPGUI.Class
             da.Fill(ds);
             return ds.Tables[0];
         }
-        //public DataTable recherche_Infromation(string NomTable, string Nom, string Postnom, string Prenom, string recherche)
-        //{
-        //    if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-        //        ImplementeConnexion.Instance.Conn.Open();
-        //    con = (SqlConnection)ImplementeConnexion.Instance.Conn;
-        //    sql = new SqlCommand("select * from " + NomTable + " WHERE " + Nom + " LIKE '%" + recherche + "%' or " + Postnom + " LIKE '%" + recherche + "%' or " + Prenom + " LIKE '%" + recherche + "%' ", con);
-        //    dt = null;
-        //    dt = new SqlDataAdapter(sql);
-        //    ds = new DataSet();
-        //    dt.Fill(ds);
-        //    con.Close();
-        //    return ds.Tables[0];
-        //}
         public int loginTest(string nom, string password)
         {
             int count = 0;
@@ -120,72 +107,100 @@ namespace CEPGUI.Class
         }
         public void chargeNomsCombo(ComboBox cmb, string nomChamp, string procedure)
         {
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            try
             {
-                cmd.CommandText = procedure;
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                IDataReader rd = cmd.ExecuteReader();
-                cmb.Items.Clear();
-
-                while (rd.Read())
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    string de = rd[nomChamp].ToString();
-                    cmb.Items.Add(de);
+                    cmd.CommandText = procedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    IDataReader rd = cmd.ExecuteReader();
+                    cmb.Items.Clear();
+
+                    while (rd.Read())
+                    {
+                        string de = rd[nomChamp].ToString();
+                        cmb.Items.Add(de);
+                    }
+                    rd.Close();
+                    rd.Dispose();
+                    cmd.Dispose();
                 }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Une exception est survenue : " + ex.Message);
             }
         }
         public int retourId(string condition,string param, string procedure)
         {
             int identifiant = 0;
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            try
             {
-                cmd.CommandText = procedure;
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, param, 100, DbType.String, condition));
-
-                IDataReader rd = cmd.ExecuteReader();
-
-                if (rd.Read())
+                
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    identifiant = int.Parse(rd["Id"].ToString());
+                    cmd.CommandText = procedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, param, 100, DbType.String, condition));
+
+                    IDataReader rd = cmd.ExecuteReader();
+
+                    if (rd.Read())
+                    {
+                        identifiant = int.Parse(rd["Id"].ToString());
+                    }
+                    rd.Close();
+                    rd.Dispose();
+                    cmd.Dispose();
                 }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Une exception est survenue : " + ex.Message);
             }
             return identifiant;
         }
         public string retourMarraine(string condition)
         {
             string identifiant = "";
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            try
             {
-                cmd.CommandText = "SELECT_MARRAINE";
                 
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@noms", 100, DbType.String, condition));
-
-                IDataReader rd = cmd.ExecuteReader();
-
-                if (rd.Read())
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    identifiant = rd["NomsMarraine"].ToString();
+                    cmd.CommandText = "SELECT_MARRAINE";
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@noms", 100, DbType.String, condition));
+
+                    IDataReader rd = cmd.ExecuteReader();
+
+                    if (rd.Read())
+                    {
+                        identifiant = rd["NomsMarraine"].ToString();
+                    }
+                    rd.Close();
+                    rd.Dispose();
+                    cmd.Dispose();
                 }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
+                
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show("Une exception est survenue : " + ex.Message);
             }
             return identifiant;
         }
@@ -242,177 +257,70 @@ namespace CEPGUI.Class
         public int retourIdWithDate(string condition, string param, string procedure)
         {
             int identifiant = 0;
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            try
             {
-                cmd.CommandText = procedure;
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, param, 100, DbType.Date, condition));
-
-                IDataReader rd = cmd.ExecuteReader();
-
-                if (rd.Read())
+                
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    identifiant = int.Parse(rd["Id"].ToString());
+                    cmd.CommandText = procedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, param, 100, DbType.Date, condition));
+
+                    IDataReader rd = cmd.ExecuteReader();
+
+                    if (rd.Read())
+                    {
+                        identifiant = int.Parse(rd["Id"].ToString());
+                    }
+                    rd.Close();
+                    rd.Dispose();
+                    cmd.Dispose();
                 }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
             return identifiant;
         }
         public void RetourDatasBapteme(string condition,TextBox champ1, TextBox champ2)
         {
-            
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+
+            try
             {
-                cmd.CommandText = "SELECT_DATAS_BAPTEMES";
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 100, DbType.Date, condition));
-
-                IDataReader rd = cmd.ExecuteReader();
-
-                if (rd.Read())
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
                 {
-                    champ1.Text = rd["Lieu"].ToString();
-                    champ2.Text = rd["Pasteur"].ToString();
-                }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
-            }
-            
-        }
-        public string retourCode(string designation)
-        {
-            string code = "";
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
-            {
-                cmd.CommandText = "SELECT_CODE_ARTICLE";
-                cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "SELECT_DATAS_BAPTEMES";
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@designation", 100, DbType.String, designation));
+                    cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@date", 100, DbType.Date, condition));
 
-                IDataReader rd = cmd.ExecuteReader();
+                    IDataReader rd = cmd.ExecuteReader();
 
-                if (rd.Read())
-                {
-                    code = rd["Code"].ToString();
-                }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
-            }
-            return code;
-        }
-        public void retourInfoCredit(Label champ1, Label champ2, Label champ3, string valeur)
-        {
-
-
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
-            {
-                cmd.CommandText = "SELECT_DETAILS_CREANCE";
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@valeur", 200, DbType.String, valeur));
-
-                IDataReader rd = cmd.ExecuteReader();
-
-                if (rd.Read())
-                {
-
-                    champ1.Text = rd["Noms"].ToString();
-                    champ2.Text = rd["Montant"].ToString();
-                    champ3.Text = rd["Date_Paiement"].ToString();
-
-
-                }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
-            }
-            //return identifiant;
-
-        }
-        public double RetourPrixArticle(string valeur)
-        {
-            double pv = 0;
-
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
-            {
-                cmd.CommandText = "SELECT_PVU";
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@valeur", 200, DbType.String, valeur));
-
-                IDataReader rd = cmd.ExecuteReader();
-
-                if (rd.Read())
-                {
-
-                    pv = Convert.ToDouble(rd["PVu"].ToString());
-
-
-
-                }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
-            }
-            return pv;
-
-        }
-        public string RetourUniteArticle(string valeur, Label quantite)
-        {
-            string unite = "";
-
-            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
-                ImplementeConnexion.Instance.Conn.Open();
-            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
-            {
-                cmd.CommandText = "SELECT_UNITE";
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.Add(Parametre.Instance.AddParametres(cmd, "@valeur", 200, DbType.String, valeur));
-
-                IDataReader rd = cmd.ExecuteReader();
-
-                if (rd.Read())
-                {
-                    if (rd["Unite"] == DBNull.Value || rd["Quantite"] == DBNull.Value)
+                    if (rd.Read())
                     {
-                        unite = "Pas d'unité";
-                        quantite.Text = "0";
+                        champ1.Text = rd["Lieu"].ToString();
+                        champ2.Text = rd["Pasteur"].ToString();
                     }
-
-                    else
-                    {
-                        unite = rd["Unite"].ToString();
-                        quantite.Text = rd["Quantite"].ToString();
-                    }
-
-
+                    rd.Close();
+                    rd.Dispose();
+                    cmd.Dispose();
                 }
-                rd.Close();
-                rd.Dispose();
-                cmd.Dispose();
             }
-            return unite;
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+            
         }
-       
-       
         public void retreivePhoto(string valeur, PictureBox photo, string procedure)
         {
             try
@@ -455,35 +363,51 @@ namespace CEPGUI.Class
         }
         public void ExportInExcel(DataGridView dg)
         {
-            if(dg.Rows.Count <=0)
+            try
             {
-                MessageBox.Show("Rien à exporter, tableau vide", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dg.Rows.Count <= 0)
+                {
+                    MessageBox.Show("Rien à exporter, tableau vide", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    copyAlltoClipboard(dg);
+                    Microsoft.Office.Interop.Excel.Application xlexcel;
+                    Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+                    Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+                    object misValue = System.Reflection.Missing.Value;
+                    xlexcel = new Microsoft.Office.Interop.Excel.Application();
+                    xlexcel.Visible = true;
+                    xlWorkBook = xlexcel.Workbooks.Add(misValue);
+                    xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                    Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
+                    CR.Select();
+                    xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                copyAlltoClipboard(dg);
-                Microsoft.Office.Interop.Excel.Application xlexcel;
-                Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
-                Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
-                object misValue = System.Reflection.Missing.Value;
-                xlexcel = new Microsoft.Office.Interop.Excel.Application();
-                xlexcel.Visible = true;
-                xlWorkBook = xlexcel.Workbooks.Add(misValue);
-                xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-                Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
-                CR.Select();
-                xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+
+                MessageBox.Show("Erreur lors de l'export en excel : \n" + ex.Message);
             }
            
         }
         private void copyAlltoClipboard(DataGridView dg)
         {
-            //to remove the first blank column from datagridview
-            dg.RowHeadersVisible = false;
-            dg.SelectAll();
-            DataObject dataObj = dg.GetClipboardContent();
-            if (dataObj != null)
-                Clipboard.SetDataObject(dataObj);
+            try
+            {
+                //to remove the first blank column from datagridview
+                dg.RowHeadersVisible = false;
+                dg.SelectAll();
+                DataObject dataObj = dg.GetClipboardContent();
+                if (dataObj != null)
+                    Clipboard.SetDataObject(dataObj);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
         public void RapportDepensesToday()
         {
