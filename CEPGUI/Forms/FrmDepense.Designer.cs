@@ -49,7 +49,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCaiss = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.montantTxt = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.montantTxt)).BeginInit();
@@ -174,7 +173,7 @@
             this.sourceCombo.FormattingEnabled = true;
             this.sourceCombo.Location = new System.Drawing.Point(94, 161);
             this.sourceCombo.Name = "sourceCombo";
-            this.sourceCombo.Size = new System.Drawing.Size(300, 29);
+            this.sourceCombo.Size = new System.Drawing.Size(297, 29);
             this.sourceCombo.TabIndex = 187;
             // 
             // departCombo
@@ -184,7 +183,7 @@
             this.departCombo.FormattingEnabled = true;
             this.departCombo.Location = new System.Drawing.Point(94, 126);
             this.departCombo.Name = "departCombo";
-            this.departCombo.Size = new System.Drawing.Size(300, 29);
+            this.departCombo.Size = new System.Drawing.Size(297, 29);
             this.departCombo.TabIndex = 186;
             // 
             // label6
@@ -250,22 +249,12 @@
             // lblCaiss
             // 
             this.lblCaiss.AutoSize = true;
-            this.lblCaiss.Location = new System.Drawing.Point(399, 89);
+            this.lblCaiss.Location = new System.Drawing.Point(390, 92);
             this.lblCaiss.Name = "lblCaiss";
             this.lblCaiss.Size = new System.Drawing.Size(19, 21);
             this.lblCaiss.TabIndex = 200;
             this.lblCaiss.Text = "0";
             this.toolTip1.SetToolTip(this.lblCaiss, "Montant total en caisse");
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(450, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 21);
-            this.label3.TabIndex = 201;
-            this.label3.Text = "$";
-            this.toolTip1.SetToolTip(this.label3, "Montant total en caisse");
             // 
             // montantTxt
             // 
@@ -277,7 +266,7 @@
             0,
             0});
             this.montantTxt.Name = "montantTxt";
-            this.montantTxt.Size = new System.Drawing.Size(300, 27);
+            this.montantTxt.Size = new System.Drawing.Size(297, 27);
             this.montantTxt.TabIndex = 202;
             this.montantTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -288,7 +277,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(474, 273);
             this.Controls.Add(this.montantTxt);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCaiss);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel4);
@@ -344,7 +332,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCaiss;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.NumericUpDown montantTxt;
     }
 }

@@ -144,5 +144,10 @@ namespace CEPGUI.Forms
         {
             AddToDataGrid();
         }
+
+        private void annonceTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

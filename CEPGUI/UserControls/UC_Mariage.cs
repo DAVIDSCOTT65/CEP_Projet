@@ -38,7 +38,31 @@ namespace CEPGUI.UserControls
                 MessageBox.Show(ex.Message);
             }
         }
+        void doubleclic_grid()
+        {
+            try
+            {
+                FrmFaireMariage frm = new FrmFaireMariage();
+                int i;
+                i = dgMariage.CurrentRow.Index;
 
+                frm.id = Convert.ToInt32(dgMariage["ColId", i].Value.ToString());
+                frm.refprev = Convert.ToInt32(dgMariage["ColRefPrev", i].Value.ToString());
+                frm.lblConjoint.Text = dgMariage["ColConjoint", i].Value.ToString();
+                frm.lblParrain.Text = dgMariage["ColParrain", i].Value.ToString();
+                frm.dateTxt.Text = dgMariage["ColDate", i].Value.ToString();
+                frm.pastTxt.Text = dgMariage["ColPasteur", i].Value.ToString();
+                frm.ShowDialog();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             FrmMariage fr = new FrmMariage();
@@ -71,15 +95,28 @@ namespace CEPGUI.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmImpression frm = new FrmImpression();
-            frm.RegistreMariages();
-            frm.ShowDialog();
+            try
+            {
+                FrmImpression frm = new FrmImpression();
+                frm.RegistreMariages();
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             SelectDatas(new FaireMariage());
             lblTotal.Text = dgMariage.RowCount.ToString() + " Mariages";
+        }
+
+        private void dgMariage_DoubleClick(object sender, EventArgs e)
+        {
+            doubleclic_grid();
         }
     }
 }

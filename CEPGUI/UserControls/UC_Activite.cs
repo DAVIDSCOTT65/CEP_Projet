@@ -30,9 +30,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
-                {
-                    FrmActivites frm = new FrmActivites();
+                FrmActivites frm = new FrmActivites();
                     int i;
                     i = dgActivite.CurrentRow.Index;
 
@@ -46,7 +44,6 @@ namespace CEPGUI.UserControls
                     frm.departTxt.SelectedIndex = -1;
 
                     frm.ShowDialog();
-                }
 
 
             }

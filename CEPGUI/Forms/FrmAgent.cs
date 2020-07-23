@@ -23,7 +23,7 @@ namespace CEPGUI.Forms
 
         private void FrmAgent_Load(object sender, EventArgs e)
         {
-            if (UserSession.GetInstance().Fonction != "Administrateur")
+            if (UserSession.GetInstance().Fonction != "Administrateur" || UserSession.GetInstance().Fonction != "SA")
                 lblWarning.Visible = true;
         }
 
@@ -45,11 +45,11 @@ namespace CEPGUI.Forms
                 {
                     if (nomsTxt.Text == "" || adresseTxt.Text == "" || fonctionTxt.Text == "" || phoneTxt.Text == "" || emailTxt.Text == "" || sexe == "")
                     {
-                        DynamicClasses.GetInstance().Alert("Utilisateur save", DialogForms.FrmAlert.enmType.Success);
+                        DynamicClasses.GetInstance().Alert("Completez tous les champs !", DialogForms.FrmAlert.enmType.Info);
                     }
-                    else
+                    else if(passTxt.Text != "" && passConfTxt.Text != "")
                     {
-                        if (passTxt.Text != passConfTxt.Text)
+                        if ((passTxt.Text != passConfTxt.Text) )
                             DynamicClasses.GetInstance().Alert("Vérifier passwords", DialogForms.FrmAlert.enmType.Warning);
                         else
                             SaveDatas();

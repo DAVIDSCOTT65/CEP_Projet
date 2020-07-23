@@ -47,9 +47,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
-                {
-                    FrmEntree frm = new FrmEntree();
+                 FrmEntree frm = new FrmEntree();
                     int i;
                     i = dgFinance.CurrentRow.Index;
 
@@ -62,7 +60,6 @@ namespace CEPGUI.UserControls
                     frm.concernDate.Text = dgFinance["ColDate", i].Value.ToString();
 
                     frm.ShowDialog();
-                }
 
 
             }

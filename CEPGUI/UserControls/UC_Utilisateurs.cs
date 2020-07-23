@@ -24,6 +24,18 @@ namespace CEPGUI.UserControls
         {
             SelectData(new Utilisateurs());
         }
+        void Search(Utilisateurs u)
+        {
+            try
+            {
+                dgAgent.DataSource = u.Research(searchTxt.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
         void SelectData(Utilisateurs u)
         {
             try
@@ -40,9 +52,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur" || UserSession.GetInstance().Fonction == "SA")
-                {
-                    FrmAgent frm = new FrmAgent();
+                 FrmAgent frm = new FrmAgent();
                     int i;
                     i = dgAgent.CurrentRow.Index;
 
@@ -70,7 +80,6 @@ namespace CEPGUI.UserControls
                     loadPhoto(dgAgent["ColId", i].Value.ToString(), frm.photo);
 
                     frm.ShowDialog();
-                }
 
 
             }
@@ -136,7 +145,7 @@ namespace CEPGUI.UserControls
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            Search(new Utilisateurs());
         }
     }
 }

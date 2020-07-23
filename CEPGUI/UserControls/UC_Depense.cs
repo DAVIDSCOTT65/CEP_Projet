@@ -35,9 +35,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
-                {
-                    FrmDepense frm = new FrmDepense();
+                  FrmDepense frm = new FrmDepense();
                     int i;
                     i = dgFinance.CurrentRow.Index;
 
@@ -47,7 +45,6 @@ namespace CEPGUI.UserControls
                     frm.sourceCombo.Text = dgFinance["ColSource", i].Value.ToString();
 
                     frm.ShowDialog();
-                }
 
 
             }

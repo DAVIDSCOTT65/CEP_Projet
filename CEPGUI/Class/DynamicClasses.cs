@@ -189,7 +189,18 @@ namespace CEPGUI.Class
 
                     if (rd.Read())
                     {
-                        identifiant = rd["NomsMarraine"].ToString();
+                        if (rd["NomsMarraine"] == DBNull.Value)
+                        {
+                            FrmMariage fr = new FrmMariage();
+                            fr.marraineTxt.ReadOnly = false;
+                        }
+                        else
+                        {
+                            identifiant = rd["NomsMarraine"].ToString();
+                            FrmMariage fr = new FrmMariage();
+                            fr.marraineTxt.ReadOnly = true;
+                        }  
+                            
                     }
                     rd.Close();
                     rd.Dispose();

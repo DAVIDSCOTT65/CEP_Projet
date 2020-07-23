@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Departements));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFidele = new System.Windows.Forms.Label();
@@ -43,9 +43,10 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.departCombo = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.dgMembre = new System.Windows.Forms.DataGridView();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDepart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +60,6 @@
             this.ColPast = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMembre)).BeginInit();
             this.SuspendLayout();
@@ -182,6 +182,23 @@
             this.toolTip1.SetToolTip(this.departCombo, "Selectionner un département");
             this.departCombo.SelectedIndexChanged += new System.EventHandler(this.departCombo_SelectedIndexChanged);
             // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button5.Image = global::CEPGUI.Properties.Resources.Refresh_32px;
+            this.button5.Location = new System.Drawing.Point(6, 541);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(40, 28);
+            this.button5.TabIndex = 201;
+            this.toolTip1.SetToolTip(this.button5, "Actualiser");
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // dgMembre
             // 
             this.dgMembre.AllowUserToAddRows = false;
@@ -192,18 +209,18 @@
             this.dgMembre.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgMembre.BackgroundColor = System.Drawing.Color.White;
             this.dgMembre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgMembre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMembre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgMembre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgMembre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNum,
-            this.Column1,
+            this.ColDepart,
             this.ColNom,
             this.ColSexe,
             this.ColLieu,
@@ -217,29 +234,30 @@
             this.ColPast,
             this.Column12,
             this.ColId});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgMembre.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgMembre.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgMembre.Location = new System.Drawing.Point(3, 85);
             this.dgMembre.Name = "dgMembre";
             this.dgMembre.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgMembre.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMembre.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgMembre.RowHeadersVisible = false;
             this.dgMembre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgMembre.Size = new System.Drawing.Size(948, 438);
             this.dgMembre.TabIndex = 188;
+            this.dgMembre.DoubleClick += new System.EventHandler(this.dgMembre_DoubleClick);
             // 
             // ColNum
             // 
@@ -250,14 +268,14 @@
             this.ColNum.ReadOnly = true;
             this.ColNum.Width = 53;
             // 
-            // Column1
+            // ColDepart
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "Pasteur";
-            this.Column1.HeaderText = "Département";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 143;
+            this.ColDepart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDepart.DataPropertyName = "Pasteur";
+            this.ColDepart.HeaderText = "Département";
+            this.ColDepart.Name = "ColDepart";
+            this.ColDepart.ReadOnly = true;
+            this.ColDepart.Width = 143;
             // 
             // ColNom
             // 
@@ -303,6 +321,7 @@
             this.ColBapt.Name = "ColBapt";
             this.ColBapt.ReadOnly = true;
             this.ColBapt.Visible = false;
+            this.ColBapt.Width = 161;
             // 
             // ColPere
             // 
@@ -312,6 +331,7 @@
             this.ColPere.Name = "ColPere";
             this.ColPere.ReadOnly = true;
             this.ColPere.Visible = false;
+            this.ColPere.Width = 125;
             // 
             // ColMere
             // 
@@ -321,6 +341,7 @@
             this.ColMere.Name = "ColMere";
             this.ColMere.ReadOnly = true;
             this.ColMere.Visible = false;
+            this.ColMere.Width = 109;
             // 
             // ColProv
             // 
@@ -330,6 +351,7 @@
             this.ColProv.Name = "ColProv";
             this.ColProv.ReadOnly = true;
             this.ColProv.Visible = false;
+            this.ColProv.Width = 157;
             // 
             // ColTerr
             // 
@@ -339,6 +361,7 @@
             this.ColTerr.Name = "ColTerr";
             this.ColTerr.ReadOnly = true;
             this.ColTerr.Visible = false;
+            this.ColTerr.Width = 116;
             // 
             // ColPhone
             // 
@@ -357,6 +380,7 @@
             this.ColPast.Name = "ColPast";
             this.ColPast.ReadOnly = true;
             this.ColPast.Visible = false;
+            this.ColPast.Width = 93;
             // 
             // Column12
             // 
@@ -374,23 +398,6 @@
             this.ColId.Name = "ColId";
             this.ColId.ReadOnly = true;
             this.ColId.Visible = false;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button5.Image = global::CEPGUI.Properties.Resources.Refresh_32px;
-            this.button5.Location = new System.Drawing.Point(6, 541);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 28);
-            this.button5.TabIndex = 201;
-            this.toolTip1.SetToolTip(this.button5, "Actualiser");
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // UC_Departements
             // 
@@ -434,8 +441,9 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ComboBox departCombo;
         public System.Windows.Forms.DataGridView dgMembre;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDepart;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNom;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSexe;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColLieu;
@@ -449,6 +457,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPast;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
-        private System.Windows.Forms.Button button5;
     }
 }

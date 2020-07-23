@@ -265,6 +265,7 @@
             this.Name = "FrmFaireMariage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFaireMariage";
+            this.Load += new System.EventHandler(this.FrmFaireMariage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

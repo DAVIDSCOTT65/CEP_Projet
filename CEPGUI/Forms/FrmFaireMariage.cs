@@ -73,5 +73,10 @@ namespace CEPGUI.Forms
         {
             this.Close();
         }
+
+        private void FrmFaireMariage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

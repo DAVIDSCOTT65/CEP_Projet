@@ -30,9 +30,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
-                {
-                    FrmAnnonce frm = new FrmAnnonce();
+                FrmAnnonce frm = new FrmAnnonce();
                     int i;
                     i = dgCommunique.CurrentRow.Index;
 
@@ -42,7 +40,7 @@ namespace CEPGUI.UserControls
                     frm.dgDepart.Rows.Add(dgCommunique["ColRefDepart", i].Value.ToString(), dgCommunique["ColDepart", i].Value.ToString());
 
                     frm.ShowDialog();
-                }
+                
 
 
             }
@@ -125,9 +123,17 @@ namespace CEPGUI.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmImpression fr = new FrmImpression();
-            fr.RegistreAnnonces("GetAnnonceToday");
-            fr.ShowDialog();
+            try
+            {
+                FrmImpression fr = new FrmImpression();
+                fr.RegistreAnnonces("GetAnnonceToday");
+                fr.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgCommunique_MouseDoubleClick(object sender, MouseEventArgs e)

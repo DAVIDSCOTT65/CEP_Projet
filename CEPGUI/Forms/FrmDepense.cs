@@ -17,6 +17,8 @@ namespace CEPGUI.Forms
         DynamicClasses dn = new DynamicClasses();
         Depenses dep = new Depenses();
         public int id = 0;
+        double number = 0;
+
         public FrmDepense()
         {
             InitializeComponent();
@@ -24,9 +26,10 @@ namespace CEPGUI.Forms
 
         private void FrmDepense_Load(object sender, EventArgs e)
         {
+            number = dep.GetCaisse();
             dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
             dn.chargeNomsCombo(sourceCombo, "Designation", "SELECT_DEPENSE");
-            lblCaiss.Text = dep.GetCaisse().ToString();
+            lblCaiss.Text = number.ToString(".##");
 
         }
 
@@ -61,8 +64,8 @@ namespace CEPGUI.Forms
             try
             {
 
-                if (Convert.ToDouble(montantTxt.Text) > Convert.ToDouble(lblCaiss.Text) || Convert.ToDouble(montantTxt.Text) <= 0)
-                    MessageBox.Show("Montant négatif ou montant supérieur au montant en caisse", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Convert.ToDouble(montantTxt.Text) > Convert.ToDouble(lblCaiss.Text) || Convert.ToDouble(montantTxt.Text) <= 0 || sourceCombo.Text == "")
+                    MessageBox.Show("Montant négatif ou montant supérieur au montant en caisse\nOu Completez tous les champs obligatoires.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {
                     dep.Id = id;
@@ -75,10 +78,10 @@ namespace CEPGUI.Forms
 
                     Initialise();
 
-
-                    lblCaiss.Text = dep.GetCaisse().ToString();
+                    number = dep.GetCaisse();
+                    lblCaiss.Text = number.ToString(".##");
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -97,7 +100,8 @@ namespace CEPGUI.Forms
         {
             dn.chargeNomsCombo(departCombo, "Departement", "SELECT_DEPARTEMENT");
             dn.chargeNomsCombo(sourceCombo, "Designation", "SELECT_DEPENSE");
-            lblCaiss.Text = dep.GetCaisse().ToString() + "$";
+            number = dep.GetCaisse();
+            lblCaiss.Text = number.ToString(".##");
         }
 
         private void montantTxt_KeyPress(object sender, KeyPressEventArgs e)

@@ -106,6 +106,26 @@ namespace UtilitiesLibrary
 
             return lst;
         }
+        public List<Utilisateurs> Research(string recherche)
+        {
+            List<Utilisateurs> lst = new List<Utilisateurs>();
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT * FROM Utilisateur WHERE (Noms LIKE '%" + recherche + "%' OR Noms LIKE '%" + recherche + "' OR Noms LIKE '" + recherche + "%') AND Pseudo !='SA' ORDER By Id DESC";
+                //cmd.CommandType = CommandType.StoredProcedure;
+
+                IDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    lst.Add(GedUser(rd));
+                }
+                rd.Dispose();
+                rd.Close();
+            }
+            return lst;
+        }
         private Utilisateurs GedUser(IDataReader dr)
         {
             Utilisateurs u = new Utilisateurs();

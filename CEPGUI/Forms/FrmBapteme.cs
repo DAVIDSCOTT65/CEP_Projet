@@ -30,7 +30,7 @@ namespace CEPGUI.Forms
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
+                if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "Sa")
                 {
                    
                     int i;
@@ -88,19 +88,6 @@ namespace CEPGUI.Forms
         private void recptTxt_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             
-        }
-
-        private void recptTxt_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                dn.RetourDatasBapteme(recptTxt.Text, lieuTxt, pastTxt);
-            }
-            catch (Exception)
-            {
-
-
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -217,6 +204,32 @@ namespace CEPGUI.Forms
                 MessageBox.Show(ex.Message);
             }
             
+        }
+        void DateRetriever()
+        {
+            try
+            {
+                dn.RetourDatasBapteme(recptTxt.Text, lieuTxt, pastTxt);
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+        private void recptTxt_ValueChanged(object sender, EventArgs e)
+        {
+            DateRetriever();
+        }
+
+        private void recptTxt_Enter(object sender, EventArgs e)
+        {
+            DateRetriever();
+        }
+
+        private void recptTxt_MouseEnter(object sender, EventArgs e)
+        {
+            DateRetriever();
         }
     }
 }

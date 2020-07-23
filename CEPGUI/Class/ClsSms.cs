@@ -57,7 +57,7 @@ namespace CEPGUI.Class
             catch (Exception ex)
             {
                 Isopen = false;
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
             return Isopen;
         }

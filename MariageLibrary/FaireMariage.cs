@@ -101,8 +101,9 @@ namespace MariageLibrary
             m.CoupleP = dr["Couple_Parrainage"].ToString();
             m.DateMariage = Convert.ToDateTime(dr["DateMariage"].ToString());
             m.Pasteur = dr["Pasteur"].ToString();
+            m.RefPrev = Convert.ToInt32(dr["Id"].ToString());
 
-            m.Conjoint = dr["Conjoint"].ToString();
+            m.Conjoint = dr["RefPrevision"].ToString();
             m.Conjointe = dr["Conjointe"].ToString();
             m.Parrain = dr["NomsParrain"].ToString();
             m.Marraine = dr["NomsMarraine"].ToString();

@@ -79,7 +79,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchTxt = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -724,15 +724,15 @@
             this.label1.TabIndex = 100;
             this.label1.Text = "Agents";
             // 
-            // textBox1
+            // searchTxt
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.searchTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(104, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(695, 27);
-            this.textBox1.TabIndex = 98;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.searchTxt.Location = new System.Drawing.Point(104, 34);
+            this.searchTxt.Name = "searchTxt";
+            this.searchTxt.Size = new System.Drawing.Size(695, 27);
+            this.searchTxt.TabIndex = 98;
+            this.searchTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox8
             // 
@@ -1017,7 +1017,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.searchTxt);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox4);
@@ -1093,7 +1093,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label13;

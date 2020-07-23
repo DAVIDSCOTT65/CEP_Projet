@@ -27,7 +27,29 @@ namespace CEPGUI.UserControls
             AffectactionDepartement frm = new AffectactionDepartement();
             frm.ShowDialog();
         }
+        void doubleclic_grid()
+        {
+            try
+            {
+                AffectactionDepartement frm = new AffectactionDepartement();
+                int i;
+                i = dgMembre.CurrentRow.Index;
 
+                frm.id = Convert.ToInt32(dgMembre["ColId", i].Value.ToString());
+                frm.departCombo.Text = dgMembre["ColDepart", i].Value.ToString();
+                frm.membreCombo.Text = dgMembre["ColNom", i].Value.ToString();
+
+                frm.ShowDialog();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+            }
+        }
         private void UC_Departements_Load(object sender, EventArgs e)
         {
             ChargementCombo();
@@ -100,6 +122,11 @@ namespace CEPGUI.UserControls
         private void button5_Click(object sender, EventArgs e)
         {
             ChargementDataGrid(new Membre());
+        }
+
+        private void dgMembre_DoubleClick(object sender, EventArgs e)
+        {
+            doubleclic_grid();
         }
     }
 }

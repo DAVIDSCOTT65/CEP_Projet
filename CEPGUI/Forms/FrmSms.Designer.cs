@@ -37,7 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.statusTxt = new System.Windows.Forms.TextBox();
             this.dgMembre = new System.Windows.Forms.DataGridView();
             this.ColNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.radioActivite = new System.Windows.Forms.RadioButton();
             this.radioAnnonce = new System.Windows.Forms.RadioButton();
+            this.statusTxt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPort = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,17 +69,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgMessage = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.lblSms = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dgMessage = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMembre)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -117,16 +117,6 @@
             this.groupBox1.Size = new System.Drawing.Size(340, 368);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            // 
-            // statusTxt
-            // 
-            this.statusTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusTxt.Location = new System.Drawing.Point(363, 579);
-            this.statusTxt.Multiline = true;
-            this.statusTxt.Name = "statusTxt";
-            this.statusTxt.ReadOnly = true;
-            this.statusTxt.Size = new System.Drawing.Size(516, 57);
-            this.statusTxt.TabIndex = 212;
             // 
             // dgMembre
             // 
@@ -396,6 +386,16 @@
             this.radioAnnonce.UseVisualStyleBackColor = true;
             this.radioAnnonce.CheckedChanged += new System.EventHandler(this.radioAnnonce_CheckedChanged);
             // 
+            // statusTxt
+            // 
+            this.statusTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTxt.Location = new System.Drawing.Point(363, 579);
+            this.statusTxt.Multiline = true;
+            this.statusTxt.Name = "statusTxt";
+            this.statusTxt.ReadOnly = true;
+            this.statusTxt.Size = new System.Drawing.Size(516, 57);
+            this.statusTxt.TabIndex = 212;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtPort);
@@ -497,6 +497,15 @@
             this.groupBox3.TabIndex = 210;
             this.groupBox3.TabStop = false;
             // 
+            // lblSms
+            // 
+            this.lblSms.AutoSize = true;
+            this.lblSms.Location = new System.Drawing.Point(241, 239);
+            this.lblSms.Name = "lblSms";
+            this.lblSms.Size = new System.Drawing.Size(96, 19);
+            this.lblSms.TabIndex = 210;
+            this.lblSms.Text = "0 Messages";
+            // 
             // dgMessage
             // 
             this.dgMessage.AllowUserToAddRows = false;
@@ -548,40 +557,6 @@
             this.dgMessage.TabIndex = 209;
             this.dgMessage.SelectionChanged += new System.EventHandler(this.dgMessage_SelectionChanged);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(241, 348);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 19);
-            this.label5.TabIndex = 207;
-            this.label5.Text = "0 Contacts";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 19);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Tous les messages";
-            // 
-            // lblSms
-            // 
-            this.lblSms.AutoSize = true;
-            this.lblSms.Location = new System.Drawing.Point(241, 239);
-            this.lblSms.Name = "lblSms";
-            this.lblSms.Size = new System.Drawing.Size(96, 19);
-            this.lblSms.TabIndex = 210;
-            this.lblSms.Text = "0 Messages";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -590,7 +565,6 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 33;
             // 
             // ColSms
             // 
@@ -631,6 +605,30 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(241, 348);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 19);
+            this.label5.TabIndex = 207;
+            this.label5.Text = "0 Contacts";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(146, 19);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Tous les messages";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmSms
             // 

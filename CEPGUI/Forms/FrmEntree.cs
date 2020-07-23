@@ -65,27 +65,90 @@ namespace CEPGUI.Forms
             {
                 DateTime datepublication;
                 datepublication = Convert.ToDateTime(concernDate.Text);
-                if (Convert.ToDouble(valeur1D.Text) <= 0 || valeur1D.Text == "" || sourceCombo.Text == "" || datepublication.Date > DateTime.Today)
+                if (fcTxt.Text=="" || dollarTxt.Text=="" || valeur1D.Text=="" || sourceCombo.Text == "" || datepublication.Date > DateTime.Today)
                     MessageBox.Show("Veuillez completé tous les champs svp ou vérifier la date ", "Champs vide", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 else
                 {
                     Entree ent = new Entree();
+                    if (Convert.ToDouble(fcTxt.Text) > 0 && Convert.ToDouble(dollarTxt.Text) > 0)
+                    {
+                        if (Convert.ToDouble(valeur1D.Text) > 0)
+                        {
+                            ent.Id = id;
+                            ent.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
+                            ent.RefSource = dn.retourId(sourceCombo.Text, "@designation", "GET_ID_SOURCE");
+                            ent.Montant = (Convert.ToDouble(fcTxt.Text) / Convert.ToDouble(valeur1D.Text)) + Convert.ToDouble(dollarTxt.Text);
+                            ent.Valeur1Dollar = Convert.ToDouble(valeur1D.Text);
+                            ent.FC = Convert.ToDouble(fcTxt.Text);
+                            ent.Dollar = Convert.ToDouble(dollarTxt.Text);
+                            ent.DateConcernee = Convert.ToDateTime(concernDate.Text);
+
+                            ent.SaveDatas(ent);
+                            dn.Alert("Entrées save", DialogForms.FrmAlert.enmType.Success);
+                            Initialise();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Entrez la valeur de 1$ SVP !", "Message");
+                            //Initialise();
+                        }
+                            
 
 
-                    ent.Id = id;
-                    ent.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
-                    ent.RefSource = dn.retourId(sourceCombo.Text, "@designation", "GET_ID_SOURCE");
-                    ent.Montant = (Convert.ToDouble(fcTxt.Text) / Convert.ToDouble(valeur1D.Text)) + Convert.ToDouble(dollarTxt.Text);
-                    ent.Valeur1Dollar = Convert.ToDouble(valeur1D.Text);
-                    ent.FC = Convert.ToDouble(fcTxt.Text);
-                    ent.Dollar = Convert.ToDouble(dollarTxt.Text);
-                    ent.DateConcernee = Convert.ToDateTime(concernDate.Text);
+                    }
+                    else if (Convert.ToDouble(fcTxt.Text) <= 0 )
+                    {
+                        if (Convert.ToDouble(dollarTxt.Text) > 0)
+                        {
+                            ent.Id = id;
+                            ent.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
+                            ent.RefSource = dn.retourId(sourceCombo.Text, "@designation", "GET_ID_SOURCE");
+                            ent.Montant = Convert.ToDouble(dollarTxt.Text);
+                            ent.Valeur1Dollar = 0;
+                            ent.FC = 0;
+                            ent.Dollar = Convert.ToDouble(dollarTxt.Text);
+                            ent.DateConcernee = Convert.ToDateTime(concernDate.Text);
 
-                    ent.SaveDatas(ent);
+                            ent.SaveDatas(ent);
+                            dn.Alert("Entrées save", DialogForms.FrmAlert.enmType.Success);
+                            Initialise();
+                        }
+                        else
+                            MessageBox.Show("0$ n'est pas pris en compte !", "Message");
 
-                    dn.Alert("Entrées save", DialogForms.FrmAlert.enmType.Success);
 
-                    Initialise();
+                        //ent.SaveDatas(ent);
+                    }
+                    else if(Convert.ToDouble(dollarTxt.Text) <= 0)
+                    {
+                        if (Convert.ToDouble(valeur1D.Text) > 0 && Convert.ToDouble(fcTxt.Text) > 0)
+                        {
+                            ent.Id = id;
+                            ent.RefDepart = dn.retourId(departCombo.Text, "@design", "GET_ID_DEPART");
+                            ent.RefSource = dn.retourId(sourceCombo.Text, "@designation", "GET_ID_SOURCE");
+                            ent.Montant = (Convert.ToDouble(fcTxt.Text) / Convert.ToDouble(valeur1D.Text)) + 0;
+                            ent.Valeur1Dollar = Convert.ToDouble(valeur1D.Text);
+                            ent.FC = Convert.ToDouble(fcTxt.Text);
+                            ent.Dollar = 0;
+                            ent.DateConcernee = Convert.ToDateTime(concernDate.Text);
+
+                            ent.SaveDatas(ent);
+                            dn.Alert("Entrées save", DialogForms.FrmAlert.enmType.Success);
+                            Initialise();
+
+                            //ent.SaveDatas(ent);
+                        }
+                        else
+                            MessageBox.Show("Entrez la valeur de 1$ SVP !", "Message");
+                        
+                    }
+                    
+
+
+                    //ent.SaveDatas(ent);
+                    //dn.Alert("Entrées save", DialogForms.FrmAlert.enmType.Success);
+
+                    //Initialise();
 
                 }
 
@@ -142,6 +205,40 @@ namespace CEPGUI.Forms
         private void fcTxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void fcTxt_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Convert.ToDouble(fcTxt.Text) > 0)
+                {
+                    valeur1D.Enabled = false;
+                }
+                else if (Convert.ToDouble(fcTxt.Text) <= 0)
+                    valeur1D.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void fcTxt_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Convert.ToDouble(fcTxt.Text) > 0)
+                {
+                    valeur1D.Enabled = true;
+                }
+                else if (Convert.ToDouble(fcTxt.Text) <= 0)
+                    valeur1D.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -86,9 +86,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur" || UserSession.GetInstance().Fonction == "SA")
-                {
-                    FrmMembre frm = new FrmMembre();
+                 FrmMembre frm = new FrmMembre();
                     int i;
                     i = dgMembre.CurrentRow.Index;
 
@@ -116,11 +114,7 @@ namespace CEPGUI.UserControls
                     }
 
                     frm.ShowDialog();
-                }
-                else
-                {
-                    dn.Alert("Niveau d'accès admin requis", DialogForms.FrmAlert.enmType.Warning);
-                }
+                
 
 
             }
@@ -157,9 +151,17 @@ namespace CEPGUI.UserControls
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FrmImpression fr = new FrmImpression();
-            fr.RegistreMembres();
-            fr.ShowDialog();
+            try
+            {
+                FrmImpression fr = new FrmImpression();
+                fr.RegistreMembres();
+                fr.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgMembre_CellContentClick(object sender, DataGridViewCellEventArgs e)

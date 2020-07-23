@@ -36,18 +36,18 @@ namespace CEPGUI.UserControls
         {
             DateTime dt = DateTime.Now;
             labelTime.Text = dt.ToString("dd/MM/yyyy HH:MM:ss");
-            LoadDatas();
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            //LoadDatas();
+            LoadDatas();
         }
         void LoadDatas()
         {
             try
             {
-                lblCaisse.Text = dep.GetCaisse().ToString() + " Dollars";
+                double number = dep.GetCaisse();
+                lblCaisse.Text = number.ToString(".##$");
                 lblDepart.Text = d.CountDepartement().ToString() + " Departements";
                 lblMembre.Text = m.CountMembre().ToString() + " Fidèles";
                 lblAnnonce.Text = c.CountCommunique().ToString() + " Annonces";
@@ -101,6 +101,11 @@ namespace CEPGUI.UserControls
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoadDatas();
         }
     }
 }

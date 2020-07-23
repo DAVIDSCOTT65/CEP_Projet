@@ -953,6 +953,16 @@ namespace CEPGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Swipe_30px {
+            get {
+                object obj = ResourceManager.GetObject("Swipe_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Today_32px {
             get {
                 object obj = ResourceManager.GetObject("Today_32px", resourceCulture);

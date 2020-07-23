@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -123,6 +124,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CR_Sorties_Trimestre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EtatSorties\CR_Test.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Test.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\AffectactionDepartement.cs">
@@ -275,6 +282,12 @@
     <Compile Include="Forms\FrmType.Designer.cs">
       <DependentUpon>FrmType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Impression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Impression.Designer.cs">
+      <DependentUpon>Impression.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,6 +408,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_Sorties_Trimestre.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="EtatSorties\CR_Test.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Test.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AffectactionDepartement.resx">
       <DependentUpon>AffectactionDepartement.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,6 +487,9 @@
     <EmbeddedResource Include="Forms\FrmType.resx">
       <DependentUpon>FrmType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Impression.resx">
+      <DependentUpon>Impression.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -530,7 +550,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaptemeLibrary\BaptemeLibrary.csproj">
@@ -882,6 +904,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Message_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swipe_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

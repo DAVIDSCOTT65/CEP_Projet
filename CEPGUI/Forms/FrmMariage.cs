@@ -27,7 +27,7 @@ namespace CEPGUI.Forms
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
+                if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                     FrmFaireMariage frm = new FrmFaireMariage();
                     int i;
@@ -240,6 +240,14 @@ namespace CEPGUI.Forms
         private void parrainTxt_TextChanged(object sender, EventArgs e)
         {
             marraineTxt.Text=dn.retourMarraine(parrainTxt.Text.Trim());
+            if (marraineTxt.Text=="")
+            {
+                marraineTxt.ReadOnly = false;
+            }
+            else
+            {
+                marraineTxt.ReadOnly = true;
+            }
             
         }
 

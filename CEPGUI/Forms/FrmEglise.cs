@@ -31,9 +31,16 @@ namespace CEPGUI.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (UserSession.GetInstance().Fonction == "Administrateur")
+                Enregistrer();
+            else
+                DynamicClasses.GetInstance().Alert("Niveau Admin requis", DialogForms.FrmAlert.enmType.Warning);
+        }
+        void Enregistrer()
+        {
             try
             {
-                if (nomTxt.Text=="" || commTxt.Text=="" || accroTxt.Text=="" || addTxt.Text=="" || phoneTxt.Text=="" || phone2.Text=="" ||mailTxt.Text=="" || siteTxt.Text=="")
+                if (nomTxt.Text == "" || commTxt.Text == "" || accroTxt.Text == "" || addTxt.Text == "" || phoneTxt.Text == "" || phone2.Text == "" || mailTxt.Text == "" || siteTxt.Text == "")
                 {
                     DynamicClasses.GetInstance().Alert("Champs vides détectés", DialogForms.FrmAlert.enmType.Error);
                 }
@@ -57,7 +64,7 @@ namespace CEPGUI.Forms
 
                     SelectData(new Eglise());
                 }
-                
+
             }
             catch (Exception ex)
             {

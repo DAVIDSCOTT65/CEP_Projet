@@ -306,6 +306,8 @@
             this.fcTxt.Size = new System.Drawing.Size(141, 27);
             this.fcTxt.TabIndex = 191;
             this.fcTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.fcTxt.ValueChanged += new System.EventHandler(this.fcTxt_ValueChanged);
+            this.fcTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fcTxt_KeyPress_1);
             // 
             // dollarTxt
             // 
@@ -324,6 +326,7 @@
             // valeur1D
             // 
             this.valeur1D.DecimalPlaces = 2;
+            this.valeur1D.Enabled = false;
             this.valeur1D.Location = new System.Drawing.Point(439, 90);
             this.valeur1D.Maximum = new decimal(new int[] {
             10000000,

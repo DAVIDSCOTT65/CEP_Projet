@@ -51,9 +51,17 @@ namespace CEPGUI.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmImpression frm = new FrmImpression();
-            frm.RegistreReceptionEnfant();
-            frm.ShowDialog();
+            try
+            {
+                FrmImpression frm = new FrmImpression();
+                frm.RegistreReceptionEnfant();
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,9 +73,7 @@ namespace CEPGUI.UserControls
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Administrateur")
-                {
-                    FrmReceptionEnfant frm = new FrmReceptionEnfant();
+                FrmReceptionEnfant frm = new FrmReceptionEnfant();
                     int i;
                     i = dgRecept.CurrentRow.Index;
 
@@ -93,7 +99,7 @@ namespace CEPGUI.UserControls
                     }
 
                     frm.ShowDialog();
-                }
+                
 
 
             }
@@ -117,12 +123,37 @@ namespace CEPGUI.UserControls
         private void button5_Click(object sender, EventArgs e)
         {
             SelectDatas(new ReceptionEnfant());
-            lblTotal.Text = dgRecept.Rows.Count.ToString() + " Enfants";
+            TotalEnfant();
         }
 
         private void serchTxt_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                Search(new ReceptionEnfant());
+                TotalEnfant();
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+        }
+        void TotalEnfant()
+        {
+            try
+            {
+                lblTotal.Text = dgRecept.Rows.Count.ToString() + " Enfants";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        void Search(ReceptionEnfant m)
+        {
+            dgRecept.DataSource = m.Research(serchTxt.Text);
         }
     }
 }

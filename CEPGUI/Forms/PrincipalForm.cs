@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace CEPGUI
     {
         int Pw;
         bool Hided;
+        Home h = new Home();
         public PrincipalForm()
         {
             InitializeComponent();
@@ -26,15 +28,27 @@ namespace CEPGUI
 
         private void PrincipalForm_Load(object sender, EventArgs e)
         {
-            PubCon.testFile();
-            var form = new ConnectUser();
-            form.ShowDialog();
-            loadPhoto(UserSession.GetInstance().Id.ToString(), avatarPic);
-            lblNom.Text = UserSession.GetInstance().UserName;
-            lblFonction.Text = UserSession.GetInstance().Fonction;
-            ChargerUser(new Home());
 
+            LoadForm();
             
+        }
+        void LoadForm()
+        {
+            try
+            {
+                PubCon.testFile();
+                var form = new ConnectUser();
+                form.ShowDialog();
+                loadPhoto(UserSession.GetInstance().Id.ToString(), avatarPic);
+                lblNom.Text = UserSession.GetInstance().UserName;
+                lblFonction.Text = UserSession.GetInstance().Fonction;
+                ChargerUser(new Home());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erreur de chargement : \n" + ex.Message);
+            }
         }
         void loadPhoto(string id, PictureBox pic)
         {
@@ -53,42 +67,58 @@ namespace CEPGUI
             catch (Exception ex)
             {
 
-                MessageBox.Show("L'erreur suivant est survenue : " + ex.Message);
+                MessageBox.Show("L'erreur suivant est survenue lors du chargement : " + ex.Message);
             }
         }
-
+        void Slide()
+        {
+            try
+            {
+                
+                timer1.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Hided) button1.Text = "H\nI\nD\nE";
-            else button1.Text = "S\nH\nO\nW";
-            timer1.Start();
+            Slide();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (Hided)
+            try
             {
-                spanel.Width = spanel.Width + 20;
-                centralPanel.Width = centralPanel.Width - 20;
-                userPanel.Width = userPanel.Width - 20;
-                if(spanel.Width >= Pw)
+                if (Hided)
                 {
-                    timer1.Stop();
-                    Hided = false;
-                    this.Refresh();
+                    spanel.Width = spanel.Width + 20;
+                    centralPanel.Width = centralPanel.Width - 20;
+                    userPanel.Width = userPanel.Width - 20;
+                    if (spanel.Width >= Pw)
+                    {
+                        timer1.Stop();
+                        Hided = false;
+                        this.Refresh();
+                    }
+                }
+                else
+                {
+                    spanel.Width = spanel.Width - 20;
+                    centralPanel.Width = centralPanel.Width + 20;
+                    userPanel.Width = userPanel.Width + 20;
+                    if (spanel.Width <= 54)
+                    {
+                        timer1.Stop();
+                        Hided = true;
+                        this.Refresh();
+                    }
                 }
             }
-            else
+            catch (Exception)
             {
-                spanel.Width = spanel.Width - 20;
-                centralPanel.Width = centralPanel.Width + 20;
-                userPanel.Width = userPanel.Width + 20;
-                if (spanel.Width<= 54)
-                {
-                    timer1.Stop();
-                    Hided = true;
-                    this.Refresh();
-                }
             }
         }
 
@@ -115,6 +145,7 @@ namespace CEPGUI
         private void button2_Click(object sender, EventArgs e)
         {
             ChargerUser(new UC_Membre());
+            //h.timer1.Stop();
         }
 
         private void button10_Click(object sender, EventArgs e)
