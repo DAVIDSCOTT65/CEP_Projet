@@ -30,7 +30,7 @@ namespace CEPGUI.Forms
         {
             try
             {
-                if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "Sa")
+                if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
                    
                     int i;
@@ -230,6 +230,11 @@ namespace CEPGUI.Forms
         private void recptTxt_MouseEnter(object sender, EventArgs e)
         {
             DateRetriever();
+        }
+
+        private void dgBapt_DoubleClick(object sender, EventArgs e)
+        {
+            doubleclic_grid();
         }
     }
 }

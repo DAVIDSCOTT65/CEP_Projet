@@ -255,5 +255,15 @@ namespace CEPGUI.Forms
         {
             //marraineTxt.Enabled = false;
         }
+
+        private void dgMariage_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgMariage_DoubleClick(object sender, EventArgs e)
+        {
+            doubleclic_grid();
+        }
     }
 }

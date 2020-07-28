@@ -49,7 +49,7 @@ namespace CEPGUI.Forms
                 }
                 else if (UserSession.GetInstance().Fonction == "Secrétaire" || UserSession.GetInstance().Fonction == "SA")
                 {
-                    if(baptTxt.Text != "")
+                    if(baptTxt.Text != "  /  /")
                     {
                         DateTime dateBapt;
                         dateBapt = Convert.ToDateTime(baptTxt.Text);
@@ -90,7 +90,7 @@ namespace CEPGUI.Forms
                         m.Sexe = sexe;
                         m.LieuNaissance = lieuTxt.Text;
                         m.DateNaissance = Convert.ToDateTime(naissTxt.Text);
-                        m.DateBapteme = baptTxt.Text;
+                        m.DateBapteme = "";
                         m.Pere = pereTxt.Text;
                         m.Mere = mereTxt.Text;
                         m.ProvOrigine = provTxt.Text;
